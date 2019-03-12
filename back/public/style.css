@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(23, 24, 27);
+}
+.container{
+    margin-top: 10px;
+}
+
+.muestra{
+    font-size: 200%;
+    color: white
+}
