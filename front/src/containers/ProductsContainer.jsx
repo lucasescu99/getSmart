@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { getProducts } from '../redux/action-creators/products-actions';
 // eslint-disable-next-line no-unused-vars
 import Products from '../components/Products';
-import axios from 'axios';
 
 class ProductsContainer extends React.Component {
   componentDidMount () {
-    this.props.getProducts();
+    console.log(this.props)
+    this.props.getProducts(this.props.location.search);
   };
 
   render () {
@@ -16,7 +16,6 @@ class ProductsContainer extends React.Component {
         <h1 className='titleProduct'>PRODUCTOS</h1>
         <hr/>
         <div className="products">
-          {console.log(this.props)}
           { (this.props.products[0]) ? <Products products={this.props.products} /> : null }
         </div>
       </div>
@@ -32,7 +31,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => (
   {
-    getProducts: () => dispatch(getProducts())
+    getProducts: (searchProduct) => dispatch(getProducts(searchProduct))
   }
 );
 

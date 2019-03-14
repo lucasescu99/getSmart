@@ -5,13 +5,21 @@ const Productos = require('../models/Producto');
 
 router.get('/', (req, res) => {
   if (req.query.modelo) {
-    Products.findAll({
+    console.log('query', req.query.modelo)
+    Productos.findAll({
       where: {
         modelo: req.query.modelo
       }
-    }).then(data => res.send(data));
+    }).then(data => {
+      console.log('DATAAAA', data);
+      res.send(data);
+    }
+    );
   } else {
-    Products.findAll().then(data => res.send(data));
+    Products.findAll().then(data => {
+      res.send(data);
+    }
+    );
   }
 });
 router.get('/:id', (req, res) => {

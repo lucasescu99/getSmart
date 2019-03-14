@@ -538,31 +538,17 @@ function (_React$Component) {
         id: "main",
         className: "container-fluid"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-<<<<<<< HEAD
+        exact: true,
+        path: "/",
+        component: _components_Home__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/productos",
-        render: function render(e) {
+        render: function render(_ref) {
+          var location = _ref.location;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            searchProduct: "s7"
+            location: location
           });
-        }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/usuarios/addadmin",
-        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/",
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_3__["default"]
-=======
-        exact: true,
-        path: "/",
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/productos",
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], null);
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -570,13 +556,12 @@ function (_React$Component) {
         component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         path: "/productos/:id",
-        render: function render(_ref) {
-          var match = _ref.match;
+        render: function render(_ref2) {
+          var match = _ref2.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_6__["default"], {
             prodId: match.params.id
           });
         }
->>>>>>> 4b492a2c775a9874d9ed8ed52dc924f612fd31f3
       })));
     }
   }]);
@@ -603,8 +588,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/action-creators/products-actions */ "./front/src/redux/action-creators/products-actions.js");
 /* harmony import */ var _components_Products__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Products */ "./front/src/components/Products.jsx");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -629,7 +612,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var ProductsContainer =
 /*#__PURE__*/
 function (_React$Component) {
@@ -644,12 +626,8 @@ function (_React$Component) {
   _createClass(ProductsContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-<<<<<<< HEAD
-      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('/productos/addpr');
-      this.props.getProducts(this.props.searchProduct);
-=======
-      this.props.getProducts();
->>>>>>> 4b492a2c775a9874d9ed8ed52dc924f612fd31f3
+      console.log(this.props);
+      this.props.getProducts(this.props.location.search);
     }
   }, {
     key: "render",
@@ -660,7 +638,7 @@ function (_React$Component) {
         className: "titleProduct"
       }, "PRODUCTOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "products"
-      }, console.log(this.props), this.props.products[0] ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Products__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, this.props.products[0] ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Products__WEBPACK_IMPORTED_MODULE_3__["default"], {
         products: this.props.products
       }) : null));
     }
@@ -679,8 +657,8 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    getProducts: function getProducts() {
-      return dispatch(Object(_redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_2__["getProducts"])());
+    getProducts: function getProducts(searchProduct) {
+      return dispatch(Object(_redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_2__["getProducts"])(searchProduct));
     }
   };
 };
@@ -842,11 +820,8 @@ var recibirProducto = function recibirProducto(product) {
 
 var getProducts = function getProducts(searchProduct) {
   return function (dispatch) {
-<<<<<<< HEAD
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/productos/".concat(searchProduct)).then(function (res) {
-=======
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/productos?modelo=".concat(searchProduct)).then(function (res) {
->>>>>>> 4b492a2c775a9874d9ed8ed52dc924f612fd31f3
+    console.log(searchProduct);
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/productos".concat(searchProduct)).then(function (res) {
       dispatch(setProducts(res.data));
     });
   };
@@ -914,52 +889,12 @@ var initialState = {
 
 /***/ }),
 
-/***/ "./front/src/redux/reducers/reducer.js":
-/*!*********************************************!*\
-  !*** ./front/src/redux/reducers/reducer.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case 'SET_PRODUCTS':
-      return action.products;
-
-    default:
-      return state;
-  }
-});
-
-/***/ }),
-
 /***/ "./front/src/redux/store.js":
 /*!**********************************!*\
   !*** ./front/src/redux/store.js ***!
   \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
-<<<<<<< HEAD
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
-/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
-/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
-/* harmony import */ var _reducers_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers/reducer */ "./front/src/redux/reducers/reducer.js");
-
-
-
-
-var composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || redux__WEBPACK_IMPORTED_MODULE_0__["compose"];
-/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_reducer__WEBPACK_IMPORTED_MODULE_3__["default"], composeEnhancers(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(Object(redux_logger__WEBPACK_IMPORTED_MODULE_1__["createLogger"])(), redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]))));
-=======
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -993,7 +928,6 @@ function _assertThisInitialized(self) {
 }
 
 module.exports = _assertThisInitialized;
->>>>>>> 4b492a2c775a9874d9ed8ed52dc924f612fd31f3
 
 /***/ }),
 
