@@ -1,13 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { Route, Redirect, Switch, Link } from 'react-router-dom';
-import store from 'react-redux'
+import CrearProd from './CrearProd';
+import EditProd from './EditProd';
+import { Route } from 'react-router-dom';
 
 export default class Main extends React.Component {
-  render() {
+  render () {
     return (
       <div id='main' className='container-fluid'>
-     HOLA SOY EL MAIN
+        <Route exact path ='/productos/add' render={() => (<CrearProd />)} />
+        <Route exact path ='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
       </div>
-    )
+    );
   }
 }
