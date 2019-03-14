@@ -32,8 +32,8 @@ export default (props) => {
             </div>
 
             <div className="row" style={{ marginTop: "60px" }}>
-              <div className="col-lg-6"><button className="btn btn-lg btn-success" type="button" style={{ padding: "20px" }} >COMPRAR!</button></div>
-              <div><button className="btn btn-lg" type="button" style={{ color: "#28a745", borderColor: "#28a745", padding: "20px" }}>Agregar al Carrito</button></div>
+              <div className="col-lg-5"><button className="btn btn-lg btn-success" type="button" style={{ padding: "20px" }} >COMPRAR!</button></div>
+              <div className="col-lg-7"><button className="btn btn-lg" type="button" style={{ color: "#28a745", borderColor: "#28a745", padding: "20px" }}>Agregar al Carrito</button></div>
             </div>
 
           </div>
