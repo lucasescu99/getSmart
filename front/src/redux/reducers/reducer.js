@@ -1,11 +1,11 @@
-import { RECEIVE_MOVIE, RECEIVE_MOVIES, RECEIVE_SEARCH,RECEIVE_FAVMOVIES } from '../constants';
+import { RECEIVE_MOVIE, RECEIVE_MOVIES, RECEIVE_SEARCH, RECEIVE_FAVMOVIES } from '../constants';
 
 const initialState = {
   list: [],
   selected: {},
   title: '',
   favmovies: []
-}
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -20,4 +20,4 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
