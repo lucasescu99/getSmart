@@ -1,40 +1,40 @@
-import axios from 'axios';
-import { RECEIVE_MOVIES, RECEIVE_MOVIE, RECEIVE_SEARCH,RECEIVE_FAVMOVIES } from '../constants';
-import store from '../store';
+// import axios from 'axios';
+// import { RECEIVE_PRODUCTS, RECEIVE_MOVIE, RECEIVE_SEARCH,RECEIVE_FAVMOVIES } from '../constants';
+// import store from '../store';
 
 
-export const receiveMovies = (movies) => ({
-  type: RECEIVE_MOVIES,
-  movies,
-});
+// export const receiveProducts = (products) => ({
+//   type: RECEIVE_PRODUCTS,
+//   products,
+// });
 
-export const receiveFavMovies = () => ({
-  type: RECEIVE_FAVMOVIES,
-  favmovies,
-});
+// export const receiveFavMovies = () => ({
+//   type: RECEIVE_FAVMOVIES,
+//   favmovies,
+// });
 
-const receiveMovie = (movie) => ({
-  type: RECEIVE_MOVIE,
-  movie,
-});
+// const receiveMovie = (movie) => ({
+//   type: RECEIVE_MOVIE,
+//   movie,
+// });
 
-export const receiveSearchTitle = (title) => ({
-  type: RECEIVE_SEARCH,
-  title,
-});
+// export const receiveSearchTitle = (title) => ({
+//   type: RECEIVE_SEARCH,
+//   title,
+// });
 
-export const buscarMovies = input => dispatch =>
-  axios.get(`https://www.omdbapi.com/?apikey=20dac387&s=${input}`)
-    .then(res => res.data.Search)
-    .then(movies => dispatch(receiveMovies(movies)))
+// export const searchProducts = input => dispatch =>
+//   axios.get('/listAll')
+//     Products.findAll (where : {marca : input})
+//     .then(findedProducts => dispatch(receiveProducts(findedProducts)
 
 
-export const oneMovie = idInput => dispatch =>
-  axios.get(`https://www.omdbapi.com/?apikey=20dac387&i=${idInput}`)
-    .then(res => res.data)
-    .then(movie => dispatch(receiveMovie(movie)))
+// export const oneMovie = idInput => dispatch =>
+//   axios.get(`https://www.omdbapi.com/?apikey=20dac387&i=${idInput}`)
+//     .then(res => res.data)
+//     .then(movie => dispatch(receiveMovie(movie)))
 
-export const favMovies = () => dispatch =>
-  {return({ 
-    favmovies
-  })}
+// export const favMovies = () => dispatch =>
+//   {return({ 
+//     favmovies
+//   })}

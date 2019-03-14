@@ -1,11 +1,35 @@
-body{
-    background-color: rgb(23, 24, 27);
-}
-.container{
-    margin-top: 10px;
-}
+*{
+  box-sizing: border-box;
 
-.muestra{
-    font-size: 200%;
-    color: white
+}
+.header{
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    align-items: center; 
+
+}
+#logo{
+    width: 150px;
+    height: 70px;
+}
+#userLogIn{
+    width: 35px;
+    margin-left: 49px; 
+}
+#userLogOut{
+    width: 35px;
+    margin-left: 35px;
+  
+}
+#input{
+    border-radius: 25px;
+    width: 500px;
+    height: 40px;
+  
+}
+#carrito{
+    width: 45px;
+     margin-left: 125px;
+
 }
