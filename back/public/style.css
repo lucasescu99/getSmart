@@ -1,11 +1,31 @@
-body{
-    background-color: rgb(23, 24, 27);
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
+
 .container{
     margin-top: 10px;
+}
+
+#singleProd{
+    margin: 7%;
+    border: 1px solid black;  
+    border-radius: 20px;
+    padding: 50px;
 }
 
 .muestra{
     font-size: 200%;
     color: white
+}
+
+#imgProdCarr{
+    height: 420px;
+}
+
+#puntuacion{
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
 }
