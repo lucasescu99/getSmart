@@ -1,25 +1,25 @@
 * {
-    box-sizing: border-box;
-}
-/* body{
-    /* background-color: rgb(23, 24, 27); 
-} */
-.container{
-    margin-top: 10px;
+  box-sizing: border-box;
 }
 
-.muestra{
-    font-size: 200%;
-    color: white
+.container{
+  margin-top: 10px;
 }
+
 #navbar-light{
-    text-align: center;
-    background-color: #e3f2fd
+  text-align: center;
+  background-color: #476694;
 }
 a{
     color: white;
 }
-#navbar-light{
-    background-color: #1eb531;
+a:hover{
+  color: #b1ccf3;
+  text-decoration: none;
 }
+.col-lg-12{
+  border-left: #929fab solid 1px;
+}
+
+
 

@@ -8,7 +8,7 @@ const Producto = db.define('productos', {
   },
   marca: {
     type: S.ENUM,
-    values: ['Samsung', 'Apple', 'Motorola', 'LG', 'Xiaomi', 'Huawei'],
+    values: ['Samsung', 'iPhone', 'Motorola', 'LG', 'Xiaomi', 'Huawei'],
     allowNull: false
   },
   modelo: {
