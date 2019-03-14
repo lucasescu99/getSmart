@@ -11,8 +11,8 @@ export default class Main extends React.Component {
   render() {
     return (
       <div id='main' className='container-fluid'>
-        <Switch>
         <Route exact path="/user" render={() => (<HomeRL />)} />
+        <Switch>
         <Route exact path="/user/register" render={() => (<Registro />)} />
         <Route exact path="/user/login" render={() => (<Login />)} />
         </Switch>
