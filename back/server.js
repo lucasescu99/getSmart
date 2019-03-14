@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use('/usuarios', usRouter);
-app.use('/productos', prRouter);
+app.use('/products', prRouter);
 app.use('/categorias', caRouter);
 app.use('/ordencompra', ocRouter);
 app.use('/carrito', carrRouter);

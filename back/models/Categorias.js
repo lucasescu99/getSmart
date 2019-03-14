@@ -1,6 +1,13 @@
 const S = require('sequelize');
 const db = require ('../config/db');
 
-module.exports = {
-  Categorias
-};
+
+const Categorias = db.define('categorias', {
+    tag: {
+        type:S.STRING,
+        allowNull: false,
+    }
+})
+
+
+module.exports = Categorias

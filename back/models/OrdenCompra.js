@@ -11,12 +11,6 @@ const OrdenCompra = db.define('ordencompra', {
         allowNull: false,
         values: ['CREADO', 'PROCESANDO', 'CANCELADO','COMPLETADO']
     },
-
-
 })
 
-
-
-module.exports = {
-    OrdenCompra
-};
+module.exports = OrdenCompra

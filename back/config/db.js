@@ -4,4 +4,4 @@ var db = new Sequelize('postgres://localhost:5432/getSmartDB', { // define la co
   logging: false
 });
 
-module.exports = db
+module.exports = db;
