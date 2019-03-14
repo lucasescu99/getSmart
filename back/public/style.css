@@ -1,5 +1,6 @@
-body{
-    background-color: rgb(23, 24, 27);
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box
 }
 .container{
     margin-top: 10px;
@@ -8,4 +9,23 @@ body{
 .muestra{
     font-size: 200%;
     color: white
+}
+
+.card{
+    padding: 10px
+}
+
+.card:hover{
+    box-shadow: 2px 2px 10px #666; 
+}
+.products{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px
+}
+
+.imgproduct{
+    height: 350px;
+    width: 300px
 }
