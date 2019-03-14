@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
-import store from 'react-redux'
-import SingleProd from '../components/singleProduct'
+import SingleProd from '../containers/SingleProductCont';
 
 export default class Main extends React.Component {
-  render() {
+  render () {
     return (
       <div id='main' className='container-fluid'>
         <Switch>
-          <Route path="/products/:id" render={() => <SingleProd />} />
+          <Route path="/productos/:chota" render={({ match }) => <SingleProd prodId={match.params.chota}/>} />
         </Switch>
       </div>
     );
