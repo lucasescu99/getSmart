@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { buscarProducto } from '../redux/action-creators/action-creator';
+import { buscarProducto } from '../redux/action-creators/products-actions';
 import SingleProdComp from '../components/singleProdComp';
 
 class SingleProd extends React.Component {

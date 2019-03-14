@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { Link } from 'react-router-dom';
 
-export default ({ products }) => (
+const Products = ({ products }) => (
   products.map(product => (
     <Link to={`/products/${product.id}`}>
       <div className="product" key={product.id}>
@@ -19,3 +19,5 @@ export default ({ products }) => (
     </Link>
   ))
 );
+
+export default Products;

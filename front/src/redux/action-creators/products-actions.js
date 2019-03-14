@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { RECEIVE_PRODUCT } from '../constants';
 
 export const setProducts = (products) => (
   {
@@ -7,9 +8,19 @@ export const setProducts = (products) => (
   }
 );
 
+const recibirProducto = (product) => ({
+  type: RECEIVE_PRODUCT,
+  product
+});
+
 export const getProducts = (searchProduct) => dispatch => {
-  return axios.get(`/products/${searchProduct}`)
+  return axios.get(`/api/productos?modelo=${searchProduct}`)
     .then(res => {
       dispatch(setProducts(res.data));
     });
 };
+
+export const buscarProducto = prodID => dispatch =>
+  axios.get(`/api/productos/${prodID}`)
+    .then(res => res.data)
+    .then(producto => dispatch(recibirProducto(producto)));

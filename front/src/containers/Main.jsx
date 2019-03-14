@@ -13,10 +13,10 @@ export default class Main extends React.Component {
       <div id='main' className='container-fluid'>
         <Header />
         <Switch>
-          <Route path= '/products' render = {(e) => <ProductsContainer searchProduct= 's7' />}/>
           <Route exact path='/' component={Home} />
+          <Route exact path= '/productos' render = {() => <ProductsContainer />}/>
           <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
-          <Route path="/productos/:chota" render={({ match }) => <SingleProd prodId={match.params.chota}/>} />
+          <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id}/>} />
         </Switch>
       </div>
 

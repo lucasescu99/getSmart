@@ -7,8 +7,7 @@ import axios from 'axios';
 
 class ProductsContainer extends React.Component {
   componentDidMount () {
-    axios.post('/products/addpr');
-    this.props.getProducts(this.props.searchProduct);
+    this.props.getProducts();
   };
 
   render () {
@@ -17,7 +16,8 @@ class ProductsContainer extends React.Component {
         <h1>PRODUCTOS</h1>
         <hr/>
         <div className="products">
-          { (this.props.products[0]) ? <Products products={this.props.products} /> : null };
+        {console.log(this.props)}
+          { (this.props.products[0]) ? <Products products={this.props.products} /> : null }
         </div>
       </div>
     );
@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => (
   {
-    getProducts: (product) => dispatch(getProducts(product))
+    getProducts: () => dispatch(getProducts())
   }
 );
 
