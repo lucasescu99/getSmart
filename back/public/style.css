@@ -1,6 +1,9 @@
-body{
-    background-color: rgb(23, 24, 27);
+* {
+    box-sizing: border-box;
 }
+/* body{
+    /* background-color: rgb(23, 24, 27); 
+} */
 .container{
     margin-top: 10px;
 }
@@ -9,3 +12,14 @@ body{
     font-size: 200%;
     color: white
 }
+#navbar-light{
+    text-align: center;
+    background-color: #e3f2fd
+}
+a{
+    color: white;
+}
+#navbar-light{
+    background-color: #1eb531;
+}
+
