@@ -1,13 +1,23 @@
+const Products = require('../models/Producto');
 const express = require('express');
 const router = express.Router();
 
-// router.post('/', (req, res) => {
-//     Favourites.create(req.body)
-//       .then(fav => res.send(fav))
-//   })
+router.get('/:model', (req, res) => {
+  Products.findAll().then(data => res.send(data));
+});
 
-// router.get('/listAll', function (req,res){
-//     Favourites.findAll()
-//     .then(data=>res.send(data))
-// })
-module.exports = router
+router.post('/addpr', (req, res) => {
+  Products.create({
+    nombre: 'lucas',
+    marca: 'Samsung',
+    modelo: 's7',
+    descripcion: 'holaholahola',
+    stock: 50,
+    precio: 5000,
+    imagenes: ['https://overline.com/wp-content/uploads/2017/02/Samsung-Galaxy-S7-edge-png.png']
+  }).then(producto => {
+    res.json(producto);
+  });
+});
+
+module.exports = router;
