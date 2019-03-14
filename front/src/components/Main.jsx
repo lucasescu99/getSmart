@@ -5,6 +5,7 @@ import store from 'react-redux'
 //components
 import Header from './Header';
 import Home from './Home';
+import UserAsAdmin from './UserAsAdmin';
 
 export default class Main extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export default class Main extends React.Component {
 
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/usuarios/adadmin' component={UserAsAdmin} />
         </Switch>
       </div>
     )
