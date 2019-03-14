@@ -1,11 +1,18 @@
-body{
-    background-color: rgb(23, 24, 27);
-}
-.container{
-    margin-top: 10px;
+* {
+    box-sizing-border-box;
 }
 
-.muestra{
-    font-size: 200%;
-    color: white
+.FRUsuarios{
+padding-left: 200px;
+padding-right: 200px;
+padding-top: 200px;
+padding-bottom: 200px;
 }
+
+
+.FRUstitle{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 60px 
+}
+

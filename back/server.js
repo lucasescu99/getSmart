@@ -21,7 +21,7 @@ app.use('/carrito', carrRouter);
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-var port = 8080;
+var port = 3000;
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, './public/index.html'));
