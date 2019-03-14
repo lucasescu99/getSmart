@@ -105,7 +105,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var products = _ref.products;
   return products.map(function (product) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/products/".concat(product.id)
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "product",
       key: product.id
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -122,7 +124,7 @@ __webpack_require__.r(__webpack_exports__);
     }, " ", product.descripcion, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/products/".concat(product.id),
       className: "btn btn-primary"
-    }, " Go somewhere "))));
+    }, " Go somewhere ")))));
   });
 });
 
