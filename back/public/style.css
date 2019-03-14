@@ -42,13 +42,18 @@
 .card:hover{
     box-shadow: 2px 2px 10px #666; 
 }
+.titleProduct{
+    margin-top: 20px
+}
 .products{
     margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px
 }
-
+.product{
+    margin-top: 20px
+}
 .imgproduct{
     height: 350px;
     width: 300px

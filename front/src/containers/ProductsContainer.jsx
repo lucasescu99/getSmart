@@ -7,14 +7,14 @@ import axios from 'axios';
 
 class ProductsContainer extends React.Component {
   componentDidMount () {
-    axios.post('/products/addpr');
+    axios.post('/productos/addpr');
     this.props.getProducts(this.props.searchProduct);
   };
 
   render () {
     return (
       <div className="container">
-        <h1>PRODUCTOS</h1>
+        <h1 className='titleProduct'>PRODUCTOS</h1>
         <hr/>
         <div className="products">
           { (this.props.products[0]) ? <Products products={this.props.products} /> : null };

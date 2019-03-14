@@ -8,7 +8,7 @@ export const setProducts = (products) => (
 );
 
 export const getProducts = (searchProduct) => dispatch => {
-  return axios.get(`/products/${searchProduct}`)
+  return axios.get(`/productos/${searchProduct}`)
     .then(res => {
       dispatch(setProducts(res.data));
     });
