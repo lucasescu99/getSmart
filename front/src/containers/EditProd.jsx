@@ -14,7 +14,7 @@ export default class AdminProd extends React.Component {
   }
 
   componentDidMount () {
-    axios.get(`/api/productos/search/${this.props.prodId}`)
+    axios.get(`/api/productos/${this.props.prodId}`)
       .then(producto => this.setState({ producto: producto.data }));
   }
 
