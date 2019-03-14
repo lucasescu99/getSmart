@@ -52,6 +52,6 @@ Usuario.prototype.validPassword = function (password) {
 };
 
 module.exports = {
-  Usuario: Usuario,
-  db: db
+  Usuario,
+  db
 };

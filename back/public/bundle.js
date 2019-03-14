@@ -423,20 +423,13 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!**************************************!*\
   !*** ./front/src/redux/constants.js ***!
   \**************************************/
-/*! exports provided: RECEIVE_MOVIES, RECEIVE_MOVIE, RECEIVE_SEARCH, RECEIVE_FAVMOVIES */
+/*! exports provided: RECEIVE_PRODUCT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MOVIES", function() { return RECEIVE_MOVIES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_MOVIE", function() { return RECEIVE_MOVIE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SEARCH", function() { return RECEIVE_SEARCH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_FAVMOVIES", function() { return RECEIVE_FAVMOVIES; });
-// Movies
-var RECEIVE_MOVIES = 'RECEIVE_MOVIES';
-var RECEIVE_MOVIE = 'RECEIVE_MOVIE';
-var RECEIVE_SEARCH = 'RECEIVE_SEARCH';
-var RECEIVE_FAVMOVIES = 'RECEIVE_FAVMOVIES';
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PRODUCT", function() { return RECEIVE_PRODUCT; });
+var RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 
 /***/ }),
 
@@ -452,34 +445,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./front/src/redux/constants.js");
 
 var initialState = {
-  list: [],
-  selected: {},
-  title: '',
-  favmovies: []
+  products: [],
+  selectedProd: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_MOVIE"]:
+    case 'SET_PRODUCTS':
       return Object.assign({}, state, {
-        selected: action.movie
+        products: action.products
       });
 
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_MOVIES"]:
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PRODUCT"]:
       return Object.assign({}, state, {
-        list: action.movies
-      });
-
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SEARCH"]:
-      return Object.assign({}, state, {
-        title: action.title
-      });
-
-    case _constants__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_FAVMOVIES"]:
-      return Object.assign({}, state, {
-        favmovies: action.favmovies
+        selectedProd: action.product
       });
 
     default:

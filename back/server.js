@@ -4,20 +4,13 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var morgan = require('morgan');
 const db = require('./config/db');
-const usRouter = require('./routes/usRouter');
-const prRouter = require('./routes/prRouter');
-const caRouter = require('./routes/caRouter');
-const ocRouter = require('./routes/ocRouter');
-const carrRouter = require('./routes/carrRouter');
+const apiRoutes = require('./routes');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
-app.use('/usuarios', usRouter);
-app.use('/productos', prRouter);
-app.use('/categorias', caRouter);
-app.use('/ordencompra', ocRouter);
-app.use('/carrito', carrRouter);
+
+app.use('/api', apiRoutes);
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
