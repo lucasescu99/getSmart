@@ -16,7 +16,7 @@ export default class Main extends React.Component {
         <Switch>
           <Route path= '/products' render = {(e) => <ProductsContainer searchProduct= 's7' />}/>
           <Route exact path='/' component={Home} />
-          <Route exact path='/usuarios/adadmin' component={UserAsAdmin} />
+          <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
         </Switch>
       </div>
 
