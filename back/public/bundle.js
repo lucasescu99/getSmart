@@ -469,8 +469,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _src_containers_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/containers/Main */ "./front/src/containers/Main.jsx");
 /* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./redux/store */ "./front/src/redux/store.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './containers/FormularioRegistro'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-
 
 
 
