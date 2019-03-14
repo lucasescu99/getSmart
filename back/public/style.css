@@ -91,30 +91,25 @@ margin-right: 10px;
 }
 
 .container{
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-#singleProd{
-    margin: 7%;
-    border: 1px solid black;  
-    border-radius: 20px;
-    padding: 50px;
-}
-
-.muestra{
-    font-size: 200%;
-    color: white
-}
 #navbar-light{
-    text-align: center;
-    background-color: #e3f2fd
+  text-align: center;
+  background-color: #476694;
 }
 a{
     color: white;
 }
-#navbar-light{
-    background-color: #1eb531;
+a:hover{
+  color: #b1ccf3;
+  text-decoration: none;
 }
+.col-lg-12{
+  border-left: #929fab solid 1px;
+}
+
+
 
 
 .formProdAm{
