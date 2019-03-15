@@ -1,5 +1,5 @@
 const S = require('sequelize');
-const db = require ('../config/db')
+const db = require('../config/db');
 
 const OrdenCompra = db.define('ordencompra', {
     fechaOC: {
