@@ -16,11 +16,11 @@
 }
 #userLogIn{
     width: 35px;
-    margin-left: 49px; 
+
 }
 #userLogOut{
     width: 35px;
-    margin-left: 35px;
+  
   
 }
 #input{
@@ -31,7 +31,6 @@
 }
 #carrito{
     width: 45px;
-     margin-left: 125px;
 
 }
 .card{
@@ -141,4 +140,20 @@ a:hover{
 #star {
     width: 25px;
     height:25px;
+}
+}
+#linkLogo{
+    width: 150px;
+}
+#linkLogOut{
+    width: 35px;
+    margin-left: 35px;
+}
+#linkLogIn{
+    width: 35px;
+    margin-left: 49px; 
+}
+#linkCart{
+    width: 45px;
+    margin-left: 125px;
 }

@@ -720,17 +720,20 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "signup"
+    to: "signup",
+    id: "linkLogIn"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogIn",
     src: "/utils/user.svg"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "login"
+    to: "login",
+    id: "linkLogOut"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogOut",
     src: "/utils/logout.svg"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/"
+    to: "/",
+    id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "logo",
     src: "/utils/logoBlanco.jpg"
@@ -742,8 +745,14 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: "Busca tu producto \uD83D\uDD0E",
     id: "input",
     onChange: handleChange
+<<<<<<< HEAD
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "cart"
+=======
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "cart",
+    id: "linkCart"
+>>>>>>> vistaAgregarUsuarioComoAdmin
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
     src: "/utils/carrito.svg"
