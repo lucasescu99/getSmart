@@ -1,40 +1,34 @@
 import axios from 'axios';
-import { RECEIVE_MOVIES, RECEIVE_MOVIE, RECEIVE_SEARCH,RECEIVE_FAVMOVIES } from '../constants';
-import store from '../store';
+import { CHECK_USER, ADD_USER, ADM_ACCESS } from '../constants';
 
-
-export const receiveMovies = (movies) => ({
-  type: RECEIVE_MOVIES,
-  movies,
+export const addUser = (user) => ({
+  type: ADD_USER,
+  user,
 });
 
-export const receiveFavMovies = () => ({
-  type: RECEIVE_FAVMOVIES,
-  favmovies,
+export const checkUser = (user) => ({
+  type: CHECK_USER,
+  user,
 });
 
-const receiveMovie = (movie) => ({
-  type: RECEIVE_MOVIE,
-  movie,
+export const admAccess = (qty) => ({
+  type: ADM_ACCESS,
+  qty,
 });
 
-export const receiveSearchTitle = (title) => ({
-  type: RECEIVE_SEARCH,
-  title,
-});
 
-export const buscarMovies = input => dispatch =>
-  axios.get(`https://www.omdbapi.com/?apikey=20dac387&s=${input}`)
-    .then(res => res.data.Search)
-    .then(movies => dispatch(receiveMovies(movies)))
+export const giveadmAccess = (data) => dispatch =>{
+return axios.post('/usuarios/esAdm', data)
+    .then(res => res.data[0])
+    .then(qtyUpdated => dispatch(admAccess(qtyUpdated)))
+}
 
-
-export const oneMovie = idInput => dispatch =>
-  axios.get(`https://www.omdbapi.com/?apikey=20dac387&i=${idInput}`)
+export const registerUser = (user) => dispatch =>
+  axios.post('/usuarios/crea', { user })
     .then(res => res.data)
-    .then(movie => dispatch(receiveMovie(movie)))
+    .then(user => dispatch(addUser(user)))
 
-export const favMovies = () => dispatch =>
-  {return({ 
-    favmovies
-  })}
+export const checkUserLogin = (data) => dispatch =>
+  axios.post('/usuarios/login', data)
+    .then(res => res.data)
+    .then(user => dispatch(checkUser(user)))

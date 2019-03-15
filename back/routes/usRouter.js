@@ -1,24 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const Usuario = require ('../models/Usuario')
+const { Usuario } = require('../models/Usuario')
+const passport = require('passport')
 
-// router.post('/users/add', (req, res) => {
-//     User.create({email: 'ombaez@gmail.com', password:'pass1234'})
-//       .then(user => console.log(user))
-//   })
+router.post('/add', (req, res) => {
+  console.log(req.body.user)
+  Usuario.create(req.body.user)
+    .then(data => res.status(201).send(data))
+})
 
- 
-//   router.get('/', (req, res) => {
-//     res.send(templates.index(req.user))
-//   })
+router.get('/todos', (req, res) => {
+  Usuario.findAll()
+    .then(data => res.send(data))
+})
 
-//   router.post('/userReg/login', (req, res) => {
-//     console.log(req.body)
-// })
-
-//   router.get('/register', (req, res) => {
-//     res.send(templates.register(req.user))
-//   })
+router.post('/login', passport.authenticate('local', { successRedirect: '/usuarios/todos',failureRedirect: '/'}))
 
 
-  module.exports = router
+module.exports = router

@@ -1,22 +1,19 @@
-import { RECEIVE_MOVIE, RECEIVE_MOVIES, RECEIVE_SEARCH,RECEIVE_FAVMOVIES } from '../constants';
+import { CHECK_USER, ADD_USER, ADM_ACCESS } from '../constants';
 
 const initialState = {
-  list: [],
-  selected: {},
-  title: '',
-  favmovies: []
+  userCheck: {},
+  user: {},
+  access: ''
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case RECEIVE_MOVIE:
-      return Object.assign({}, state, { selected: action.movie });
-    case RECEIVE_MOVIES:
-      return Object.assign({}, state, { list: action.movies });
-    case RECEIVE_SEARCH:
-      return Object.assign({}, state, { title: action.title });
-    case RECEIVE_FAVMOVIES:
-      return Object.assign({}, state, { favmovies: action.favmovies });
+    case CHECK_USER:
+      return Object.assign({}, state, { userCheck: action.user });
+    case ADD_USER:
+      return Object.assign({}, state, { user: action.user });
+    case ADM_ACCESS:
+      return Object.assign({}, state, { access: action.qty });
     default:
       return state;
   }

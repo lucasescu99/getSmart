@@ -1,10 +1,9 @@
-
 const S = require('sequelize');
 const crypto = require('crypto');
 const db = require('../config/db');
 const OrdenCompra = require('./OrdenCompra');
 
-const Usuario = db.define('usuarios', {
+const Usuario = db.define('usuario', {
   nombre: {
     type: S.STRING,
     allowNull: false
@@ -38,7 +37,7 @@ const Usuario = db.define('usuarios', {
 
 Usuario.addHook('beforeCreate', (usuario) => {
   usuario.salt = crypto.randomBytes(20).toString('hex');
-  usuario.password = Usuario.hashPassword(usuario.password);
+  usuario.password = usuario.hashPassword(usuario.password);
 });
 
 // Usuario.belongsTo(OrdenCompra, { as: 'owner' });

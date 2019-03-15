@@ -1,11 +1,10 @@
 import React from 'react';
-import store from 'react-redux'
-import Home from './Home'
-import { Route, Redirect, Switch, Link } from 'react-router-dom';
-import HomeRL from './HomeRl';
+import { Route, Redirect, Switch, Link,withRouter } from 'react-router-dom';
+import HomeRL from './HomeRL';
 import Registro from '../components/Registro'
-import FormularioLogin from './FormularioLogin'
 import Login from '../components/Login'
+import GiveAdmAccess from '../components/GiveAdmAccess';
+
 
 export default class Main extends React.Component {
   render() {
@@ -15,6 +14,7 @@ export default class Main extends React.Component {
         <Route exact path="/user" render={() => (<HomeRL />)} />
         <Route exact path="/user/register" render={() => (<Registro />)} />
         <Route exact path="/user/login" render={() => (<Login />)} />
+        <Route exact path="/user/makeAdmin" render={() => (<GiveAdmAccess />)} />
         </Switch>
       </div>
     )
