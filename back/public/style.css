@@ -16,11 +16,11 @@
 }
 #userLogIn{
     width: 35px;
-    margin-left: 49px; 
+
 }
 #userLogOut{
     width: 35px;
-    margin-left: 35px;
+  
   
 }
 #input{
@@ -31,7 +31,6 @@
 }
 #carrito{
     width: 45px;
-     margin-left: 125px;
 
 }
 
@@ -82,4 +81,19 @@ margin-right: 10px;
     width: 40px;
     margin-right: 15px;
     margin-left: 10px;
+}
+#linkLogo{
+    width: 150px;
+}
+#linkLogOut{
+    width: 35px;
+    margin-left: 35px;
+}
+#linkLogIn{
+    width: 35px;
+    margin-left: 49px; 
+}
+#linkCart{
+    width: 45px;
+    margin-left: 125px;
 }
