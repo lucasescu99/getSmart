@@ -745,14 +745,9 @@ __webpack_require__.r(__webpack_exports__);
     placeholder: "Busca tu producto \uD83D\uDD0E",
     id: "input",
     onChange: handleChange
-<<<<<<< HEAD
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "cart"
-=======
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "cart",
     id: "linkCart"
->>>>>>> vistaAgregarUsuarioComoAdmin
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
     src: "/utils/carrito.svg"
