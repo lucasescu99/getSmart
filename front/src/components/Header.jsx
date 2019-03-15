@@ -7,7 +7,9 @@ export default ({handleChange}) => (
     </div>
     <Link to='login'><img id='userLogOut' src="/utils/logout.svg"></img></Link>
     <Link to='/' ><img id='logo' src="/utils/logoBlanco.jpg"></img></Link>
-    <input type='search' placeholder=' Busca tu producto 🔎' id='input' onChange = {handleChange}/>
+    <form method='GET'>
+      <input type='search' name= 'modelo' placeholder= 'Busca tu producto 🔎' id='input' onChange = {handleChange}/>
+    </form>
     <Link to='cart' ><img id='carrito' src="/utils/carrito.svg"></img></Link>
 
   </header>

@@ -734,12 +734,15 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "logo",
     src: "/utils/logoBlanco.jpg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    method: "GET"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "search",
-    placeholder: " Busca tu producto \uD83D\uDD0E",
+    name: "modelo",
+    placeholder: "Busca tu producto \uD83D\uDD0E",
     id: "input",
     onChange: handleChange
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "cart"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
@@ -1914,7 +1917,6 @@ var recibirProducto = function recibirProducto(product) {
 
 var getProducts = function getProducts(searchProduct) {
   return function (dispatch) {
-    console.log(searchProduct);
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/productos".concat(searchProduct)).then(function (res) {
       dispatch(setProducts(res.data));
     });
