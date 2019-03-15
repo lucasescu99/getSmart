@@ -17,11 +17,10 @@ export const admAccess = (qty) => ({
 });
 
 
-export const giveadmAccess = (data) => dispatch =>{
-return axios.post('/usuarios/esAdm', data)
+export const giveadmAccess = (data) => dispatch =>
+axios.post('/usuarios/esAdm', data)
     .then(res => res.data[0])
     .then(qtyUpdated => dispatch(admAccess(qtyUpdated)))
-}
 
 export const registerUser = (user) => dispatch =>
   axios.post('/usuarios/crea', { user })
@@ -31,4 +30,5 @@ export const registerUser = (user) => dispatch =>
 export const checkUserLogin = (data) => dispatch =>
   axios.post('/usuarios/login', data)
     .then(res => res.data)
-    .then(user => dispatch(checkUser(user)))
+    .then(user => { 
+      return dispatch(checkUser(user))})
