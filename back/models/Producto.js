@@ -1,10 +1,10 @@
 const S = require('sequelize');
 const db = require('../config/db');
 
-const Producto = db.define('producto', {
+const Producto = db.define('productos', {
   marca: {
     type: S.ENUM,
-    values: ['Samsung', 'Apple', 'Motorola', 'LG', 'Xiaomi', 'Huawei'],
+    values: ['Samsung', 'iPhone', 'Motorola', 'LG', 'Xiaomi', 'Huawei'],
     allowNull: false
   },
   modelo: {
@@ -29,7 +29,7 @@ const Producto = db.define('producto', {
   imagenes: {
     type: S.ARRAY(S.TEXT),
     allowNull: true
-  }
+  },
 
 });
 
