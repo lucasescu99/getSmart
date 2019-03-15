@@ -17,7 +17,7 @@ export default class Main extends React.Component {
     return (
       <div id='main' className='container-fluid'>
         <Header />
-        <NavbarContainer isAdmin = {false}/>
+        <NavbarContainer isAdmin = {true}/>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path= '/productos' render = {({ location }) => <ProductsContainer location= {location}/>}/>
