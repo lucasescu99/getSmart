@@ -1,14 +1,22 @@
-*{
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+* {
+    box-sizing : border-box;
+    font-family: 'Montserrat', sans-serif;
 
+}
+.FRUsuarios{
+    width: 650px;
+    margin: 50px auto
+}
+.FRUstitle{
+    text-align: center;
+    margin: 25px auto;
+    font-size: 50px 
 }
 .header{
     border-bottom: 1px solid black;
     display: grid;
     grid-template-columns: 0.3fr 0.3fr 1fr 1fr 0.5fr;
     align-items: center; 
-
 }
 #logo{
     width: 150px;
@@ -16,14 +24,18 @@
 }
 #userLogIn{
     width: 35px;
-
 }
 #userLogOut{
     width: 35px;
     margin-left: 8px;
   
-  
 }
+#singleProd{
+    margin: 7%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 50px;
+ }
 #input{
     border-radius: 25px;
     width: 500px;
@@ -32,7 +44,6 @@
 }
 #carrito{
     width: 45px;
-
 }
 .card{
     padding: 10px
@@ -48,6 +59,7 @@
 }
 .products{
     margin-top: 20px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px
@@ -200,4 +212,44 @@ a:hover{
 #localidadInput{
     width: 223px;
 
+.w-100{
+    margin-bottom: 15px
+}
+.carousel-caption{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.3)
+}
+
+.registro-contenedor{
+    width: 800px;
+    padding: 15px;
+    margin: 50px auto;
+    border-radius: 25px;
+    border-color: rgba(51, 51, 51, 0.6);
+    box-shadow: 0px 0px 27px 0px rgba(0,0,0,0.75);
+}
+
+.login-contenedor{
+    width: 1000px;
+    padding: 15px;
+    margin: 50px auto;
+    border-radius: 25px;
+    border-color: rgba(51, 51, 51, 0.6);
+    box-shadow: 0px 0px 27px 0px rgba(0,0,0,0.75);
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
 }

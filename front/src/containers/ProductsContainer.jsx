@@ -6,7 +6,6 @@ import Products from '../components/Products';
 
 class ProductsContainer extends React.Component {
   componentDidMount () {
-    console.log(this.props)
     this.props.getProducts(this.props.location.search);
   };
 

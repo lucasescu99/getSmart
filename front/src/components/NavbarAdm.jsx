@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,12 +9,12 @@ export default class NavbarUser extends Component {
         <div className="row"> 
           <div className="col-sm-3 nav-link">
             <div className='col-lg-12 '>
-              <Link to='/adm/products' onClick = { this.handleClick }>PRODUCTO</Link> 
+              <Link to='/productos' onClick = { this.handleClick }>PRODUCTO</Link> 
             </div>
           </div>
           <div className="col-sm-3 nav-link">
             <div className='col-lg-12 '>
-              <Link to='/adm/createProduct' onClick = { this.handleClick }>CREAR PRODUCTO</Link> 
+              <Link to='/productos/add' onClick = { this.handleClick }>CREAR PRODUCTO</Link> 
             </div>
           </div>
           <div className="col-sm-3 nav-link">
