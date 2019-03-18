@@ -14,7 +14,6 @@ const recibirProducto = (product) => ({
 });
 
 export const getProducts = (searchProduct) => dispatch => {
-  console.log(searchProduct)
   return axios.get(`/api/productos${searchProduct}`)
     .then(res => {
       dispatch(setProducts(res.data));

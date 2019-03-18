@@ -16,7 +16,8 @@ export default class AdminProd extends React.Component {
   handleChange (e) {
     this.setState(
 
-      { [e.target.name]: e.target.value
+      {
+        [e.target.name]: e.target.value
       });
   }
 
@@ -29,10 +30,14 @@ export default class AdminProd extends React.Component {
       precio: this.state.Precio,
       imagenes: this.state.Imagen.split(','),
       descripcion: this.state.Descripcion
-    });
+    })
+      .then(product => {
+        this.props.history.push(`/productos/${product.data.id}`);
+      });
   }
 
   render () {
+    console.log(this.props.e);
     return (
       <div>
         <FormCrearProd
