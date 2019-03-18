@@ -1,8 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-const Formulario = ({ onChange, onSubmit, title }) => (
+const categorias = []
+const addCat = (cat) => {
+  categorias.push(cat)
+}
+const Formulario = ({ onChange,onChange2, onSubmit, title, array }) => (
 
-  <form className='formProdAm' onSubmit={onSubmit} >
+  <form className='formProdAm' onSubmit={(e) => onSubmit(e, categorias)} >
     <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} Crear un Nuevo Producto</h1>
     <div className="row">
       <h3>Marca: </h3>
@@ -68,54 +72,15 @@ const Formulario = ({ onChange, onSubmit, title }) => (
 
     <div className="form-group">
       <h3 id='modelo' className="form-group"> * Seleccionar Categorias:</h3>
-      <h4>* Linea:</h4>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Linea" id="Liberado" value="Liberado" />
-        <label className="form-check-label" htmlFor="Liberado">Liberado</label>
-      </div>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Linea" id="Movistar" value="Movistar" />
-        <label className="form-check-label" htmlFor="Movistar">Movistar</label>
-      </div>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Linea" id="Claro" value="Claro" />
-        <label className="form-check-label" htmlFor="Claro">Claro</label>
-      </div>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Linea" id="Personal" value="Personal" />
-        <label className="form-check-label" htmlFor="Personal">Personal</label>
-      </div>
 
+      {array.map((categoria) => (
+        <div key= {categoria.id} className="form-check form-check-inline">
+          <input className="form-check-input" name='categoriesId' type="checkbox" id="inlineCheckbox1" value={categoria.id} onChange={(e) => addCat(e.target.value)}/>
+          <label className="form-check-label" htmlFor="inlineCheckbox1">{categoria.name}</label>
+        </div>
+      )
+      )}
     </div>
-
-    <div className="form-group">
-      <h4>* Gama</h4>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Gama" id="Alta" value="Alta" />
-        <label className="form-check-label" htmlFor="Alta">Alta</label>
-      </div>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Gama" id="Media" value="Media" />
-        <label className="form-check-label" htmlFor="Media">Media</label>
-      </div>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Gama" id="Baja" value="Baja" />
-        <label className="form-check-label" htmlFor="Baja">Baja</label>
-      </div>
-    </div>
-
-    <div className="form-group">
-      <h4>* Sistema operativo :</h4>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Sistema Operativo" id="iOS" value="iOS" />
-        <label className="form-check-label" htmlFor="iOS">iOS</label>
-      </div>
-      <div className="form-check form-check-inline">
-        <input onChange={onChange} className="form-check-input" type="radio" name="Sistema Operativo" id="Android" value="Android" />
-        <label className="form-check-label" htmlFor="Android">Android</label>
-      </div>
-    </div>
-
     <div className="form-group ">
       <label><h3>* Descripcion: </h3>
         <textarea onChange={onChange} name='Descripcion' rows="4" cols="50"></textarea>

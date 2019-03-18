@@ -2,6 +2,7 @@
 import React from 'react';
 import CrearProd from './CrearProd';
 import EditProd from './EditProd';
+import CreateCat from './CreateCat';
 
 // eslint-disable-next-line no-unused-vars
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
@@ -18,6 +19,7 @@ export default class Main extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
           <Route exact path= '/productos' render = {({ location }) => <ProductsContainer location= {location}/>}/>
           <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
           <Route exact path ='/productos/add' render={() => (<CrearProd />)} />

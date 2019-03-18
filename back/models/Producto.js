@@ -33,4 +33,5 @@ const Producto = db.define('productos', {
 
 });
 
+
 module.exports = Producto;
