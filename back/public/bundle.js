@@ -838,20 +838,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* eslint-disable no-unused-vars */
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var handleChange = _ref.handleChange;
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var handleSubmit = function handleSubmit(e, red) {
+    e.preventDefault(); // eslint-disable-next-line no-unused-expressions
+
+    red.push("/productos?modelo=".concat(e.target.input.value));
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "signup",
+    to: "/user/register",
     id: "linkLogIn"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogIn",
     src: "/utils/user.svg"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "login",
+    to: "/user/login",
     id: "linkLogOut"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogOut",
@@ -862,15 +868,21 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "logo",
     src: "/utils/logoBlanco.jpg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    method: "GET"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "search",
-    name: "modelo",
-    placeholder: "Busca tu producto \uD83D\uDD0E",
-    id: "input",
-    onChange: handleChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    render: function render(_ref) {
+      var history = _ref.history;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        method: "GET",
+        onSubmit: function onSubmit(e) {
+          return handleSubmit(e, history);
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        name: "modelo",
+        placeholder: "Busca tu producto \uD83D\uDD0E",
+        id: "input"
+      }));
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "cart",
     id: "linkCart"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1008,6 +1020,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1018,12 +1031,12 @@ var Login =
 function (_React$Component) {
   _inherits(Login, _React$Component);
 
-  function Login() {
+  function Login(props) {
     var _this;
 
     _classCallCheck(this, Login);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this, props));
     _this.state = {
       email: '',
       password: ''
@@ -1044,19 +1057,19 @@ function (_React$Component) {
       e.preventDefault();
       var user = this.state;
       this.props.checkUserLogin(user);
-      console.log(user, 'STAAAATE');
-      console.log(_redux_store__WEBPACK_IMPORTED_MODULE_3__["default"].getState(), 'store');
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "FRUstitle"
-      }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-contenedor"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FRUsuarios"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "FRUstitle"
+      }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group col-md-6"
@@ -1086,7 +1099,7 @@ function (_React$Component) {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
-      }, "Login"))));
+      }, "Login")))));
     }
   }]);
 
@@ -1142,6 +1155,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1234,6 +1248,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1300,6 +1315,7 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
+;
 
 /***/ }),
 
@@ -1337,7 +1353,9 @@ var Products = function Products(_ref) {
       className: "card-body"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-title"
-    }, " ", product.marca + ' ' + product.modelo, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, " ", product.marca + ' ' + product.modelo, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "card-text"
+    }, " $", product.precio, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "card-text"
     }, " ", product.descripcion, " ")))));
   });
@@ -1380,6 +1398,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable one-var */
 
 
 
@@ -1389,12 +1408,12 @@ var Registro =
 function (_React$Component) {
   _inherits(Registro, _React$Component);
 
-  function Registro() {
+  function Registro(props) {
     var _this;
 
     _classCallCheck(this, Registro);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Registro).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Registro).call(this, props));
     _this.state = {
       nombre: '',
       apellido: '',
@@ -1406,7 +1425,35 @@ function (_React$Component) {
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  }
+  } // componentDidMount () {
+  //   window.fbAsyncInit = () => {
+  //     window.FB.init({
+  //       appId: '{534343110422200}',
+  //       cookie: true,
+  //       xfbml: true,
+  //       version: '{1.0.0}'
+  //     });
+  //     window.FB.AppEvents.logPageView();
+  //   };
+  //   window.FB.Event.subscribe('auth.statusChange', response => this.statusChangeCallback(response));
+  //   this.getLoginStatus();
+  //   (function (d, s, id) {
+  //     var js, fjs = d.getElementsByTagName(s)[0];
+  //     if (d.getElementById(id)) { return; }
+  //     js = d.createElement(s); js.id = id;
+  //     js.src = 'https://connect.facebook.net/en_US/sdk.js';
+  //     fjs.parentNode.insertBefore(js, fjs);
+  //   }(document, 'script', 'facebook-jssdk'));
+  // }
+  // statusChangeCallback (response) {
+  //   this.setState(response);
+  // }
+  // getLoginStatus () {
+  //   window.FB.getLoginStatus((response) => {
+  //     this.statusChangeCallback(response);
+  //   });
+  // }
+
 
   _createClass(Registro, [{
     key: "handleChange",
@@ -1424,6 +1471,8 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "registro-contenedor"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "FRUstitle"
       }, " Completa tus datos... "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1485,10 +1534,18 @@ function (_React$Component) {
         placeholder: "Domicilio"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "botones"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         className: "btn btn-primary"
-      }, "Registro")));
+      }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fb-login-button",
+        "data-size": "large",
+        "data-button-type": "login_with",
+        "data-auto-logout-link": "true",
+        "data-use-continue-as": "true"
+      })))));
     }
   }]);
 
@@ -1600,6 +1657,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Carousel */ "./node_modules/react-bootstrap/Carousel.js");
 /* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _starRating__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./starRating */ "./front/src/components/starRating.jsx");
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1954,6 +2012,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1964,12 +2023,12 @@ var AdminUsuarios =
 function (_React$Component) {
   _inherits(AdminUsuarios, _React$Component);
 
-  function AdminUsuarios() {
+  function AdminUsuarios(props) {
     var _this;
 
     _classCallCheck(this, AdminUsuarios);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminUsuarios).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminUsuarios).call(this, props));
     _this.state = {
       nombre: '',
       apellido: '',
@@ -2013,6 +2072,7 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+;
 
 /***/ }),
 
@@ -2060,7 +2120,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 /* eslint-disable no-unused-vars */
- // eslint-disable-next-line no-unused-vars
 
 
 
@@ -2081,23 +2140,38 @@ var Main =
 function (_React$Component) {
   _inherits(Main, _React$Component);
 
-  function Main() {
+  function Main(props) {
+    var _this;
+
     _classCallCheck(this, Main);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Main).apply(this, arguments));
-  }
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Main).call(this, props));
+    _this.state = {
+      response: {}
+    };
+    return _this;
+  } // testAPI () {
+  //   window.FB.api('/me', function (response) {
+  //   });
+  // }
+  // statusChangeCallback (response) {
+  //   this.testAPI();
+  // }
+  // componentDidMount () {
+  //   window.FB.getLoginStatus((response) => {
+  //     this.statusChangeCallback(response);
+  //   });
+  // }
+
 
   _createClass(Main, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container-fluid"
-<<<<<<< HEAD
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        isAdmin: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
-=======
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], {
         isAdmin: false
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -2110,7 +2184,9 @@ function (_React$Component) {
         exact: true,
         path: "/user/register",
         render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            user: _this2.state.response
+          });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -2119,10 +2195,15 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], null);
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
->>>>>>> 07bedcb8212c3874807bbe9c2a0ea99524e2c557
         exact: true,
-        path: "/",
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
+        path: "/user/addadmin",
+        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/user/makeAdmin",
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_GiveAdmAccess__WEBPACK_IMPORTED_MODULE_13__["default"], null);
+        }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/productos",
@@ -2131,16 +2212,6 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
             location: location
           });
-        }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/usuarios/addadmin",
-        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/user/makeAdmin",
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_GiveAdmAccess__WEBPACK_IMPORTED_MODULE_13__["default"], null);
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -2165,6 +2236,10 @@ function (_React$Component) {
             prodId: match.params.id
           });
         }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/",
+        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
       })));
     }
   }]);
@@ -2290,7 +2365,6 @@ function (_React$Component) {
   _createClass(ProductsContainer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(this.props);
       this.props.getProducts(this.props.location.search);
     }
   }, {
@@ -2363,6 +2437,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable no-unused-vars */
 
 
 
@@ -2389,7 +2464,6 @@ function (_React$Component) {
     value: function render() {
       console.log(this.props);
       var product = this.props.producto;
-      var puto = this.props.prodId;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, product.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__["default"], {

@@ -82,7 +82,7 @@ app.post('/api/usuarios/login', passport.authenticate('local', { failureRedirect
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-var port = 3000;
+var port = 8080;
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, './public/index.html'));
