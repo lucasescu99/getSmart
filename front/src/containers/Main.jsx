@@ -12,6 +12,7 @@ import Header from '../components/Header';
 import SingleProd from '../containers/SingleProductCont';
 import NavbarContainer from '../containers/NavbarContainer'
 
+
 export default class Main extends React.Component {
   render () {
     return (
@@ -25,6 +26,7 @@ export default class Main extends React.Component {
           <Route exact path ='/productos/add' render={() => (<CrearProd />)} />
           <Route exact path ='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
           <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id}/>} />
+          
         </Switch>
       </div>
 

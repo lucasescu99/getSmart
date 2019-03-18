@@ -86,6 +86,65 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./front/src/components/DatosDelCliente.jsx":
+/*!**************************************************!*\
+  !*** ./front/src/components/DatosDelCliente.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-header"
+  }, "Datos del Cliente"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "list-group list-group-flush"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Nombre y apellido: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "fname",
+    className: "inputDetail",
+    id: "fullnameInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, " Email: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "email",
+    name: "email",
+    className: "inputDetail",
+    id: "emailInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Direcci\xF3n de Env\xEDo: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "address",
+    className: "inputDetail",
+    id: "addressInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Codigo Postal: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "cp",
+    className: "inputDetail",
+    id: "cpInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Localidad: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "localidad",
+    className: "inputDetail",
+    id: "localidadInput"
+  })))));
+});
+
+/***/ }),
+
 /***/ "./front/src/components/FormCrearProd.jsx":
 /*!************************************************!*\
   !*** ./front/src/components/FormCrearProd.jsx ***!
@@ -206,7 +265,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     "aria-label": "Large",
-    "aria-describedby": "inputGroup-sizing-sm"
+    "aria-describedby": "inputGroup-sizing-sm",
+    required: true
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group input-group-lg"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -220,7 +280,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     "aria-label": "Large",
-    "aria-describedby": "inputGroup-sizing-sm"
+    "aria-describedby": "inputGroup-sizing-sm",
+    required: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     style: {
       marginTop: '10px'
@@ -241,7 +302,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     id: "inputAddress",
-    placeholder: "Precio"
+    placeholder: "Precio",
+    required: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group input-group-lg",
     style: {
@@ -258,7 +320,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     id: "inputAddress",
-    placeholder: "Unid."
+    placeholder: "Unid.",
+    required: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -382,7 +445,8 @@ var Formulario = function Formulario(_ref) {
     onChange: onChange,
     name: "Descripcion",
     rows: "4",
-    cols: "50"
+    cols: "50",
+    required: true
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onSubmit: onSubmit,
     className: "btn btn-lg btn-success"
@@ -725,13 +789,17 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogIn",
     src: "/utils/user.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption"
+  }, "Registrate"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "login",
     id: "linkLogOut"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogOut",
     src: "/utils/logout.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption2"
+  }, "Ingres\xE1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -742,7 +810,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "search",
     name: "modelo",
-    placeholder: "Busca tu producto \uD83D\uDD0E",
+    placeholder: "    Busca tu producto \uD83D\uDD0E",
     id: "input",
     onChange: handleChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1512,6 +1580,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
 /* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
 /* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
+/* harmony import */ var _components_DatosDelCliente__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/DatosDelCliente */ "./front/src/components/DatosDelCliente.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1534,6 +1603,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
  // eslint-disable-next-line no-unused-vars
+
 
 
 
@@ -1602,6 +1672,10 @@ function (_React$Component) {
             prodId: match.params.id
           });
         }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
+        path: "/all",
+        component: _components_DatosDelCliente__WEBPACK_IMPORTED_MODULE_10__["default"]
       })));
     }
   }]);

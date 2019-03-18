@@ -20,6 +20,7 @@
 }
 #userLogOut{
     width: 35px;
+    margin-left: 8px;
   
   
 }
@@ -147,7 +148,7 @@ a:hover{
 }
 #linkLogOut{
     width: 35px;
-    margin-left: 35px;
+    margin-left: 26px;
 }
 #linkLogIn{
     width: 35px;
@@ -156,4 +157,47 @@ a:hover{
 #linkCart{
     width: 45px;
     margin-left: 125px;
+}
+.caption{
+    width: 35px;
+    height: 15px;
+    color: black;
+    font-size: 12px;
+    margin-left: 31px
+}
+.caption2{
+    width: 35px;
+    height: 15px;
+    color: black;
+    font-size: 12px;
+  
+}
+.card{
+    width: 18rem;
+    width: 371px;
+
+}
+.inputDetail{
+    background-color: transparent;
+    border: 0px solid;
+    color: black;
+}
+.card-header{
+    background-color: #9cbff5
+}
+#fullnameInput{
+    width: 151px;
+}
+#emailInput{
+    width: 255px;
+}
+#addressInput{
+    width: 151px;
+}
+#cpInput{
+    width: 190px;
+}
+#localidadInput{
+    width: 223px;
+
 }
