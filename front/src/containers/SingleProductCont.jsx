@@ -10,11 +10,10 @@ class SingleProd extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     const product = this.props.producto;
     return (
       <div className="container" >
-        {product.id ? <SingleProdComp producto={product}/> : <h1>Este producto no existe</h1>}
+        {product.id ? <SingleProdComp producto={product} adminInfo={this.props.isAdmin}/> : <h1>Este producto no existe</h1>}
       </div>
     );
   }

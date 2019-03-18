@@ -1637,15 +1637,21 @@ __webpack_require__.r(__webpack_exports__);
       marginTop: '60px'
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-lg-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "col-lg-5 col-sm-12"
+  }, props.adminInfo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg btn-success",
     type: "button",
     style: {
       padding: '20px'
     }
-  }, "COMPRAR!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-lg-7"
+  }, " EDITAR ") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-lg btn-success",
+    type: "button",
+    style: {
+      padding: '20px'
+    }
+  }, " COMPRAR! ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-7 col-sm-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg",
     type: "button",
@@ -2151,7 +2157,8 @@ function (_React$Component) {
         render: function render(_ref3) {
           var match = _ref3.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            prodId: match.params.id
+            prodId: match.params.id,
+            isAdmin: true
           });
         }
       })));
@@ -2416,12 +2423,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       var product = this.props.producto;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, product.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        producto: product
+        producto: product,
+        adminInfo: this.props.isAdmin
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Este producto no existe"));
     }
   }]);
