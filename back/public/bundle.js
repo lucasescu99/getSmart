@@ -867,7 +867,7 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "search",
     name: "modelo",
-    placeholder: "Busca tu producto \uD83D\uDD0E",
+    placeholder: "      Busca tu producto \uD83D\uDD0E",
     id: "input",
     onChange: handleChange
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1650,15 +1650,21 @@ __webpack_require__.r(__webpack_exports__);
       marginTop: '60px'
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-lg-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "col-lg-5 col-sm-12"
+  }, props.adminInfo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg btn-success",
     type: "button",
     style: {
       padding: '20px'
     }
-  }, "COMPRAR!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-lg-7"
+  }, " EDITAR ") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-lg btn-success",
+    type: "button",
+    style: {
+      padding: '20px'
+    }
+  }, " COMPRAR! ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-7 col-sm-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg",
     type: "button",
@@ -1954,6 +1960,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1964,12 +1971,12 @@ var AdminUsuarios =
 function (_React$Component) {
   _inherits(AdminUsuarios, _React$Component);
 
-  function AdminUsuarios() {
+  function AdminUsuarios(props) {
     var _this;
 
     _classCallCheck(this, AdminUsuarios);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminUsuarios).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminUsuarios).call(this, props));
     _this.state = {
       nombre: '',
       apellido: '',
@@ -2013,6 +2020,7 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+;
 
 /***/ }),
 
@@ -2060,7 +2068,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 /* eslint-disable no-unused-vars */
- // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 
 
 
@@ -2093,13 +2101,8 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container-fluid"
-<<<<<<< HEAD
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        isAdmin: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
-=======
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        isAdmin: false
+        isAdmin: true
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/user",
@@ -2119,7 +2122,6 @@ function (_React$Component) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], null);
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
->>>>>>> 07bedcb8212c3874807bbe9c2a0ea99524e2c557
         exact: true,
         path: "/",
         component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -2162,7 +2164,8 @@ function (_React$Component) {
         render: function render(_ref3) {
           var match = _ref3.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            prodId: match.params.id
+            prodId: match.params.id,
+            isAdmin: true
           });
         }
       })));
@@ -2387,13 +2390,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       var product = this.props.producto;
-      var puto = this.props.prodId;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, product.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        producto: product
+        producto: product,
+        adminInfo: this.props.isAdmin
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Este producto no existe"));
     }
   }]);

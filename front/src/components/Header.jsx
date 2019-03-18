@@ -8,7 +8,7 @@ export default ({handleChange}) => (
     <Link to='login' id = 'linkLogOut'><img id='userLogOut' src="/utils/logout.svg"></img></Link>
     <Link to='/' id = 'linkLogo' ><img id='logo' src="/utils/logoBlanco.jpg"></img></Link>
     <form method='GET'>
-      <input type='search' name= 'modelo' placeholder= 'Busca tu producto 🔎' id='input' onChange = {handleChange}/>
+      <input type='search' name= 'modelo' placeholder= '      Busca tu producto 🔎' id='input' onChange = {handleChange}/>
     </form>
     <Link to='cart' id = 'linkCart'><img id='carrito' src="/utils/carrito.svg"></img></Link>
 

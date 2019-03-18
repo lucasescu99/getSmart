@@ -31,7 +31,7 @@ export default class Main extends React.Component {
           <Route exact path="/user/makeAdmin" render={() => (<GiveAdmAccess />)} />
           <Route exact path='/productos/add' render={() => (<CrearProd />)} />
           <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
-          <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} />} />
+          <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={true} />} />
         </Switch>
       </div >
 
