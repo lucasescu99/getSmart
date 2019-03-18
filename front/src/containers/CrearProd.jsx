@@ -36,8 +36,10 @@ export default class AdminProd extends React.Component {
       imagenes: this.state.Imagen.split(','),
       descripcion: this.state.Descripcion,
       categorias
+    })
+      .then(product => {
+      this.props.history.push(`/productos/${product.data.id}`);
     });
-    
   }
 
   render () {

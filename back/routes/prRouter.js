@@ -15,7 +15,7 @@ router.post('/add', (req, res, next) => {
   router.put('/edit/:id', (req, res, next) => {
     modelos.Productos.findByPk(req.params.id)
       .then(producto => producto.updateAttributes(req.body))
-      .then(update => res.status(200).send('Producto modificado'))
+      .then(update => res.send(update))
       .catch(next);
   });
   router.get('/', (req, res) => {
