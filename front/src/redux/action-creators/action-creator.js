@@ -6,9 +6,9 @@ export const addUser = (user) => ({
   user,
 });
 
-export const checkUser = (user) => ({
+export const checkUser = (data) => ({
   type: CHECK_USER,
-  user,
+  data,
 });
 
 export const admAccess = (qty) => ({
@@ -16,19 +16,41 @@ export const admAccess = (qty) => ({
   qty,
 });
 
+export const setUser = (usuario) => ({
+  type: 'SET_USER',
+  user
+})
+
 
 export const giveadmAccess = (data) => dispatch =>
-axios.post('/usuarios/esAdm', data)
-    .then(res => res.data[0])
-    .then(qtyUpdated => dispatch(admAccess(qtyUpdated)))
+  axios.post('/api/usuarios/esAdm', data)
+    .then(res => {
+      return res
+    })
 
 export const registerUser = (user) => dispatch =>
-  axios.post('/usuarios/crea', { user })
+  axios.post('/api/usuarios/crea', { user })
     .then(res => res.data)
     .then(user => dispatch(addUser(user)))
 
 export const checkUserLogin = (data) => dispatch =>
-  axios.post('/usuarios/login', data)
-    .then(res => res.data)
-    .then(user => { 
-      return dispatch(checkUser(user))})
+  axios.post('/api/usuarios/login', data)
+    .then(res => {
+      console.log(res, 'reeeeeeeeeeeeeeeeeeeeeeeeeees')
+      return res.data
+    })
+    .then(data => dispatch(checkUser(data)))
+
+export const getUser = () => dispatch =>
+  axios.get('/api/usuarios/user')
+    .then(usuario =>
+      dispatch(addUser(usuario.data)))
+
+export const cookieIsAdmin = () => dispatch =>
+  axios.get('/api/usuarios/getcookies')
+    .then(cookie => cookie.userIsAdmin)
+
+// export const setUserLogin = (userCheck) => dispatch =>
+// localStorage
+//     })
+//     .then(status => dispatch(checkUser(status)))

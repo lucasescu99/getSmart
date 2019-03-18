@@ -3,11 +3,11 @@ import { giveadmAccess } from '../redux/action-creators/action-creator'
 import { connect } from 'react-redux'
 import store from '../redux/store'
 
-class giveAdmAccess extends React.Component {
+class UserAsAdmin extends React.Component {
   constructor() {
     super()
     this.state = {
-      email: '',
+    
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -25,23 +25,22 @@ class giveAdmAccess extends React.Component {
     console.log(user, 'STAAAATE')
     console.log(store.getState(), 'store')
   }
-
   render() {
-    return (<div>
-      <h1 className="FRUstitle"> Ingresa Email para sumar ADM  </h1>
-      <div className='FRUsuarios'><form onSubmit={this.handleSubmit} >
-        <div className="form-row">
-          <div className="form-group col-md-6">
-            <label htmlFor="email">E-mail</label>
-            <input name='email' onChange={this.handleChange} type="text" className="form-control" id="inputEmail4" placeholder="E-mail" />
-          </div>
+    return (
+      <form className='userAsAdm' onSubmit={this.handleSubmit}>
+        <h1>Cambio de Perfil de Usuario</h1>
+        <div>
+          <label className='labelDelAdm'>E-MAIL DE USUARIO:</label>
+          <input name='email' className='inputDelAdm' type='email' onChange={this.handleChange}  />
         </div>
-        <div className="form-row">
+        <div>
+          <img className = 'adminIcons'  src="/utils/user1.svg"></img>
+          <button className='botonesAdm btn btn-success' onSubmit={this.handleSubmit} >Hacer Administrador</button>
+          <img className = 'adminIcons' src="/utils/userdelete.svg"></img>
+          <button className='botonesAdm btn btn-danger'>Eliminar Usuario</button>
         </div>
-        <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary">Login</button>
       </form>
-      </div>
-    </div>)
+    )
   }
 }
 
@@ -52,4 +51,4 @@ const mapDispatchToProps = (dispatch) => ({
   giveadmAccess: (user) => dispatch((giveadmAccess(user)))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(giveAdmAccess);
+export default connect(mapStateToProps, mapDispatchToProps)(UserAsAdmin);

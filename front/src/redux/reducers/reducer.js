@@ -1,15 +1,21 @@
-import { CHECK_USER, ADD_USER, ADM_ACCESS } from '../constants';
+import { CHECK_USER, ADD_USER, ADM_ACCESS, RECEIVE_PRODUCT } from '../constants';
 
 const initialState = {
+  products: [],
+  selectedProd: {},
   userCheck: {},
   user: {},
   access: ''
-}
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case 'SET_PRODUCTS':
+      return Object.assign({}, state, { products: action.products });
+    case RECEIVE_PRODUCT:
+      return Object.assign({}, state, { selectedProd: action.product });
     case CHECK_USER:
-      return Object.assign({}, state, { userCheck: action.user });
+      return Object.assign({}, state, { userCheck: action.data });
     case ADD_USER:
       return Object.assign({}, state, { user: action.user });
     case ADM_ACCESS:
@@ -17,4 +23,4 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
