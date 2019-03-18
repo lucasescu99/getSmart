@@ -11,10 +11,12 @@ const Formulario = ({ onChange, onSubmit, title }) => (
           <input onChange={onChange} className="form-check-input" type="radio" name="Marca" id="iPhone" value="iPhone" />
           <label className="form-check-label" htmlFor="iPhone">iPhone</label>
         </div>
+        
         <div className="form-check form-check-inline">
           <input onChange={onChange} className="form-check-input" type="radio" name="Marca" id="Samsung" value="Samsung" />
           <label className="form-check-label" htmlFor="Samsung">Samsung</label>
         </div>
+
         <div className="form-check form-check-inline">
           <input onChange={onChange} className="form-check-input" type="radio" name="Marca" id="Motorola" value="Motorola" />
           <label className="form-check-label" htmlFor="Motorola">Motorola</label>

@@ -10,14 +10,14 @@ import Home from '../components/Home';
 import UserAsAdmin from '../components/UserAsAdmin';
 import Header from '../components/Header';
 import SingleProd from '../containers/SingleProductCont';
-import NavbarContainer from '../containers/NavbarContainer'
+import NavbarContainer from '../containers/NavbarContainer';
 
 export default class Main extends React.Component {
   render () {
     return (
       <div id='main' className='container-fluid'>
         <Header />
-        <NavbarContainer isAdmin = {false}/>
+        <NavbarContainer isAdmin = {true}/>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path= '/productos' render = {({ location }) => <ProductsContainer location= {location}/>}/>

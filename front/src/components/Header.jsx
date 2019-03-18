@@ -11,5 +11,4 @@ export default ({handleChange}) => (
     <Link to='cart' ><img id='carrito' src="/utils/carrito.svg"></img></Link>
 
   </header>
-
-)
+);
