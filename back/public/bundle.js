@@ -705,86 +705,10 @@ var Formulario = function Formulario(_ref) {
 /*!*****************************************!*\
   !*** ./front/src/components/Header.jsx ***!
   \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* eslint-disable no-unused-vars */
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var handleSubmit = function handleSubmit(e, red) {
-    e.preventDefault(); // eslint-disable-next-line no-unused-expressions
-
-    red.push("/productos?modelo=".concat(e.target.input.value));
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    className: "header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-<<<<<<< HEAD
-    to: "/user/register",
-=======
-    to: "/usuarios/registro",
->>>>>>> FRegistroU
-    id: "linkLogIn"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogIn",
-    src: "/utils/user.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-<<<<<<< HEAD
-    to: "/user/login",
-=======
-    to: "/usuarios/login",
->>>>>>> FRegistroU
-    id: "linkLogOut"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogOut",
-    src: "/utils/logout.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/",
-    id: "linkLogo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "logo",
-    src: "/utils/logoBlanco.jpg"
-<<<<<<< HEAD
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    method: "GET"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "search",
-    name: "modelo",
-    placeholder: "      Busca tu producto \uD83D\uDD0E",
-    id: "input",
-    onChange: handleChange
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-=======
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    render: function render(_ref) {
-      var history = _ref.history;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        method: "GET",
-        onSubmit: function onSubmit(e) {
-          return handleSubmit(e, history);
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        name: "modelo",
-        placeholder: "Busca tu producto \uD83D\uDD0E",
-        id: "input"
-      }));
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
->>>>>>> c50315d3130c9635315d3b39f87ba8c9c2ca0170
-    to: "cart",
-    id: "linkCart"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "carrito",
-    src: "/utils/carrito.svg"
-  })));
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/cabe/Escritorio/Bootcamp/E-Commerce/front/src/components/Header.jsx: Unexpected token (3:1)\n\n\u001b[0m \u001b[90m 1 | \u001b[39m\u001b[90m/* eslint-disable no-unused-vars */\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mReact\u001b[39m from \u001b[32m'react'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 3 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mLink\u001b[39m\u001b[33m,\u001b[39m \u001b[33mRoute\u001b[39m } from \u001b[32m'react-router-dom'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 6 | \u001b[39m\u001b[36mimport\u001b[39m { \u001b[33mLink\u001b[39m } from \u001b[32m'react-router-dom'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at Object.raise (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3831:17)\n    at Object.unexpected (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5143:16)\n    at Object.jsxParseIdentifier (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3332:12)\n    at Object.jsxParseNamespacedName (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3342:23)\n    at Object.jsxParseElementName (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3353:21)\n    at Object.jsxParseOpeningElementAt (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3438:22)\n    at Object.jsxParseElementAt (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3471:33)\n    at Object.jsxParseElement (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3540:17)\n    at Object.parseExprAtom (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:3547:19)\n    at Object.parseExprSubscripts (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5862:23)\n    at Object.parseMaybeUnary (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5842:21)\n    at Object.parseExprOps (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5729:23)\n    at Object.parseMaybeConditional (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5702:23)\n    at Object.parseMaybeAssign (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5647:21)\n    at Object.parseExpression (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:5595:23)\n    at Object.parseStatementContent (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:7378:23)\n    at Object.parseStatement (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:7243:17)\n    at Object.parseBlockOrModuleBlockBody (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:7810:25)\n    at Object.parseBlockBody (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:7797:10)\n    at Object.parseTopLevel (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:7181:10)\n    at Object.parse (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:8660:17)\n    at parse (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/parser/lib/index.js:10660:38)\n    at parser (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at process.nextTick (/home/cabe/Escritorio/Bootcamp/E-Commerce/node_modules/@babel/core/lib/transform.js:34:34)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
 
 /***/ }),
 
@@ -907,9 +831,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -920,9 +844,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var miStorage = window.localStorage;
-var sessionStorage = window.sessionStorage;
-var historyObj = window.history;
 
 var Login =
 /*#__PURE__*/
@@ -939,6 +860,8 @@ function (_React$Component) {
       email: '',
       password: ''
     };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -957,20 +880,13 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "login-contenedor"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "FRUsuarios"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-<<<<<<< HEAD
-        onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "FRUstitle"
       }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-=======
-        onSubmit: this.handleSubmit.bind(this)
+        className: "FRUsuarios"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> FRegistroU
         className: "form-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group col-md-6"
@@ -978,7 +894,7 @@ function (_React$Component) {
         htmlFor: "email"
       }, "E-mail"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         name: "email",
-        onChange: this.handleChange.bind(this),
+        onChange: this.handleChange,
         type: "text",
         className: "form-control",
         id: "inputEmail4",
@@ -989,7 +905,7 @@ function (_React$Component) {
         htmlFor: "inputPassword4"
       }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         name: "password",
-        onChange: this.handleChange.bind(this),
+        onChange: this.handleChange,
         type: "password",
         className: "form-control",
         id: "inputPassword4",
@@ -1000,7 +916,7 @@ function (_React$Component) {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
-      }, "Login")))));
+      }, "Login"))));
     }
   }]);
 
@@ -2052,6 +1968,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Home */ "./front/src/components/Home.jsx");
 /* harmony import */ var _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/UserAsAdmin */ "./front/src/components/UserAsAdmin.jsx");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_Header__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
 /* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
 /* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
@@ -2075,15 +1992,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 /* eslint-disable no-unused-vars */
-<<<<<<< HEAD
-// eslint-disable-next-line no-unused-vars
-=======
-<<<<<<< HEAD
-=======
-// eslint-disable-next-line no-unused-vars
 
->>>>>>> FRegistroU
->>>>>>> c50315d3130c9635315d3b39f87ba8c9c2ca0170
 
 
 
@@ -2104,49 +2013,32 @@ var Main =
 function (_React$Component) {
   _inherits(Main, _React$Component);
 
-  function Main(props) {
-    var _this;
-
+  function Main() {
     _classCallCheck(this, Main);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Main).call(this, props));
-    _this.state = {
-      response: {}
-    };
-    return _this;
-  } // testAPI () {
-  //   window.FB.api('/me', function (response) {
-  //   });
-  // }
-  // statusChangeCallback (response) {
-  //   this.testAPI();
-  // }
-  // componentDidMount () {
-  //   window.FB.getLoginStatus((response) => {
-  //     this.statusChangeCallback(response);
-  //   });
-  // }
-
+    return _possibleConstructorReturn(this, _getPrototypeOf(Main).apply(this, arguments));
+  }
 
   _createClass(Main, [{
     key: "render",
+    // testAPI () {
+    //   window.FB.api('/me', function (response) {
+    //   });
+    // }
+    // statusChangeCallback (response) {
+    //   this.testAPI();
+    // }
+    // componentDidMount () {
+    //   window.FB.getLoginStatus((response) => {
+    //     this.statusChangeCallback(response);
+    //   });
+    // }
     value: function render() {
-<<<<<<< HEAD
-      var _this2 = this;
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "main",
-        className: "container-fluid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        isAdmin: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-=======
       console.log(this.props);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container-fluid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
->>>>>>> FRegistroU
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10___default.a, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/usuarios",
         render: function render() {
@@ -2156,9 +2048,7 @@ function (_React$Component) {
         exact: true,
         path: "/usuarios/registro",
         render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            user: _this2.state.response
-          });
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_6__["default"], null);
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
@@ -2168,14 +2058,8 @@ function (_React$Component) {
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
-        path: "/user/addadmin",
-        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/user/makeAdmin",
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_GiveAdmAccess__WEBPACK_IMPORTED_MODULE_13__["default"], null);
-        }
+        path: "/",
+        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
         path: "/productos",
@@ -2187,13 +2071,10 @@ function (_React$Component) {
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
-<<<<<<< HEAD
-=======
         path: "/usuarios/addadmin",
         component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
         exact: true,
->>>>>>> FRegistroU
         path: "/productos/add",
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProd__WEBPACK_IMPORTED_MODULE_3__["default"], null);
@@ -2216,10 +2097,6 @@ function (_React$Component) {
             isAdmin: true
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/",
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
       })));
     }
   }]);
