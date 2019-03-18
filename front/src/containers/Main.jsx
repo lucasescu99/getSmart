@@ -14,8 +14,9 @@ import SingleProd from '../containers/SingleProductCont';
 import NavbarContainer from '../containers/NavbarContainer';
 import { getUser } from '../redux/action-creators/action-creator'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router'
 
-export default class Main extends React.Component {
+class Main extends React.Component {
     // testAPI () {
   //   window.FB.api('/me', function (response) {
   //   });
@@ -29,7 +30,6 @@ export default class Main extends React.Component {
   //   });
   // }
   render() {
-    console.log(this.props)
     return (
       <div id='main' className='container-fluid'>
         <Header />
@@ -52,14 +52,13 @@ export default class Main extends React.Component {
 };
 
 
-//// PREGUNTAR A GUILLE 
 
-// const mapStateToProps = (state) => ({
-//   user: state.user,
-//   userCheck: state.userCheck
-// });
-// const mapDispatchToProps = (dispatch) => ({
-//   getUser: () => dispatch((getUser()))
-// })
+const mapStateToProps = (state) => ({
+  user: state.user,
+  userCheck: state.userCheck
+});
+const mapDispatchToProps = (dispatch) => ({
+  getUser: () => dispatch((getUser()))
+})
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
