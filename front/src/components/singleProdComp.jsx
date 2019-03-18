@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Stars from './starRating';
 
 export default (props) => {
-  const producto = props.producto
+  const producto = props.producto;
   return (
     <div id="singleProd">
 

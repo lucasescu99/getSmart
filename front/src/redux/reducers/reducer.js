@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
     case RECEIVE_PRODUCT:
       return Object.assign({}, state, { selectedProd: action.product });
     case CHECK_USER:
-      return Object.assign({}, state, { userCheck: action.user });
+      return Object.assign({}, state, { userCheck: action.data });
     case ADD_USER:
       return Object.assign({}, state, { user: action.user });
     case ADM_ACCESS:

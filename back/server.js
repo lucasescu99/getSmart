@@ -11,15 +11,15 @@ const db = require('./config/db');
 const apiRoutes = require('./routes');
 const { Usuario } = require('./models/Usuario')
 
+app.use(cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(session({ secret: "passport" }))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use('/api', apiRoutes);
 
-app.use(cookieParser());
-app.use(passport.initialize());
-app.use(passport.session());
 
 passport.serializeUser(function (user, done) {
   done(null, user.id);
@@ -27,7 +27,10 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (id, done) {
   Usuario.findById(id)
-    .then(user => done(null, user))
+    .then(user => {
+      console.log(user, '-------------------------')
+      return done(null, user)
+    })
 }); /* esta funcion esta deserializando el usuario => como veo el usuario*/
 
 
@@ -37,7 +40,6 @@ passport.use(new LocalStrategy({
   passwordField: 'password'
 },
   function (username, password, done) {
-    console.log('passport CL', username, password)
     Usuario.findOne({ where: { email: username } })
       .then(function (user) {
         if (!user) {
@@ -52,37 +54,9 @@ passport.use(new LocalStrategy({
   }
 ));
 
-/*TODAS LAS RUTAS DE USUARIO*/
-app.post('/api/usuarios/esAdm', (req, res) => {
-  Usuario.findOne(req.body)
-    .then(data => Usuario.update({ isAdmin: false, }, { where: { isAdmin: true } }))
-    .then(data => res.send(data))
-})
-
-app.get('/api/usuarios/todos', (req, res) => {
-  if (!req.user.dataValues.nombre) res.send(404, 'cantfindthat')
-  res.send(req.user.dataValues.nombre)
-})
-
-app.get('/failurelogin', (req, res) => {
-  res.send('cantfindthat')
-})
-
-app.post('/api/usuarios/crea', (req, res) => {
-  console.log(req.body.user)
-  Usuario.create(req.body.user)
-    .then(data => res.status(201).send(data))
-})
-
-// app.post('/usuarios/login', passport.authenticate('local', { successRedirect: '/usuarios/todos',failureRedirect: '/'}))
-app.post('/api/usuarios/login', passport.authenticate('local', { failureRedirect: '/failurelogin' }),
-  function (req, res) {
-    res.redirect('/api/usuarios/todos');
-  });
-
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-var port = 3000;
+var port = 8080;
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, './public/index.html'));
