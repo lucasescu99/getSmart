@@ -12,16 +12,11 @@ import UserAsAdmin from '../components/UserAsAdmin';
 import Header from '../components/Header';
 import SingleProd from '../containers/SingleProductCont';
 import NavbarContainer from '../containers/NavbarContainer';
-import GiveAdmAccess from '../components/GiveAdmAccess';
+import { getUser } from '../redux/action-creators/action-creator'
+import { connect } from 'react-redux'
 
 export default class Main extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      response: {}
-    };
-  }
-  // testAPI () {
+    // testAPI () {
   //   window.FB.api('/me', function (response) {
   //   });
   // }
@@ -33,18 +28,19 @@ export default class Main extends React.Component {
   //     this.statusChangeCallback(response);
   //   });
   // }
-  render () {
+  render() {
+    console.log(this.props)
     return (
       <div id='main' className='container-fluid'>
         <Header />
-        <NavbarContainer isAdmin={false} />
+        <NavbarContainer/>
         <Switch>
-          <Route exact path="/user" render={() => (<HomeRL />)} />
-          <Route exact path="/user/register" render={() => (<Registro user={this.state.response}/>)} />
-          <Route exact path="/user/login" render={() => (<Login />)} />
-          <Route exact path='/user/addadmin' component={UserAsAdmin} />
-          <Route exact path="/user/makeAdmin" render={() => (<GiveAdmAccess />)} />
+          <Route exact path="/usuarios" render={() => (<HomeRL />)} />
+          <Route exact path="/usuarios/registro" render={() => (<Registro />)} />
+          <Route exact path="/usuarios/login" render={() => (<Login />)} />
+          <Route exact path='/' component={Home} />
           <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
+          <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
           <Route exact path='/productos/add' render={() => (<CrearProd />)} />
           <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
           <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} />} />
@@ -54,3 +50,16 @@ export default class Main extends React.Component {
     );
   }
 };
+
+
+//// PREGUNTAR A GUILLE 
+
+// const mapStateToProps = (state) => ({
+//   user: state.user,
+//   userCheck: state.userCheck
+// });
+// const mapDispatchToProps = (dispatch) => ({
+//   getUser: () => dispatch((getUser()))
+// })
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Main);

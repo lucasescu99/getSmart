@@ -20,40 +20,38 @@ class Login extends React.Component {
       { [e.target.name]: e.target.value });
   }
 
-  handleSubmit (e) {
-    e.preventDefault();
-    const user = this.state;
-    this.props.checkUserLogin(user);
+  handleSubmit(e) {
+    e.preventDefault()
+    const user = this.state
+    this.props.checkUserLogin(user)
   }
 
-  render () {
-    return (<div>
-      <div className="login-contenedor">
-        <div className='FRUsuarios'>
-          <form onSubmit={this.handleSubmit} >
-            <h1 className="FRUstitle"> ¡Hola! Ingresa tu Email para seguir  </h1>
-            <div className="form-row">
-              <div className="form-group col-md-6">
-                <label htmlFor="email">E-mail</label>
-                <input name='email' onChange={this.handleChange} type="text" className="form-control" id="inputEmail4" placeholder="E-mail" />
-              </div>
-              <div className="form-group col-md-6">
-                <label htmlFor="inputPassword4">Password</label>
-                <input name='password' onChange={this.handleChange} type="password" className="form-control" id="inputPassword4" placeholder="Password" />
-              </div>
-            </div>
-            <div className="form-row">
-            </div>
-            <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary">Login</button>
-          </form>
+render() {
+  return (<div>
+    <h1 className="FRUstitle"> ¡Hola! Ingresa tu Email para seguir  </h1>
+    <div className='FRUsuarios'><form onSubmit={this.handleSubmit} >
+      <div className="form-row">
+        <div className="form-group col-md-6">
+          <label htmlFor="email">E-mail</label>
+          <input name='email' onChange={this.handleChange} type="text" className="form-control" id="inputEmail4" placeholder="E-mail" />
+        </div>
+        <div className="form-group col-md-6">
+          <label htmlFor="inputPassword4">Password</label>
+          <input name='password' onChange={this.handleChange} type="password" className="form-control" id="inputPassword4" placeholder="Password" />
         </div>
       </div>
-    </div>);
-  }
+      <div className="form-row">
+      </div>
+      <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary">Login</button>
+    </form>
+    </div>
+  </div>)
+}
 }
 
 const mapStateToProps = (state) => ({
-  user: state.user
+  user: state.user,
+  userCheck: state.userCheck
 });
 const mapDispatchToProps = (dispatch) => ({
   checkUserLogin: (user) => dispatch((checkUserLogin(user)))
