@@ -206,7 +206,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     "aria-label": "Large",
-    "aria-describedby": "inputGroup-sizing-sm"
+    "aria-describedby": "inputGroup-sizing-sm",
+    required: true
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group input-group-lg"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -220,7 +221,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     "aria-label": "Large",
-    "aria-describedby": "inputGroup-sizing-sm"
+    "aria-describedby": "inputGroup-sizing-sm",
+    required: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     style: {
       marginTop: '10px'
@@ -241,7 +243,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     id: "inputAddress",
-    placeholder: "Precio"
+    placeholder: "Precio",
+    required: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "input-group input-group-lg",
     style: {
@@ -258,7 +261,8 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     id: "inputAddress",
-    placeholder: "Unid."
+    placeholder: "Unid.",
+    required: true
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
@@ -382,7 +386,8 @@ var Formulario = function Formulario(_ref) {
     onChange: onChange,
     name: "Descripcion",
     rows: "4",
-    cols: "50"
+    cols: "50",
+    required: true
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onSubmit: onSubmit,
     className: "btn btn-lg btn-success"
@@ -731,13 +736,17 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogIn",
     src: "/utils/user.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption"
+  }, "Registrate"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/usuarios/login",
     id: "linkLogOut"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogOut",
     src: "/utils/logout.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption2"
+  }, "Ingres\xE1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -753,7 +762,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         name: "modelo",
-        placeholder: "Busca tu producto \uD83D\uDD0E",
+        placeholder: "    Busca tu producto \uD83D\uDD0E",
         id: "input"
       }));
     }
@@ -1628,15 +1637,21 @@ __webpack_require__.r(__webpack_exports__);
       marginTop: '60px'
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-lg-5"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "col-lg-5 col-sm-12"
+  }, props.adminInfo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg btn-success",
     type: "button",
     style: {
       padding: '20px'
     }
-  }, "COMPRAR!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-lg-7"
+  }, " EDITAR ") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-lg btn-success",
+    type: "button",
+    style: {
+      padding: '20px'
+    }
+  }, " COMPRAR! ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-7 col-sm-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg",
     type: "button",
@@ -2142,13 +2157,10 @@ function (_React$Component) {
         render: function render(_ref3) {
           var match = _ref3.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__["default"], {
-            prodId: match.params.id
+            prodId: match.params.id,
+            isAdmin: true
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/",
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
       })));
     }
   }]);
@@ -2419,12 +2431,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       var product = this.props.producto;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, product.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        producto: product
+        producto: product,
+        adminInfo: this.props.isAdmin
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Este producto no existe"));
     }
   }]);

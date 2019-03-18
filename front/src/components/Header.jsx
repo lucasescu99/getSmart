@@ -11,14 +11,20 @@ export default () => {
   return (
     <header className='header'>
       <div>
-        <Link to='/usuarios/registro' id='linkLogIn'><img id='userLogIn' src="/utils/user.svg"></img></Link>
+        <Link to='/usuarios/registro' id='linkLogIn'>
+          <img id='userLogIn' src="/utils/user.svg"></img>
+          <span className='caption'>Registrate</span>
+        </Link>
       </div>
-      <Link to='/usuarios/login' id='linkLogOut'><img id='userLogOut' src="/utils/logout.svg"></img></Link>
+      <Link to='/usuarios/login' id='linkLogOut'>
+        <img id='userLogOut' src="/utils/logout.svg"></img>
+        <span className='caption2'>Ingresá</span>
+      </Link>
       <Link to='/' id='linkLogo' ><img id='logo' src="/utils/logoBlanco.jpg"></img></Link>
       <Route render={({ history }) => {
         return (
           <form method='GET' onSubmit={(e) => handleSubmit(e, history)}>
-            <input name='modelo' placeholder='Busca tu producto 🔎' id='input' />
+            <input name='modelo' placeholder='    Busca tu producto 🔎' id='input' />
           </form>
         );
       }
