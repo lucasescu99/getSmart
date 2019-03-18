@@ -123,9 +123,6 @@ a:hover{
   border-left: #929fab solid 1px;
 }
 
-
-
-
 .formProdAm{
     padding: 7% 20%;
 }
@@ -252,4 +249,9 @@ a:hover{
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
+}
+
+#visa{
+    width: 10px;
+    height: 10px;
 }

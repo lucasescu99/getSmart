@@ -15,6 +15,7 @@ import NavbarContainer from '../containers/NavbarContainer';
 import { getUser } from '../redux/action-creators/action-creator'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
+import MetodosDePago from '../components/MetodosDePago';
 
 class Main extends React.Component {
     // testAPI () {
@@ -44,6 +45,7 @@ class Main extends React.Component {
           <Route exact path='/productos/add' render={() => (<CrearProd />)} />
           <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
           <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={true} />} />
+          <Route path="/pagos/" component={MetodosDePago} />} />
         </Switch>
       </div >
     );
