@@ -1,30 +1,29 @@
-import React from 'react'
-import { checkUserLogin } from '../redux/action-creators/action-creator'
-import { connect } from 'react-redux'
-import store from '../redux/store'
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import { checkUserLogin } from '../redux/action-creators/action-creator';
+import { connect } from 'react-redux';
+import store from '../redux/store';
 
 class Login extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
     this.state = {
       email: '',
-      password: '',
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+      password: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     this.setState(
-      { [e.target.name]: e.target.value })
+      { [e.target.name]: e.target.value });
   }
 
   handleSubmit(e) {
     e.preventDefault()
     const user = this.state
     this.props.checkUserLogin(user)
-    console.log(user,'STAAAATE')
-    console.log(store.getState(),'store')
   }
 
   render() {
@@ -52,9 +51,10 @@ class Login extends React.Component {
 
 const mapStateToProps = (state) => ({
   user: state.user,
+  userCheck: state.userCheck
 });
 const mapDispatchToProps = (dispatch) => ({
   checkUserLogin: (user) => dispatch((checkUserLogin(user)))
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

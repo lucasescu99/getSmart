@@ -41,7 +41,7 @@ const Formulario = ({ onChange, onSubmit, title }) => (
           <div className="input-group-prepend">
             <span className="input-group-text" id="inputGroup-sizing-lg">Modelo :</span>
           </div>
-          <input name='Modelo' onChange={onChange} type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
+          <input name='Modelo' onChange={onChange} type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" required />
         </div>
       </div>
 
@@ -51,7 +51,7 @@ const Formulario = ({ onChange, onSubmit, title }) => (
       <div className="input-group-prepend">
         <span className="input-group-text" id="inputGroup-sizing-lg">URL Imagenes</span>
       </div>
-      <input onChange={onChange} name="Imagen" type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
+      <input onChange={onChange} name="Imagen" type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" required />
     </div>
     <h6 style={{ marginTop: '10px' }}>* Separar las URL con coma (',')</h6>
 
@@ -59,14 +59,14 @@ const Formulario = ({ onChange, onSubmit, title }) => (
       <div className="input-group-prepend">
         <span className="input-group-text" id="inputGroup-sizing-lg">Precio</span>
       </div>
-      <input name='Precio' onChange={onChange} type="text" className="form-control" id="inputAddress" placeholder="Precio" />
+      <input name='Precio' onChange={onChange} type="text" className="form-control" id="inputAddress" placeholder="Precio" required />
     </div>
 
     <div className="input-group input-group-lg" style={{ margin: '15px 0' }}>
       <div className="input-group-prepend">
         <span className="input-group-text" id="inputGroup-sizing-lg">Unidades</span>
       </div>
-      <input name='Stock' onChange={onChange} type="text" className="form-control" id="inputAddress" placeholder="Unid." />
+      <input name='Stock' onChange={onChange} type="text" className="form-control" id="inputAddress" placeholder="Unid." required/>
     </div>
 
     <div className="form-group">
@@ -121,7 +121,7 @@ const Formulario = ({ onChange, onSubmit, title }) => (
 
     <div className="form-group ">
       <label><h3>* Descripcion: </h3>
-        <textarea onChange={onChange} name='Descripcion' rows="4" cols="50"></textarea>
+        <textarea onChange={onChange} name='Descripcion' rows="4" cols="50" required></textarea>
       </label>
     </div>
 
