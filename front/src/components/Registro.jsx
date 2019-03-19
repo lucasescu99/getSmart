@@ -1,11 +1,14 @@
-/* eslint-disable one-var */
+/* eslint-disable no-unused-vars */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../redux/action-creators/action-creator';
+import { Link } from 'react-router-dom';
 
 class Registro extends React.Component {
   constructor (props) {
     super(props);
+
     this.state = {
       nombre: '',
       apellido: '',
@@ -14,6 +17,7 @@ class Registro extends React.Component {
       password: '',
       isAdmin: false
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -21,11 +25,13 @@ class Registro extends React.Component {
   handleChange (e) {
     this.setState(
       { [e.target.name]: e.target.value });
+    console.log(this.state)
   }
 
   handleSubmit (e) {
     e.preventDefault();
     this.props.registerUser(this.state);
+    return this.props.history.push('/usuarios/login')
   }
 
   render () {
@@ -59,7 +65,7 @@ class Registro extends React.Component {
             <div className="form-row">
             </div>
             <div className="botones">
-              <button type="submit" className="btn btn-primary" >Registrarse</button>
+             <Link to='/'><button type="submit" className="btn btn-primary" onSubmit={this.handleSubmit} >Registrarse</button></Link>
               <a className="loginBtn loginBtn--facebook" href='/api/auth/facebook'>
                 Login with Facebook
               </a>

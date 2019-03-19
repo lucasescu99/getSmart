@@ -4,11 +4,9 @@ import { connect } from 'react-redux'
 import store from '../redux/store'
 
 class UserAsAdmin extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-    
-    }
+  constructor(props) {
+    super(props);
+    this.state = {};
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -22,9 +20,8 @@ class UserAsAdmin extends React.Component {
     e.preventDefault()
     const user = this.state
     this.props.giveadmAccess(user)
-    console.log(user, 'STAAAATE')
-    console.log(store.getState(), 'store')
   }
+  
   render() {
     return (
       <form className='userAsAdm' onSubmit={this.handleSubmit}>

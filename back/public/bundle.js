@@ -1248,6 +1248,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1268,7 +1269,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-/* eslint-disable one-var */
+/* eslint-disable no-unused-vars */
+
 
 
 
@@ -1301,12 +1303,14 @@ function (_React$Component) {
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
+      console.log(this.state);
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
       this.props.registerUser(this.state);
+      return this.props.history.push('/usuarios/login');
     }
   }, {
     key: "render",
@@ -1378,8 +1382,11 @@ function (_React$Component) {
         className: "form-row"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "botones"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
+<<<<<<< HEAD
         className: "btn btn-primary"
       }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--facebook",
@@ -1388,6 +1395,11 @@ function (_React$Component) {
         className: "loginBtn loginBtn--google",
         href: "/api/auth/google"
       }, "Login with Google")))));
+=======
+        className: "btn btn-primary",
+        onSubmit: this.handleSubmit
+      }, "Registrarse"))))));
+>>>>>>> prueba
     }
   }]);
 
@@ -1456,12 +1468,12 @@ var UserAsAdmin =
 function (_React$Component) {
   _inherits(UserAsAdmin, _React$Component);
 
-  function UserAsAdmin() {
+  function UserAsAdmin(props) {
     var _this;
 
     _classCallCheck(this, UserAsAdmin);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this, props));
     _this.state = {};
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1479,8 +1491,6 @@ function (_React$Component) {
       e.preventDefault();
       var user = this.state;
       this.props.giveadmAccess(user);
-      console.log(user, 'STAAAATE');
-      console.log(_redux_store__WEBPACK_IMPORTED_MODULE_3__["default"].getState(), 'store');
     }
   }, {
     key: "render",
@@ -2237,15 +2247,40 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/registro",
+<<<<<<< HEAD
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+=======
+<<<<<<< HEAD
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+=======
+        render: function render(_ref2) {
+          var history = _ref2.history;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            history: history
+          });
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
+>>>>>>> prueba
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/login",
+<<<<<<< HEAD
         render: function render(_ref2) {
           var history = _ref2.history,
               location = _ref2.location;
+=======
+<<<<<<< HEAD
+        render: function render(_ref2) {
+          var history = _ref2.history,
+              location = _ref2.location;
+=======
+        render: function render(_ref3) {
+          var history = _ref3.history,
+              location = _ref3.location;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
+>>>>>>> prueba
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], {
             history: history,
             location: location
@@ -2264,8 +2299,18 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos",
+<<<<<<< HEAD
         render: function render(_ref3) {
           var location = _ref3.location;
+=======
+<<<<<<< HEAD
+        render: function render(_ref3) {
+          var location = _ref3.location;
+=======
+        render: function render(_ref4) {
+          var location = _ref4.location;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
+>>>>>>> prueba
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
             location: location
           });
@@ -2283,16 +2328,36 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
+<<<<<<< HEAD
         render: function render(_ref4) {
           var match = _ref4.match;
+=======
+<<<<<<< HEAD
+        render: function render(_ref4) {
+          var match = _ref4.match;
+=======
+        render: function render(_ref5) {
+          var match = _ref5.match;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
+>>>>>>> prueba
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
             prodId: match.params.id
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
+<<<<<<< HEAD
         render: function render(_ref5) {
           var match = _ref5.match;
+=======
+<<<<<<< HEAD
+        render: function render(_ref5) {
+          var match = _ref5.match;
+=======
+        render: function render(_ref6) {
+          var match = _ref6.match;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
+>>>>>>> prueba
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
@@ -2405,19 +2470,9 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    checkUserLogin: function (_checkUserLogin) {
-      function checkUserLogin(_x) {
-        return _checkUserLogin.apply(this, arguments);
-      }
-
-      checkUserLogin.toString = function () {
-        return _checkUserLogin.toString();
-      };
-
-      return checkUserLogin;
-    }(function (user) {
-      return dispatch(checkUserLogin(user));
-    })
+    checkUserLogin: function checkUserLogin(user) {
+      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_5__["checkUserLogin"])(user));
+    }
   };
 };
 
