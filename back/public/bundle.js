@@ -1022,11 +1022,13 @@ function (_React$Component) {
         placeholder: "Password"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        to: "/"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
-      }, "Login"))));
+      }, "Login")))));
     }
   }]);
 
@@ -1306,6 +1308,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1326,7 +1329,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-/* eslint-disable one-var */
+/* eslint-disable no-unused-vars */
+
 
 
 
@@ -1353,40 +1357,13 @@ function (_React$Component) {
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // componentDidMount () {
-  //   window.fbAsyncInit = () => {
-  //     window.FB.init({
-  //       appId: '{534343110422200}',
-  //       cookie: true,
-  //       xfbml: true,
-  //       version: '{1.0.0}'
-  //     });
-  //     window.FB.AppEvents.logPageView();
-  //   };
-  //   window.FB.Event.subscribe('auth.statusChange', response => this.statusChangeCallback(response));
-  //   this.getLoginStatus();
-  //   (function (d, s, id) {
-  //     var js, fjs = d.getElementsByTagName(s)[0];
-  //     if (d.getElementById(id)) { return; }
-  //     js = d.createElement(s); js.id = id;
-  //     js.src = 'https://connect.facebook.net/en_US/sdk.js';
-  //     fjs.parentNode.insertBefore(js, fjs);
-  //   }(document, 'script', 'facebook-jssdk'));
-  // }
-  // statusChangeCallback (response) {
-  //   this.setState(response);
-  // }
-  // getLoginStatus () {
-  //   window.FB.getLoginStatus((response) => {
-  //     this.statusChangeCallback(response);
-  //   });
-  // }
-
+  }
 
   _createClass(Registro, [{
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
+      console.log(this.state);
     }
   }, {
     key: "handleSubmit",
@@ -1464,16 +1441,13 @@ function (_React$Component) {
         className: "form-row"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "botones"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-        className: "btn btn-primary"
-      }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fb-login-button",
-        "data-size": "large",
-        "data-button-type": "login_with",
-        "data-auto-logout-link": "true",
-        "data-use-continue-as": "true"
-      })))));
+        className: "btn btn-primary",
+        onSubmit: this.handleSubmit
+      }, "Registrarse"))))));
     }
   }]);
 
