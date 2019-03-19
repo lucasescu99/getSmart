@@ -1003,11 +1003,23 @@ function (_React$Component) {
         placeholder: "Password"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "botones"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
+<<<<<<< HEAD
       }, "Login"))));
+=======
+      }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--facebook",
+        href: "/api/auth/facebook"
+      }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--google",
+        href: "/api/auth/google"
+      }, "Login with Google"))))));
+>>>>>>> logueoFacebook
     }
   }]);
 
@@ -1372,35 +1384,7 @@ function (_React$Component) {
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // componentDidMount () {
-  //   window.fbAsyncInit = () => {
-  //     window.FB.init({
-  //       appId: '{534343110422200}',
-  //       cookie: true,
-  //       xfbml: true,
-  //       version: '{1.0.0}'
-  //     });
-  //     window.FB.AppEvents.logPageView();
-  //   };
-  //   window.FB.Event.subscribe('auth.statusChange', response => this.statusChangeCallback(response));
-  //   this.getLoginStatus();
-  //   (function (d, s, id) {
-  //     var js, fjs = d.getElementsByTagName(s)[0];
-  //     if (d.getElementById(id)) { return; }
-  //     js = d.createElement(s); js.id = id;
-  //     js.src = 'https://connect.facebook.net/en_US/sdk.js';
-  //     fjs.parentNode.insertBefore(js, fjs);
-  //   }(document, 'script', 'facebook-jssdk'));
-  // }
-  // statusChangeCallback (response) {
-  //   this.setState(response);
-  // }
-  // getLoginStatus () {
-  //   window.FB.getLoginStatus((response) => {
-  //     this.statusChangeCallback(response);
-  //   });
-  // }
-
+  }
 
   _createClass(Registro, [{
     key: "handleChange",
@@ -1486,13 +1470,13 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         className: "btn btn-primary"
-      }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fb-login-button",
-        "data-size": "large",
-        "data-button-type": "login_with",
-        "data-auto-logout-link": "true",
-        "data-use-continue-as": "true"
-      })))));
+      }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--facebook",
+        href: "/api/auth/facebook"
+      }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--google",
+        href: "/api/auth/google"
+      }, "Login with Google")))));
     }
   }]);
 
