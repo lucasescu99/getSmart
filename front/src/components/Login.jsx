@@ -3,6 +3,7 @@ import React from 'react';
 import { checkUserLogin } from '../redux/action-creators/action-creator';
 import { connect } from 'react-redux';
 import store from '../redux/store';
+import { withRouter } from 'react-router-dom'
 
 class Login extends React.Component {
   constructor(props) {
@@ -20,13 +21,17 @@ class Login extends React.Component {
       { [e.target.name]: e.target.value });
   }
 
-  handleSubmit(e) {
-    e.preventDefault()
-    const user = this.state
+  handleSubmit (e) {
+    e.preventDefault();
+    const user = this.state;
     this.props.checkUserLogin(user)
+      .then(() => {
+        this.props.history.push('/');
+      })
+    ;
   }
 
-  render() {
+  render () {
     return (<div>
       <h1 className="FRUstitle"> ¡Hola! Ingresa tu Email para seguir  </h1>
       <div className='FRUsuarios'><form onSubmit={this.handleSubmit} >
@@ -42,10 +47,10 @@ class Login extends React.Component {
         </div>
         <div className="form-row">
         </div>
-        <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary">Login</button>
+        <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary" >Login</button>
       </form>
       </div>
-    </div>)
+    </div>);
   }
 }
 
@@ -57,4 +62,4 @@ const mapDispatchToProps = (dispatch) => ({
   checkUserLogin: (user) => dispatch((checkUserLogin(user)))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
