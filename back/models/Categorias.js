@@ -3,11 +3,13 @@ const db = require ('../config/db');
 
 
 const Categorias = db.define('categorias', {
-    tag: {
+    name: {
         type:S.STRING,
         allowNull: false,
     }
 })
+
+
 
 
 module.exports = Categorias

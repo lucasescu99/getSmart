@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Stars from './starRating';
+import { Link } from 'react-router-dom';
 
 export default (props) => {
-  const producto = props.producto
+  const producto = props.producto;
+  console.log(props);
   return (
     <div id="singleProd">
 
@@ -24,8 +27,13 @@ export default (props) => {
           </div>
 
           <div className="row" style={{ marginTop: '60px' }}>
-            <div className="col-lg-5"><button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} >COMPRAR!</button></div>
-            <div className="col-lg-7"><button className="btn btn-lg" type="button" style={{ color: '#28a745', borderColor: '#28a745', padding: '20px' }}>Agregar al Carrito</button></div>
+            <div className="col-lg-5 col-sm-12">
+              {props.adminInfo
+                ? <Link to={`/productos/edit/${producto.id}`}> <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px', margin: '7px' }} > EDITAR </button> </Link>
+                : <Link to={`/checkout/${producto.id}`}><button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} > COMPRAR! </button> </Link>}
+            </div>
+
+            <div className="col-lg-7 col-sm-12"><button className="btn btn-lg" type="button" style={{ color: '#28a745', borderColor: '#28a745', padding: '20px' }}>Agregar al Carrito</button></div>
           </div>
 
         </div>
@@ -48,16 +56,24 @@ export default (props) => {
       </div>
 
       <div className="row">
-        <h3><strong>Descripción : </strong></h3>
-        <h5>{producto.descripcion}</h5>
+        <div className="col-lg-6 col-xs-12">
+          <h3><strong>Descripción : </strong></h3>
+          <h5>{producto.descripcion}</h5>
+        </div>
       </div>
 
       <div className="row" style={{}}>
-        <h3><strong>Reviews :</strong></h3><br />
-        <h5 className="col-lg-12"><strong>UsuarioX </strong>dijo :
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h5>
+        <div className="col-lg-6 col-xs-12">
+          <h4><strong>Categorias :</strong></h4>
+          <h6 className="col-lg-12">{}</h6>
+        </div>
+        <div className="col-lg-6 col-xs-12">
+          <h4><strong>Reviews :</strong></h4><br />
+          <h6 className="col-lg-12"><strong>UsuarioX </strong>dijo :
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
+        </div>
       </div>
 
     </div>
-  )
-} 
+  );
+};
