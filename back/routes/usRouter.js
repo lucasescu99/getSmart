@@ -4,12 +4,11 @@ const { Usuario } = require('../models/Usuario');
 const passport = require('passport');
 
 router.post('/esAdm', (req, res) => {
-  console.log(req.body, '000000000000000000000000000000');
   Usuario.findOne({ where: { email: req.body.email } })
     .then(data => {
       return data.update({ isAdmin: true }, { where: { isAdmin: false } });
     })
-    .then(data => res.send(data));
+    .then(data => console.log(data));
 });
 
 router.get('/todos', (req, res) => {
