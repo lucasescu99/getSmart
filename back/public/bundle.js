@@ -109,7 +109,6 @@ var addCat = function addCat(cat) {
 
 var Formulario = function Formulario(_ref) {
   var onChange = _ref.onChange,
-      onChange2 = _ref.onChange2,
       _onSubmit = _ref.onSubmit,
       title = _ref.title,
       array = _ref.array;
@@ -329,8 +328,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Formulario = function Formulario(_ref) {
-  var productoAnterior = _ref.productoAnterior,
-      onChange = _ref.onChange,
+  var onChange = _ref.onChange,
       onSubmit = _ref.onSubmit,
       title = _ref.title;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -387,12 +385,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* eslint-disable no-unused-vars */
 
+var categorias = [];
+
+var addCat = function addCat(cat) {
+  categorias.push(cat);
+};
 
 var Formulario = function Formulario(_ref) {
   var productoAnterior = _ref.productoAnterior,
       onChange = _ref.onChange,
       onSubmit = _ref.onSubmit,
-      title = _ref.title;
+      title = _ref.title,
+      array = _ref.array;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "formProdAm",
     onSubmit: onSubmit
@@ -403,7 +407,7 @@ var Formulario = function Formulario(_ref) {
       borderBottom: '1px solid black',
       paddingBottom: '20px'
     }
-  }, title, " Crear Categoria:  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, title, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Editar producto: "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " '", productoAnterior && productoAnterior.marca, "  ", productoAnterior && productoAnterior.modelo, "'  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Marca: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown form-group col-lg-9 "
@@ -553,119 +557,26 @@ var Formulario = function Formulario(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     id: "modelo",
     className: "form-group"
-  }, " * Seleccionar Categorias:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "* Linea:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Liberado",
-    value: "Liberado"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Liberado"
-  }, "Liberado")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Movistar",
-    value: "Movistar"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Movistar"
-  }, "Movistar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Claro",
-    value: "Claro"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Claro"
-  }, "Claro")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Personal",
-    value: "Personal"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Personal"
-  }, "Personal"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, " * Seleccionar Categorias:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "* Gama"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Gama",
-    id: "Alta",
-    value: "Alta"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Alta"
-  }, "Alta")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Gama",
-    id: "Media",
-    value: "Media"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Media"
-  }, "Media")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Gama",
-    id: "Baja",
-    value: "Baja"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Baja"
-  }, "Baja"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "* Sistema operativo :"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Sistema Operativo",
-    id: "iOS",
-    value: "iOS"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "iOS"
-  }, "iOS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Sistema Operativo",
-    id: "Android",
-    value: "Android"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Android"
-  }, "Android"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), array.map(function (categoria) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: categoria.id,
+      className: "form-check form-check-inline"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "form-check-input",
+      name: "categoriesId",
+      type: "checkbox",
+      id: "inlineCheckbox1",
+      value: categoria.id,
+      onChange: function onChange(e) {
+        return addCat(e.target.value);
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "form-check-label",
+      htmlFor: "inlineCheckbox1"
+    }, categoria.name));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-group "
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "* Descripcion: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
     onChange: onChange,
@@ -1003,11 +914,23 @@ function (_React$Component) {
         placeholder: "Password"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "botones"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
+<<<<<<< HEAD
       }, "Login"))));
+=======
+      }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--facebook",
+        href: "/api/auth/facebook"
+      }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--google",
+        href: "/api/auth/google"
+      }, "Login with Google"))))));
+>>>>>>> logueoFacebook
     }
   }]);
 
@@ -1372,35 +1295,7 @@ function (_React$Component) {
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // componentDidMount () {
-  //   window.fbAsyncInit = () => {
-  //     window.FB.init({
-  //       appId: '{534343110422200}',
-  //       cookie: true,
-  //       xfbml: true,
-  //       version: '{1.0.0}'
-  //     });
-  //     window.FB.AppEvents.logPageView();
-  //   };
-  //   window.FB.Event.subscribe('auth.statusChange', response => this.statusChangeCallback(response));
-  //   this.getLoginStatus();
-  //   (function (d, s, id) {
-  //     var js, fjs = d.getElementsByTagName(s)[0];
-  //     if (d.getElementById(id)) { return; }
-  //     js = d.createElement(s); js.id = id;
-  //     js.src = 'https://connect.facebook.net/en_US/sdk.js';
-  //     fjs.parentNode.insertBefore(js, fjs);
-  //   }(document, 'script', 'facebook-jssdk'));
-  // }
-  // statusChangeCallback (response) {
-  //   this.setState(response);
-  // }
-  // getLoginStatus () {
-  //   window.FB.getLoginStatus((response) => {
-  //     this.statusChangeCallback(response);
-  //   });
-  // }
-
+  }
 
   _createClass(Registro, [{
     key: "handleChange",
@@ -1486,13 +1381,13 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         className: "btn btn-primary"
-      }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "fb-login-button",
-        "data-size": "large",
-        "data-button-type": "login_with",
-        "data-auto-logout-link": "true",
-        "data-use-continue-as": "true"
-      })))));
+      }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--facebook",
+        href: "/api/auth/facebook"
+      }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "loginBtn loginBtn--google",
+        href: "/api/auth/google"
+      }, "Login with Google")))));
     }
   }]);
 
@@ -1892,8 +1787,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormCrearProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
         array: this.state.categorias,
         onSubmit: this.handleSubmit,
-        onChange: this.handleChange,
-        onChange2: this.handleChange2
+        onChange: this.handleChange
       }));
     }
   }]);
@@ -2047,7 +1941,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminProd).call(this));
     _this.state = {
-      productoAnterior: {} // productoActual: {}
+      productoAnterior: {},
+      categorias: [] // productoActual: {}
 
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
@@ -2063,6 +1958,12 @@ function (_React$Component) {
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/productos/".concat(this.props.prodId)).then(function (producto) {
         return _this2.setState({
           productoAnterior: producto.data
+        });
+      });
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/categorias/get') // .then(categorias => console.log(categorias.data))
+      .then(function (categorias) {
+        return _this2.setState({
+          categorias: categorias.data
         });
       });
     }
@@ -2096,6 +1997,7 @@ function (_React$Component) {
           Marca = _this$state.Marca,
           Modelo = _this$state.Modelo;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormEditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        array: this.state.categorias,
         productoAnterior: productoAnterior,
         marca: Marca,
         modelo: Modelo,
