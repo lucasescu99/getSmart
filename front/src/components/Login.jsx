@@ -6,7 +6,7 @@ import store from '../redux/store';
 import { withRouter } from 'react-router-dom'
 
 class Login extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       email: '',
@@ -16,7 +16,7 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e) {
+  handleChange (e) {
     this.setState(
       { [e.target.name]: e.target.value });
   }
