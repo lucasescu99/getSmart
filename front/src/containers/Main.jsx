@@ -18,9 +18,9 @@ import NavbarContainer from '../containers/NavbarContainer';
 import { getUser, checkUserLogin, fetchUser } from '../redux/action-creators/action-creator';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import MetodosDePago from '../components/MetodosDePago';
-import DetalleDeCompra from '../components/DetalleDeCompra';
-import Checkout from '../components/Checkout'
+// import MetodosDePago from '../components/MetodosDePago';
+// import DetalleDeCompra from '../components/DetalleDeCompra';
+import Checkout from '../components/Checkout';
 import TarjetaDeCredito from '../components/TarjetaDeCredito';
 
 class Main extends React.Component {
