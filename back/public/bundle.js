@@ -882,13 +882,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "FRUstitle"
-      }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-contenedor"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FRUsuarios"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "FRUstitle"
+      }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group col-md-6"
@@ -920,17 +922,13 @@ function (_React$Component) {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
-<<<<<<< HEAD
-      }, "Login"))));
-=======
       }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--facebook",
         href: "/api/auth/facebook"
       }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--google",
         href: "/api/auth/google"
-      }, "Login with Google"))))));
->>>>>>> logueoFacebook
+      }, "Login with Google")))));
     }
   }]);
 
