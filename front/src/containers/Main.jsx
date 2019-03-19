@@ -15,19 +15,14 @@ import UserAsAdmin from '../components/UserAsAdmin';
 import Header from '../components/Header';
 import SingleProd from '../containers/SingleProductCont';
 import NavbarContainer from '../containers/NavbarContainer';
-<<<<<<< HEAD
 import { getUser, checkUserLogin, fetchUser } from '../redux/action-creators/action-creator';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import MetodosDePago from '../components/MetodosDePago';
-
-=======
-import { getUser } from '../redux/action-creators/action-creator'
-import { connect } from 'react-redux'
-import { withRouter } from 'react-router'
 import DetalleDeCompra from '../components/DetalleDeCompra';
 import Checkout from '../components/Checkout'
->>>>>>> metodosdepago
+import TarjetaDeCredito from '../components/TarjetaDeCredito';
+
 class Main extends React.Component {
   constructor (props) {
     super(props);
@@ -64,6 +59,7 @@ class Main extends React.Component {
             <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
             <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
             <Route path="/pagos/" component={Checkout} />} />
+            <Route exact path='/tarjeta' component={TarjetaDeCredito} />
           </Switch>
         </div >
     );

@@ -425,3 +425,58 @@ margin-left:30px;
     grid-template-columns: 0.3fr 1fr;
     height: 0px;
 }
+}
+#vencimiento{
+    width: 185px;
+}
+#passwordHelpBlock{
+    width: 261px
+}
+#dni{
+    width: 300px;
+}
+#dorsoTarjeta{
+    width: 50px;
+}
+
+.codigo{
+    width: 150px;
+}
+.tarjeta{
+    display: grid;
+    grid-template-rows: 1fr 1.3fr 1.3fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    /* justify-items: center;  */
+}
+.datosTarjeta{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+}
+#metodo{
+    font-size: 30px
+}
+#datos{
+    font-size: 20px
+}
+.numerodetarjeta{
+    width: 820px;
+    margin-left: 35px;
+   
+}
+#dni{
+    margin-left: 100px
+}
+.fecha{
+    margin-left: 10px
+}
+.note{
+margin-left: 160px;
+}
+.finCompra{
+    width: 210px;
+    height: 50px;
+    border: 1px solid black;
+    float: right;
+    display: grid;
+    margin: 10px 20% 0 60% ;
+}
