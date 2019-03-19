@@ -10,7 +10,8 @@ export default class AdminProd extends React.Component {
   constructor () {
     super();
     this.state = {
-      productoAnterior: {}
+      productoAnterior: {},
+      categorias: []
       // productoActual: {}
 
     };
@@ -21,12 +22,16 @@ export default class AdminProd extends React.Component {
   componentDidMount () {
     axios.get(`/api/productos/${this.props.prodId}`)
       .then(producto => this.setState({ productoAnterior: producto.data }));
+    axios.get('/api/categorias/get')
+      // .then(categorias => console.log(categorias.data))
+      .then(categorias => this.setState({ categorias: categorias.data }));
   }
 
   handleChange (e) {
     this.setState(
       {
-        [e.target.name]: e.target.value }
+        [e.target.name]: e.target.value
+      }
     );
   }
 
@@ -50,8 +55,9 @@ export default class AdminProd extends React.Component {
     return (
       <div>
         <FormEditProd
+          array={this.state.categorias}
           productoAnterior={productoAnterior}
-          marca= {Marca}
+          marca={Marca}
           modelo={Modelo}
           onSubmit={this.handleSubmit}
           onChange={this.handleChange} />
