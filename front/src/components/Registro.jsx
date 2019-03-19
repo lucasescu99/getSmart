@@ -31,6 +31,7 @@ class Registro extends React.Component {
   handleSubmit (e) {
     e.preventDefault();
     this.props.registerUser(this.state);
+    return this.props.history.push('/usuarios/login')
   }
 
   render () {

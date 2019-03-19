@@ -1387,6 +1387,7 @@ function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       this.props.registerUser(this.state);
+      return this.props.history.push('/usuarios/login');
     }
   }, {
     key: "render",
@@ -1533,12 +1534,12 @@ var UserAsAdmin =
 function (_React$Component) {
   _inherits(UserAsAdmin, _React$Component);
 
-  function UserAsAdmin() {
+  function UserAsAdmin(props) {
     var _this;
 
     _classCallCheck(this, UserAsAdmin);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this, props));
     _this.state = {};
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1556,8 +1557,6 @@ function (_React$Component) {
       e.preventDefault();
       var user = this.state;
       this.props.giveadmAccess(user);
-      console.log(user, 'STAAAATE');
-      console.log(_redux_store__WEBPACK_IMPORTED_MODULE_3__["default"].getState(), 'store');
     }
   }, {
     key: "render",
@@ -2307,15 +2306,29 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/registro",
+<<<<<<< HEAD
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+=======
+        render: function render(_ref2) {
+          var history = _ref2.history;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            history: history
+          });
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/login",
+<<<<<<< HEAD
         render: function render(_ref2) {
           var history = _ref2.history,
               location = _ref2.location;
+=======
+        render: function render(_ref3) {
+          var history = _ref3.history,
+              location = _ref3.location;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], {
             history: history,
             location: location
@@ -2334,8 +2347,13 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos",
+<<<<<<< HEAD
         render: function render(_ref3) {
           var location = _ref3.location;
+=======
+        render: function render(_ref4) {
+          var location = _ref4.location;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
             location: location
           });
@@ -2353,16 +2371,26 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
+<<<<<<< HEAD
         render: function render(_ref4) {
           var match = _ref4.match;
+=======
+        render: function render(_ref5) {
+          var match = _ref5.match;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
             prodId: match.params.id
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
+<<<<<<< HEAD
         render: function render(_ref5) {
           var match = _ref5.match;
+=======
+        render: function render(_ref6) {
+          var match = _ref6.match;
+>>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
