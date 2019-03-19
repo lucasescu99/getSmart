@@ -18,7 +18,7 @@ import { withRouter } from 'react-router'
 import MetodosDePago from '../components/MetodosDePago';
 
 class Main extends React.Component {
-    // testAPI () {
+  // testAPI () {
   //   window.FB.api('/me', function (response) {
   //   });
   // }
@@ -30,11 +30,11 @@ class Main extends React.Component {
   //     this.statusChangeCallback(response);
   //   });
   // }
-  render() {
+  render () {
     return (
       <div id='main' className='container-fluid'>
         <Header />
-        <NavbarContainer/>
+        <NavbarContainer />
         <Switch>
           <Route exact path="/usuarios" render={() => (<HomeRL />)} />
           <Route exact path="/usuarios/registro" render={() => (<Registro />)} />
@@ -42,8 +42,8 @@ class Main extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
           <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
-          <Route exact path='/productos/add' render={({ history }) => (<CrearProd history = { history}/>)} />
-          <Route exact path='/productos/edit/:id' render={({ match, history }) => (<EditProd history={ history } prodId={match.params.id} />)} />
+          <Route exact path='/productos/add' render={({ history }) => (<CrearProd history={history} />)} />
+          <Route exact path='/productos/edit/:id' render={({ match, history }) => (<EditProd history={history} prodId={match.params.id} />)} />
           <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={true} />} />
           <Route path="/pagos/" component={MetodosDePago} />} />
         </Switch>
@@ -52,14 +52,12 @@ class Main extends React.Component {
   }
 };
 
-
-
 const mapStateToProps = (state) => ({
   user: state.user,
   userCheck: state.userCheck
 });
 const mapDispatchToProps = (dispatch) => ({
   getUser: () => dispatch((getUser()))
-})
+});
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

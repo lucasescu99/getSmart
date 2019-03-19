@@ -208,14 +208,9 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     "aria-label": "Large",
-<<<<<<< HEAD
-    "aria-describedby": "inputGroup-sizing-sm"
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-=======
     "aria-describedby": "inputGroup-sizing-sm",
     required: true
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "input-group input-group-lg"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "input-group-prepend"
@@ -228,14 +223,9 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     "aria-label": "Large",
-<<<<<<< HEAD
-    "aria-describedby": "inputGroup-sizing-sm"
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h6", {
-=======
     "aria-describedby": "inputGroup-sizing-sm",
     required: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h6", {
     style: {
       marginTop: '10px'
     }
@@ -255,14 +245,9 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     id: "inputAddress",
-<<<<<<< HEAD
-    placeholder: "Precio"
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-=======
     placeholder: "Precio",
     required: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "input-group input-group-lg",
     style: {
       margin: '15px 0'
@@ -278,14 +263,9 @@ var Formulario = function Formulario(_ref) {
     type: "text",
     className: "form-control",
     id: "inputAddress",
-<<<<<<< HEAD
-    placeholder: "Unid."
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-=======
     placeholder: "Unid.",
     required: true
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "form-group"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     id: "modelo",
@@ -408,14 +388,9 @@ var Formulario = function Formulario(_ref) {
     onChange: onChange,
     name: "Descripcion",
     rows: "4",
-<<<<<<< HEAD
-    cols: "50"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-=======
     cols: "50",
     required: true
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
     onSubmit: onSubmit,
     className: "btn btn-lg btn-success"
   }, "SUBMIT"));
@@ -758,29 +733,6 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-<<<<<<< HEAD
-    to: "signup"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogIn",
-    src: "/utils/user.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "login"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogOut",
-    src: "/utils/logout.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "logo",
-    src: "/utils/logoBlanco.jpg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "search",
-    placeholder: " Busca tu producto \uD83D\uDD0E",
-    id: "input",
-    onChange: handleChange
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "cart"
-=======
     to: "/usuarios/registro",
     id: "linkLogIn"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -819,7 +771,6 @@ __webpack_require__.r(__webpack_exports__);
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "cart",
     id: "linkCart"
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
     src: "/utils/carrito.svg"
@@ -1763,12 +1714,20 @@ __webpack_require__.r(__webpack_exports__);
     }));
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Descripci\xF3n : ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, producto.descripcion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 col-xs-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Descripci\xF3n : ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, producto.descripcion))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     style: {}
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Reviews :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 col-xs-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Categorias :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "col-lg-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "dijo : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.")));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 col-xs-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Reviews :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "col-lg-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "dijo : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos."))));
 });
 
 /***/ }),
@@ -2154,13 +2113,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 /* eslint-disable no-unused-vars */
-<<<<<<< HEAD
-// eslint-disable-next-line no-unused-vars
-=======
 
 
 
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
 
 
 
@@ -2205,13 +2160,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container-fluid"
-<<<<<<< HEAD
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        isAdmin: false
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-=======
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
->>>>>>> 5d7b850565ef6d83a14d97be57d23dcd72f77952
         exact: true,
         path: "/usuarios",
         render: function render() {
