@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Formulario = ({ productoAnterior, onChange, onSubmit, title }) => (
+const Formulario = ({ onChange, onSubmit, title }) => (
 
   <form className='formProdAm' onSubmit={onSubmit} >
     <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} Crear Categoria: </h1>
