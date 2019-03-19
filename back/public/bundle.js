@@ -86,6 +86,141 @@
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
+/***/ "./front/src/components/Checkout.jsx":
+/*!*******************************************!*\
+  !*** ./front/src/components/Checkout.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _DatosDelCliente__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatosDelCliente */ "./front/src/components/DatosDelCliente.jsx");
+/* harmony import */ var _DetalleDeCompra__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DetalleDeCompra */ "./front/src/components/DetalleDeCompra.jsx");
+
+
+
+
+var Checkout = function Checkout() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "checkoutview"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "datosgrid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DatosDelCliente__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "datosgrid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DetalleDeCompra__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Checkout);
+
+/***/ }),
+
+/***/ "./front/src/components/DatosDelCliente.jsx":
+/*!**************************************************!*\
+  !*** ./front/src/components/DatosDelCliente.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-header"
+  }, "Datos del Cliente"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "list-group list-group-flush"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Nombre y apellido: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "fname",
+    className: "inputDetail",
+    id: "fullnameInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, " Email: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "email",
+    name: "email",
+    className: "inputDetail",
+    id: "emailInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Direcci\xF3n de Env\xEDo: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "address",
+    className: "inputDetail",
+    id: "addressInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Codigo Postal: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "cp",
+    className: "inputDetail",
+    id: "cpInput"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item"
+  }, "Localidad: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "localidad",
+    className: "inputDetail",
+    id: "localidadInput"
+  })))));
+});
+
+/***/ }),
+
+/***/ "./front/src/components/DetalleDeCompra.jsx":
+/*!**************************************************!*\
+  !*** ./front/src/components/DetalleDeCompra.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pagos"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Detalle"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Detalle de Compra")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "TitOC"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Orden de Compra #123456")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "imgCompra"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Foto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Prod. Nro"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Cantidad"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Precio x Unid."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "SUBTOTAL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "textosOC"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "OCimage",
+    src: "/utils/iphone.jpg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "texto"
+  }, "Producto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "inputOC",
+    type: "number"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "textoPrecio"
+  }, " $130 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "textoPrecio"
+  }, " $130 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "preciofinal"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "PRECIO FINAL"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, " $360 ")));
+});
+
+/***/ }),
+
+=======
+>>>>>>> tarjetaDeCredito
 /***/ "./front/src/components/FormCrearProd.jsx":
 /*!************************************************!*\
   !*** ./front/src/components/FormCrearProd.jsx ***!
@@ -954,44 +1089,6 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./front/src/components/MetodosDePago.jsx":
-/*!************************************************!*\
-  !*** ./front/src/components/MetodosDePago.jsx ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pagos"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "visa",
-    src: "/utils/visa-circulo.svg"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "radio",
-    name: "visa"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "master",
-    src: "/utils/mastercard-circulo.svg"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "radio",
-    name: "master"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "american",
-    src: "/utils/american-express-circulo.svg"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "radio",
-    name: "american"
-  })));
-});
-
-/***/ }),
-
 /***/ "./front/src/components/NavbarAdm.jsx":
 /*!********************************************!*\
   !*** ./front/src/components/NavbarAdm.jsx ***!
@@ -1072,9 +1169,9 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-12 "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/adm/users",
+        to: "/usuarios/addadmin",
         onClick: this.handleClick
-      }, "USUARIOS")))));
+      }, "USUARIOS ADMINISTRADORES")))));
     }
   }]);
 
@@ -1233,10 +1330,17 @@ var Products = function Products(_ref) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./front/src/components/Registro.jsx":
 /*!*******************************************!*\
   !*** ./front/src/components/Registro.jsx ***!
   \*******************************************/
+=======
+/***/ "./front/src/components/TarjetaDeCredito.jsx":
+/*!***************************************************!*\
+  !*** ./front/src/components/TarjetaDeCredito.jsx ***!
+  \***************************************************/
+>>>>>>> tarjetaDeCredito
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1244,12 +1348,18 @@ var Products = function Products(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+<<<<<<< HEAD
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+=======
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+>>>>>>> tarjetaDeCredito
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1258,15 +1368,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+<<<<<<< HEAD
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
+=======
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+>>>>>>> tarjetaDeCredito
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-/* eslint-disable one-var */
+<<<<<<< HEAD
+/* eslint-disable no-unused-vars */
+
 
 
 
@@ -1299,12 +1418,14 @@ function (_React$Component) {
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
+      console.log(this.state);
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
       this.props.registerUser(this.state);
+      return this.props.history.push('/usuarios/login');
     }
   }, {
     key: "render",
@@ -1378,7 +1499,8 @@ function (_React$Component) {
         className: "botones"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-        className: "btn btn-primary"
+        className: "btn btn-primary",
+        onSubmit: this.handleSubmit
       }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--facebook",
         href: "/api/auth/facebook"
@@ -1407,6 +1529,75 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Registro));
+=======
+
+
+var TarjetaDeCredito =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(TarjetaDeCredito, _React$Component);
+
+  function TarjetaDeCredito() {
+    _classCallCheck(this, TarjetaDeCredito);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(TarjetaDeCredito).apply(this, arguments));
+  }
+
+  _createClass(TarjetaDeCredito, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "tarjeta container-fluid"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        id: "metodo"
+      }, "M\xE9todo de Pago"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "inputEmail3"
+      }, "Numero de Tarjeta: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "numerodetarjeta",
+        type: "text"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "datosTarjeta"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Fecha de Vencimiento: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "fecha",
+        type: "date",
+        id: "vencimiento"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "inputPassword5"
+      }, "Codigo de Seguridad: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "fecha",
+        type: "text",
+        id: "inputPassword5",
+        "aria-describedby": "passwordHelpBlock"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+        id: "passwordHelpBlock",
+        className: "form-text text-muted note"
+      }, "Ultimos 3 digitos en el dorso de la tarjeta")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        id: "dorsoTarjeta",
+        src: "/utils/dorsoTarjeta.svg"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        id: "datos"
+      }, "Datos Titular de la Tarjeta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "inputEmail3"
+      }, "Nombre Completo:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "numerodetarjeta",
+        type: "text"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "inputEmail3"
+      }, "DNI Titular:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "dni",
+        type: "text"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        class: "btn btn-success finCompra"
+      }, "FINALIZAR COMPRA")));
+    }
+  }]);
+
+  return TarjetaDeCredito;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (TarjetaDeCredito);
+>>>>>>> tarjetaDeCredito
 
 /***/ }),
 
@@ -1454,12 +1645,12 @@ var UserAsAdmin =
 function (_React$Component) {
   _inherits(UserAsAdmin, _React$Component);
 
-  function UserAsAdmin() {
+  function UserAsAdmin(props) {
     var _this;
 
     _classCallCheck(this, UserAsAdmin);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this, props));
     _this.state = {};
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1477,8 +1668,7 @@ function (_React$Component) {
       e.preventDefault();
       var user = this.state;
       this.props.giveadmAccess(user);
-      console.log(user, 'STAAAATE');
-      console.log(_redux_store__WEBPACK_IMPORTED_MODULE_3__["default"].getState(), 'store');
+      return this.props.history.push('/');
     }
   }, {
     key: "render",
@@ -2122,10 +2312,12 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+<<<<<<< HEAD
 /* harmony import */ var _EditProd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditProd */ "./front/src/containers/EditProd.jsx");
 /* harmony import */ var _CreateCat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateCat */ "./front/src/containers/CreateCat.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _ProductsContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProductsContainer */ "./front/src/containers/ProductsContainer.jsx");
+<<<<<<< HEAD
 /* harmony import */ var _CrearProd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CrearProd */ "./front/src/containers/CrearProd.jsx");
 /* harmony import */ var _HomeRL__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./HomeRL */ "./front/src/containers/HomeRL.jsx");
 /* harmony import */ var _components_Registro__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Registro */ "./front/src/components/Registro.jsx");
@@ -2139,6 +2331,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
 /* harmony import */ var _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/MetodosDePago */ "./front/src/components/MetodosDePago.jsx");
+=======
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _ProductsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductsContainer */ "./front/src/containers/ProductsContainer.jsx");
+/* harmony import */ var _CrearProd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CrearProd */ "./front/src/containers/CrearProd.jsx");
+/* harmony import */ var _HomeRL__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HomeRL */ "./front/src/containers/HomeRL.jsx");
+/* harmony import */ var _EditProd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditProd */ "./front/src/containers/EditProd.jsx");
+/* harmony import */ var _components_Registro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Registro */ "./front/src/components/Registro.jsx");
+/* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Login */ "./front/src/components/Login.jsx");
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Home */ "./front/src/components/Home.jsx");
+/* harmony import */ var _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/UserAsAdmin */ "./front/src/components/UserAsAdmin.jsx");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
+/* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
+/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
+/* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
+/* harmony import */ var _components_DetalleDeCompra__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/DetalleDeCompra */ "./front/src/components/DetalleDeCompra.jsx");
+/* harmony import */ var _components_Checkout__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Checkout */ "./front/src/components/Checkout.jsx");
+>>>>>>> metodosdepago
+=======
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Home */ "./front/src/components/Home.jsx");
+/* harmony import */ var _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/UserAsAdmin */ "./front/src/components/UserAsAdmin.jsx");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
+/* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
+/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
+/* harmony import */ var _components_TarjetaDeCredito__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/TarjetaDeCredito */ "./front/src/components/TarjetaDeCredito.jsx");
+>>>>>>> tarjetaDeCredito
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2161,6 +2380,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
  // eslint-disable-next-line no-unused-vars
+
 
 
 
@@ -2235,15 +2455,18 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/registro",
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+        render: function render(_ref2) {
+          var history = _ref2.history;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            history: history
+          });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/login",
-        render: function render(_ref2) {
-          var history = _ref2.history,
-              location = _ref2.location;
+        render: function render(_ref3) {
+          var history = _ref3.history,
+              location = _ref3.location;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], {
             history: history,
             location: location
@@ -2262,8 +2485,8 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos",
-        render: function render(_ref3) {
-          var location = _ref3.location;
+        render: function render(_ref4) {
+          var location = _ref4.location;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
             location: location
           });
@@ -2271,7 +2494,12 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/addadmin",
-        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_10__["default"]
+        render: function render(_ref5) {
+          var history = _ref5.history;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            history: history
+          });
+        }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/add",
@@ -2281,25 +2509,36 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
-        render: function render(_ref4) {
-          var match = _ref4.match;
+        render: function render(_ref6) {
+          var match = _ref6.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
             prodId: match.params.id
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
-        render: function render(_ref5) {
-          var match = _ref5.match;
+        render: function render(_ref7) {
+          var match = _ref7.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+<<<<<<< HEAD
         path: "/pagos/",
+<<<<<<< HEAD
         component: _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_17__["default"]
+=======
+        component: _components_Checkout__WEBPACK_IMPORTED_MODULE_17__["default"]
+>>>>>>> metodosdepago
       }), "} />"));
+=======
+        exact: true,
+        path: "/tarjeta",
+        component: _components_TarjetaDeCredito__WEBPACK_IMPORTED_MODULE_10__["default"]
+      })));
+>>>>>>> tarjetaDeCredito
     }
   }]);
 
@@ -2403,19 +2642,9 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    checkUserLogin: function (_checkUserLogin) {
-      function checkUserLogin(_x) {
-        return _checkUserLogin.apply(this, arguments);
-      }
-
-      checkUserLogin.toString = function () {
-        return _checkUserLogin.toString();
-      };
-
-      return checkUserLogin;
-    }(function (user) {
-      return dispatch(checkUserLogin(user));
-    })
+    checkUserLogin: function checkUserLogin(user) {
+      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_5__["checkUserLogin"])(user));
+    }
   };
 };
 

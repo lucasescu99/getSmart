@@ -3,7 +3,7 @@ import React from 'react';
 import { checkUserLogin } from '../redux/action-creators/action-creator';
 import { connect } from 'react-redux';
 import store from '../redux/store';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor (props) {

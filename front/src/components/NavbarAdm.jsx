@@ -24,7 +24,7 @@ export default class NavbarUser extends Component {
           </div>
           <div className="col-sm-3 nav-link">
             <div className='col-lg-12 '>
-              <Link to='/adm/users' onClick={this.handleClick}>USUARIOS</Link>
+              <Link to='/usuarios/addadmin' onClick={this.handleClick}>USUARIOS ADMINISTRADORES</Link>
             </div>
           </div>
         </div>

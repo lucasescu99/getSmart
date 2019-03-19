@@ -45,7 +45,8 @@
     width: 45px;
 }
 .card{
-    padding: 10px
+    padding: 10px;
+    margin-top: 20px;
 }
 .card-body{
     color: black;
@@ -68,7 +69,7 @@
 }
 .imgproduct{
     height: 350px;
-    width: 300px
+    width: 300px;
 }
 .userAsAdm{
     margin-top: 100px;
@@ -322,3 +323,160 @@ a:hover{
   .loginBtn--google:focus {
     background: #E74B37;
   }
+    width: 90px;
+    height: 90px;
+}
+
+#master{
+    width: 90px;
+    height: 90px;
+}
+
+#american{
+    width: 90px;
+    height: 90px;
+}
+
+.pagos{
+    display:grid;
+    grid-template-rows: 1fr 1fr 0.5fr 0.8fr 1fr;
+    /* align-items: center; */
+    /* justify-items: center; */
+    border: 2px solid black;
+    height: 400px;
+    width: 900px;
+    margin-left:500px;
+    margin-top:20px;
+}
+
+.imgCompra{
+    display:grid;
+    grid-template-columns: 1fr 1.2fr 0.2fr 1.5fr 1fr;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    align-items: center;
+    justify-items: center;
+    width: 850px;
+    margin-left: 25px;
+    
+}
+
+.preciofinal{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 430px;
+    align-items: center;
+    justify-items: center;  
+    color: #476694
+}
+
+.texto{
+    font-size: 18px;
+}
+
+.tituloOC{
+    font-size:20px;
+    color:red;
+}
+.tituloST{
+    font-size: 24px;
+    color: red;
+}
+
+.inputOC{
+width: 43px;
+height: 33px;
+margin-left:30px;    
+}
+
+.textoST{
+    width: 50px;
+    }
+.textosOC{
+    display:grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 1fr;
+    font-size: 25px; 
+    margin-top: 20px; 
+    align-items: center;
+    justify-items: center;  
+}
+
+.OCimage{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.Detalle{
+    margin-left: 265px;
+    margin-bottom:8px;
+    width: 400px;
+    height: 8px;
+}
+.TitOC{
+    margin-left: 235px;
+    margin-bottom:8px;
+}
+
+
+.datosgrid{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.3fr 1fr;
+    height: 0px;
+}
+}
+#vencimiento{
+    width: 185px;
+}
+#passwordHelpBlock{
+    width: 261px
+}
+#dni{
+    width: 300px;
+}
+#dorsoTarjeta{
+    width: 50px;
+}
+
+.codigo{
+    width: 150px;
+}
+.tarjeta{
+    display: grid;
+    grid-template-rows: 1fr 1.3fr 1.3fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    /* justify-items: center;  */
+}
+.datosTarjeta{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+}
+#metodo{
+    font-size: 30px
+}
+#datos{
+    font-size: 20px
+}
+.numerodetarjeta{
+    width: 820px;
+    margin-left: 35px;
+   
+}
+#dni{
+    margin-left: 100px
+}
+.fecha{
+    margin-left: 10px
+}
+.note{
+margin-left: 160px;
+}
+.finCompra{
+    width: 210px;
+    height: 50px;
+    border: 1px solid black;
+    float: right;
+    display: grid;
+    margin: 10px 20% 0 60% ;
+}

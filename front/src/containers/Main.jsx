@@ -19,6 +19,9 @@ import { getUser, checkUserLogin, fetchUser } from '../redux/action-creators/act
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import MetodosDePago from '../components/MetodosDePago';
+import DetalleDeCompra from '../components/DetalleDeCompra';
+import Checkout from '../components/Checkout'
+import TarjetaDeCredito from '../components/TarjetaDeCredito';
 
 class Main extends React.Component {
   constructor (props) {
@@ -46,16 +49,17 @@ class Main extends React.Component {
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
-            <Route exact path="/usuarios/registro" render={() => (<Registro />)} />
+            <Route exact path="/usuarios/registro" render={({ history }) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
             <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
-            <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
+            <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
             <Route exact path='/productos/add' render={() => (<CrearProd />)} />
             <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
             <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
-            <Route path="/pagos/" component={MetodosDePago} />} />
+            <Route path="/pagos/" component={Checkout} />} />
+            <Route exact path='/tarjeta' component={TarjetaDeCredito} />
           </Switch>
         </div >
     );
