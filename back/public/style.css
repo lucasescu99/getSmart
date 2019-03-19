@@ -123,6 +123,11 @@ a:hover{
   border-left: #929fab solid 1px;
 }
 
+#logOut {
+    color: blue;
+}
+
+
 .formProdAm{
     padding: 7% 20%;
 }

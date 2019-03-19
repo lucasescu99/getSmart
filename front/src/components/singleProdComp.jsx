@@ -2,9 +2,11 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Stars from './starRating';
+import { Link } from 'react-router-dom';
 
 export default (props) => {
   const producto = props.producto;
+  console.log(props);
   return (
     <div id="singleProd">
 
@@ -25,7 +27,12 @@ export default (props) => {
           </div>
 
           <div className="row" style={{ marginTop: '60px' }}>
-            <div className="col-lg-5 col-sm-12">{props.adminInfo ? <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} > EDITAR </button> : <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} > COMPRAR! </button>}</div>
+            <div className="col-lg-5 col-sm-12">
+              {props.adminInfo
+                ? <Link to={`/productos/edit/${producto.id}`}> <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px', margin: '7px' }} > EDITAR </button> </Link>
+                : <Link to={`/checkout/${producto.id}`}><button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} > COMPRAR! </button> </Link>}
+            </div>
+
             <div className="col-lg-7 col-sm-12"><button className="btn btn-lg" type="button" style={{ color: '#28a745', borderColor: '#28a745', padding: '20px' }}>Agregar al Carrito</button></div>
           </div>
 
@@ -69,4 +76,4 @@ export default (props) => {
 
     </div>
   );
-}
+};
