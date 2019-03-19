@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const S = require('sequelize');
 const crypto = require('crypto');
 const db = require('../config/db');

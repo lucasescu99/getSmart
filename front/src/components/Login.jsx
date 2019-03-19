@@ -44,7 +44,16 @@ class Login extends React.Component {
             </div>
             <div className="form-row">
             </div>
-            <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary">Login</button>
+            <div className="botones">
+              <button type="submit" onSubmit={this.handleSubmit} className="btn btn-primary">Login</button>
+              <a className="loginBtn loginBtn--facebook" href='/api/auth/facebook'>
+                Login with Facebook
+              </a>
+
+              <a className="loginBtn loginBtn--google" href='/api/auth/google'>
+                Login with Google
+              </a>
+            </div>
           </form>
         </div>
       </div>
