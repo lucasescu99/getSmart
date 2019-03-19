@@ -101,14 +101,23 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint-disable no-unused-vars */
 
 
+var categorias = [];
+
+var addCat = function addCat(cat) {
+  categorias.push(cat);
+};
 
 var Formulario = function Formulario(_ref) {
   var onChange = _ref.onChange,
-      onSubmit = _ref.onSubmit,
-      title = _ref.title;
+      onChange2 = _ref.onChange2,
+      _onSubmit = _ref.onSubmit,
+      title = _ref.title,
+      array = _ref.array;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
     className: "formProdAm",
-    onSubmit: onSubmit
+    onSubmit: function onSubmit(e) {
+      return _onSubmit(e, categorias);
+    }
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
     style: {
       textAlign: 'center',
@@ -270,119 +279,24 @@ var Formulario = function Formulario(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     id: "modelo",
     className: "form-group"
-  }, " * Seleccionar Categorias:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "* Linea:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Liberado",
-    value: "Liberado"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Liberado"
-  }, "Liberado")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Movistar",
-    value: "Movistar"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Movistar"
-  }, "Movistar")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Claro",
-    value: "Claro"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Claro"
-  }, "Claro")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Linea",
-    id: "Personal",
-    value: "Personal"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Personal"
-  }, "Personal"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "* Gama"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Gama",
-    id: "Alta",
-    value: "Alta"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Alta"
-  }, "Alta")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Gama",
-    id: "Media",
-    value: "Media"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Media"
-  }, "Media")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Gama",
-    id: "Baja",
-    value: "Baja"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Baja"
-  }, "Baja"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", null, "* Sistema operativo :"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Sistema Operativo",
-    id: "iOS",
-    value: "iOS"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "iOS"
-  }, "iOS")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-check form-check-inline"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    onChange: onChange,
-    className: "form-check-input",
-    type: "radio",
-    name: "Sistema Operativo",
-    id: "Android",
-    value: "Android"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "form-check-label",
-    htmlFor: "Android"
-  }, "Android"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, " * Seleccionar Categorias:"), array.map(function (categoria) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      key: categoria.id,
+      className: "form-check form-check-inline"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      className: "form-check-input",
+      name: "categoriesId",
+      type: "checkbox",
+      id: "inlineCheckbox1",
+      value: categoria.id,
+      onChange: function onChange(e) {
+        return addCat(e.target.value);
+      }
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+      className: "form-check-label",
+      htmlFor: "inlineCheckbox1"
+    }, categoria.name));
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "form-group "
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, "* Descripcion: "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
     onChange: onChange,
@@ -391,6 +305,66 @@ var Formulario = function Formulario(_ref) {
     cols: "50",
     required: true
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    onSubmit: _onSubmit,
+    className: "btn btn-lg btn-success"
+  }, "SUBMIT"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Formulario);
+
+/***/ }),
+
+/***/ "./front/src/components/FormCreatCat.jsx":
+/*!***********************************************!*\
+  !*** ./front/src/components/FormCreatCat.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* eslint-disable no-unused-vars */
+
+
+var Formulario = function Formulario(_ref) {
+  var productoAnterior = _ref.productoAnterior,
+      onChange = _ref.onChange,
+      onSubmit = _ref.onSubmit,
+      title = _ref.title;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "formProdAm",
+    onSubmit: onSubmit
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    style: {
+      textAlign: 'center',
+      marginBottom: '50px',
+      borderBottom: '1px solid black',
+      paddingBottom: '20px'
+    }
+  }, title, " Crear Categoria: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "modelo",
+    className: "form-group col-lg-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group input-group-lg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-group-prepend"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "input-group-text",
+    id: "inputGroup-sizing-lg"
+  }, "Nueva Categoria :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "newCategory",
+    onChange: onChange,
+    type: "text",
+    className: "form-control",
+    "aria-label": "Large",
+    "aria-describedby": "inputGroup-sizing-sm"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group "
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onSubmit: onSubmit,
     className: "btn btn-lg btn-success"
   }, "SUBMIT"));
@@ -415,7 +389,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Formulario = function Formulario(_ref) {
-  var producto = _ref.producto,
+  var productoAnterior = _ref.productoAnterior,
       onChange = _ref.onChange,
       onSubmit = _ref.onSubmit,
       title = _ref.title;
@@ -429,7 +403,7 @@ var Formulario = function Formulario(_ref) {
       borderBottom: '1px solid black',
       paddingBottom: '20px'
     }
-  }, title, " Editar producto: ", producto && producto.marca, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, title, " Crear Categoria:  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Marca: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown form-group col-lg-9 "
@@ -1770,10 +1744,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AdminProd; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_FormEditProd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FormEditProd */ "./front/src/components/FormEditProd.jsx");
-/* harmony import */ var _components_FormCrearProd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/FormCrearProd */ "./front/src/components/FormCrearProd.jsx");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_FormCrearProd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FormCrearProd */ "./front/src/components/FormCrearProd.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1796,6 +1769,120 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 /* eslint-disable no-unused-vars */
 
+
+
+
+var AdminProd =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(AdminProd, _React$Component);
+
+  function AdminProd() {
+    var _this;
+
+    _classCallCheck(this, AdminProd);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminProd).call(this));
+    _this.state = {
+      categorias: [],
+      categoriesId: []
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(AdminProd, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/categorias/get') // .then(categorias => console.log(categorias.data))
+      .then(function (categorias) {
+        return _this2.setState({
+          categorias: categorias.data
+        });
+      });
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e, categorias) {
+      var _this3 = this;
+
+      e.preventDefault();
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/api/productos/add', {
+        marca: this.state.Marca,
+        modelo: this.state.Modelo,
+        stock: this.state.Stock,
+        precio: this.state.Precio,
+        imagenes: this.state.Imagen.split(','),
+        descripcion: this.state.Descripcion,
+        categorias: categorias
+      }).then(function (product) {
+        _this3.props.history.push("/productos/".concat(product.data.id));
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // {console.log(this.state.categorias)}
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormCrearProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        array: this.state.categorias,
+        onSubmit: this.handleSubmit,
+        onChange: this.handleChange,
+        onChange2: this.handleChange2
+      }));
+    }
+  }]);
+
+  return AdminProd;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./front/src/containers/CreateCat.jsx":
+/*!********************************************!*\
+  !*** ./front/src/containers/CreateCat.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AdminProd; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_FormCreatCat__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FormCreatCat */ "./front/src/components/FormCreatCat.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+/* eslint-disable no-unused-vars */
 
 
 
@@ -1825,25 +1912,15 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this2 = this;
-
       e.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('/api/productos/add', {
-        marca: this.state.Marca,
-        modelo: this.state.Modelo,
-        stock: this.state.Stock,
-        precio: this.state.Precio,
-        imagenes: this.state.Imagen.split(','),
-        descripcion: this.state.Descripcion
-      }).then(function (product) {
-        _this2.props.history.push("/productos/".concat(product.data.id));
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/api/categorias/add', {
+        name: this.state.newCategory
       });
     }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.e);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormCrearProd__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormCreatCat__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onSubmit: this.handleSubmit,
         onChange: this.handleChange
       }));
@@ -1902,6 +1979,9 @@ var AdminProd =
 function (_React$Component) {
   _inherits(AdminProd, _React$Component);
 
+  // static getDerivedStateFromProps (props, state) {
+  //   return state.id ? state : props.prodId;
+  // }
   function AdminProd() {
     var _this;
 
@@ -1909,7 +1989,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AdminProd).call(this));
     _this.state = {
-      producto: {}
+      productoAnterior: {} // productoActual: {}
+
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1923,7 +2004,7 @@ function (_React$Component) {
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/api/productos/".concat(this.props.prodId)).then(function (producto) {
         return _this2.setState({
-          producto: producto.data
+          productoAnterior: producto.data
         });
       });
     }
@@ -1938,7 +2019,7 @@ function (_React$Component) {
       var _this3 = this;
 
       e.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.put('/api/productos/edit/' + this.state.producto.id, {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.put('/api/productos/edit/' + this.state.productoAnterior.id, {
         marca: this.state.Marca,
         modelo: this.state.Modelo,
         stock: this.state.Stock,
@@ -1952,9 +2033,14 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var producto = this.state.producto;
+      var _this$state = this.state,
+          productoAnterior = _this$state.productoAnterior,
+          Marca = _this$state.Marca,
+          Modelo = _this$state.Modelo;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormEditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        producto: producto,
+        productoAnterior: productoAnterior,
+        marca: Marca,
+        modelo: Modelo,
         onSubmit: this.handleSubmit,
         onChange: this.handleChange
       }));
@@ -2078,22 +2164,23 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* harmony import */ var _ProductsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductsContainer */ "./front/src/containers/ProductsContainer.jsx");
-/* harmony import */ var _CrearProd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CrearProd */ "./front/src/containers/CrearProd.jsx");
-/* harmony import */ var _HomeRL__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HomeRL */ "./front/src/containers/HomeRL.jsx");
-/* harmony import */ var _EditProd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditProd */ "./front/src/containers/EditProd.jsx");
-/* harmony import */ var _components_Registro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Registro */ "./front/src/components/Registro.jsx");
-/* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Login */ "./front/src/components/Login.jsx");
-/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Home */ "./front/src/components/Home.jsx");
-/* harmony import */ var _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/UserAsAdmin */ "./front/src/components/UserAsAdmin.jsx");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
-/* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
-/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
-/* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
-/* harmony import */ var _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/MetodosDePago */ "./front/src/components/MetodosDePago.jsx");
+/* harmony import */ var _EditProd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditProd */ "./front/src/containers/EditProd.jsx");
+/* harmony import */ var _CreateCat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateCat */ "./front/src/containers/CreateCat.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _ProductsContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProductsContainer */ "./front/src/containers/ProductsContainer.jsx");
+/* harmony import */ var _CrearProd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CrearProd */ "./front/src/containers/CrearProd.jsx");
+/* harmony import */ var _HomeRL__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./HomeRL */ "./front/src/containers/HomeRL.jsx");
+/* harmony import */ var _components_Registro__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Registro */ "./front/src/components/Registro.jsx");
+/* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Login */ "./front/src/components/Login.jsx");
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Home */ "./front/src/components/Home.jsx");
+/* harmony import */ var _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/UserAsAdmin */ "./front/src/components/UserAsAdmin.jsx");
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
+/* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
+/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
+/* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
+/* harmony import */ var _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/MetodosDePago */ "./front/src/components/MetodosDePago.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2114,6 +2201,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 /* eslint-disable no-unused-vars */
 
+
+ // eslint-disable-next-line no-unused-vars
 
 
 
@@ -2160,73 +2249,79 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container-fluid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_13__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios",
         render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeRL__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HomeRL__WEBPACK_IMPORTED_MODULE_6__["default"], null);
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/registro",
         render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_6__["default"], null);
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/login",
         render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], null);
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/",
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        component: _components_Home__WEBPACK_IMPORTED_MODULE_9__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
+        path: "/categorias/add",
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CreateCat__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos",
         render: function render(_ref) {
           var location = _ref.location;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
             location: location
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/addadmin",
-        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_10__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/add",
         render: function render(_ref2) {
           var history = _ref2.history;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProd__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProd__WEBPACK_IMPORTED_MODULE_5__["default"], {
             history: history
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
         render: function render(_ref3) {
           var match = _ref3.match,
               history = _ref3.history;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
             history: history,
             prodId: match.params.id
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
         render: function render(_ref4) {
           var match = _ref4.match;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
             prodId: match.params.id,
             isAdmin: true
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/pagos/",
-        component: _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_16__["default"]
+        component: _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_17__["default"]
       }), "} />"));
     }
   }]);
@@ -2246,12 +2341,12 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     getUser: function getUser() {
-      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__["getUser"])());
+      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_14__["getUser"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_15__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_14__["connect"])(mapStateToProps, mapDispatchToProps)(Main)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_16__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_15__["connect"])(mapStateToProps, mapDispatchToProps)(Main)));
 
 /***/ }),
 

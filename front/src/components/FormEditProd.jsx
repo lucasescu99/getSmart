@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Formulario = ({ producto, onChange, onSubmit, title }) => (
+const Formulario = ({ productoAnterior, onChange, onSubmit, title }) => (
 
   <form className='formProdAm' onSubmit={onSubmit} >
-    <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} Editar producto: {producto && producto.marca} </h1>
+    <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} Crear Categoria:  </h1>
     <div className="row">
       <h3>Marca: </h3>
       <div className="dropdown form-group col-lg-9 " >
@@ -42,7 +42,7 @@ const Formulario = ({ producto, onChange, onSubmit, title }) => (
           <input name='Modelo' onChange={onChange} type="text" className="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
         </div>
       </div>
-
+      {/* value={producto && producto.modelo} */}
     </div>
 
     <div className="input-group input-group-lg">

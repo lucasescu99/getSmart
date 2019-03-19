@@ -4,10 +4,15 @@ import FormEditProd from '../components/FormEditProd';
 import axios from 'axios';
 
 export default class AdminProd extends React.Component {
+  // static getDerivedStateFromProps (props, state) {
+  //   return state.id ? state : props.prodId;
+  // }
   constructor () {
     super();
     this.state = {
-      producto: {}
+      productoAnterior: {}
+      // productoActual: {}
+
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,18 +20,19 @@ export default class AdminProd extends React.Component {
 
   componentDidMount () {
     axios.get(`/api/productos/${this.props.prodId}`)
-      .then(producto => this.setState({ producto: producto.data }));
+      .then(producto => this.setState({ productoAnterior: producto.data }));
   }
 
   handleChange (e) {
     this.setState(
-      { [e.target.name]: e.target.value
-      });
+      {
+        [e.target.name]: e.target.value }
+    );
   }
 
   handleSubmit (e) {
     e.preventDefault();
-    axios.put('/api/productos/edit/' + this.state.producto.id, {
+    axios.put('/api/productos/edit/' + this.state.productoAnterior.id, {
       marca: this.state.Marca,
       modelo: this.state.Modelo,
       stock: this.state.Stock,
@@ -40,11 +46,13 @@ export default class AdminProd extends React.Component {
   }
 
   render () {
-    const { producto } = this.state;
+    const { productoAnterior, Marca, Modelo } = this.state;
     return (
       <div>
         <FormEditProd
-          producto={producto}
+          productoAnterior={productoAnterior}
+          marca= {Marca}
+          modelo={Modelo}
           onSubmit={this.handleSubmit}
           onChange={this.handleChange} />
       </div>
