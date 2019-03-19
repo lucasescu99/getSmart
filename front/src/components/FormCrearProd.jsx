@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { Link } from 'react-router-dom';
 import React from 'react';
-const categorias = []
+const categorias = [];
 const addCat = (cat) => {
-  categorias.push(cat)
-}
-const Formulario = ({ onChange,onChange2, onSubmit, title, array }) => (
+  categorias.push(cat);
+};
+const Formulario = ({ onChange, onSubmit, title, array }) => (
 
   <form className='formProdAm' onSubmit={(e) => onSubmit(e, categorias)} >
     <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} Crear un Nuevo Producto</h1>
@@ -16,7 +16,7 @@ const Formulario = ({ onChange,onChange2, onSubmit, title, array }) => (
           <input onChange={onChange} className="form-check-input" type="radio" name="Marca" id="iPhone" value="iPhone" />
           <label className="form-check-label" htmlFor="iPhone">iPhone</label>
         </div>
-        
+
         <div className="form-check form-check-inline">
           <input onChange={onChange} className="form-check-input" type="radio" name="Marca" id="Samsung" value="Samsung" />
           <label className="form-check-label" htmlFor="Samsung">Samsung</label>

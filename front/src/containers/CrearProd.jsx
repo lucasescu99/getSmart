@@ -38,8 +38,8 @@ export default class AdminProd extends React.Component {
       categorias
     })
       .then(product => {
-      this.props.history.push(`/productos/${product.data.id}`);
-    });
+        this.props.history.push(`/productos/${product.data.id}`);
+      });
   }
 
   render () {
@@ -49,8 +49,7 @@ export default class AdminProd extends React.Component {
         <FormCrearProd
           array={this.state.categorias}
           onSubmit={this.handleSubmit}
-          onChange={this.handleChange}
-          onChange2={this.handleChange2} />
+          onChange={this.handleChange} />
       </div>
     );
   }

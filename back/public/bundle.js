@@ -109,7 +109,6 @@ var addCat = function addCat(cat) {
 
 var Formulario = function Formulario(_ref) {
   var onChange = _ref.onChange,
-      onChange2 = _ref.onChange2,
       _onSubmit = _ref.onSubmit,
       title = _ref.title,
       array = _ref.array;
@@ -403,7 +402,7 @@ var Formulario = function Formulario(_ref) {
       borderBottom: '1px solid black',
       paddingBottom: '20px'
     }
-  }, title, " Crear Categoria:  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, title, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Editar producto: "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " '", productoAnterior && productoAnterior.marca, "  ", productoAnterior && productoAnterior.modelo, "'  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Marca: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown form-group col-lg-9 "
@@ -1826,8 +1825,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormCrearProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
         array: this.state.categorias,
         onSubmit: this.handleSubmit,
-        onChange: this.handleChange,
-        onChange2: this.handleChange2
+        onChange: this.handleChange
       }));
     }
   }]);
