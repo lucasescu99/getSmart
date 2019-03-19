@@ -715,21 +715,13 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogIn",
     src: "/utils/user.svg"
-<<<<<<< HEAD
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "caption"
-  }, "Registrate"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-=======
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
->>>>>>> sprintMartes
     to: "/usuarios/login",
     id: "linkLogOut"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogOut",
     src: "/utils/logout.svg"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "caption2"
-  }, "Ingres\xE1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -746,8 +738,6 @@ __webpack_require__.r(__webpack_exports__);
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         name: "modelo",
         placeholder: "    Busca tu producto \uD83D\uDD0E",
-<<<<<<< HEAD
-=======
         id: "input"
       }));
     }
@@ -793,7 +783,6 @@ __webpack_require__.r(__webpack_exports__);
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         name: "modelo",
         placeholder: "    Busca tu producto \uD83D\uDD0E",
->>>>>>> sprintMartes
         id: "input"
       }));
     }
@@ -941,10 +930,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> sprintMartes
 
 var Login =
 /*#__PURE__*/
@@ -1386,35 +1372,7 @@ function (_React$Component) {
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // componentDidMount () {
-  //   window.fbAsyncInit = () => {
-  //     window.FB.init({
-  //       appId: '{534343110422200}',
-  //       cookie: true,
-  //       xfbml: true,
-  //       version: '{1.0.0}'
-  //     });
-  //     window.FB.AppEvents.logPageView();
-  //   };
-  //   window.FB.Event.subscribe('auth.statusChange', response => this.statusChangeCallback(response));
-  //   this.getLoginStatus();
-  //   (function (d, s, id) {
-  //     var js, fjs = d.getElementsByTagName(s)[0];
-  //     if (d.getElementById(id)) { return; }
-  //     js = d.createElement(s); js.id = id;
-  //     js.src = 'https://connect.facebook.net/en_US/sdk.js';
-  //     fjs.parentNode.insertBefore(js, fjs);
-  //   }(document, 'script', 'facebook-jssdk'));
-  // }
-  // statusChangeCallback (response) {
-  //   this.setState(response);
-  // }
-  // getLoginStatus () {
-  //   window.FB.getLoginStatus((response) => {
-  //     this.statusChangeCallback(response);
-  //   });
-  // }
-
+  }
 
   _createClass(Registro, [{
     key: "handleChange",
@@ -1426,6 +1384,7 @@ function (_React$Component) {
     value: function handleSubmit(e) {
       e.preventDefault();
       this.props.registerUser(this.state);
+      return this.props.history.push('/usuarios/login');
     }
   }, {
     key: "render",
@@ -1575,12 +1534,12 @@ var UserAsAdmin =
 function (_React$Component) {
   _inherits(UserAsAdmin, _React$Component);
 
-  function UserAsAdmin() {
+  function UserAsAdmin(props) {
     var _this;
 
     _classCallCheck(this, UserAsAdmin);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(UserAsAdmin).call(this, props));
     _this.state = {};
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1598,8 +1557,6 @@ function (_React$Component) {
       e.preventDefault();
       var user = this.state;
       this.props.giveadmAccess(user);
-      console.log(user, 'STAAAATE');
-      console.log(_redux_store__WEBPACK_IMPORTED_MODULE_3__["default"].getState(), 'store');
     }
   }, {
     key: "render",
@@ -2236,7 +2193,6 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-<<<<<<< HEAD
 /* harmony import */ var _EditProd__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditProd */ "./front/src/containers/EditProd.jsx");
 /* harmony import */ var _CreateCat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateCat */ "./front/src/containers/CreateCat.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
@@ -2254,23 +2210,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
 /* harmony import */ var _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/MetodosDePago */ "./front/src/components/MetodosDePago.jsx");
-=======
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-/* harmony import */ var _ProductsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductsContainer */ "./front/src/containers/ProductsContainer.jsx");
-/* harmony import */ var _CrearProd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CrearProd */ "./front/src/containers/CrearProd.jsx");
-/* harmony import */ var _HomeRL__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HomeRL */ "./front/src/containers/HomeRL.jsx");
-/* harmony import */ var _EditProd__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditProd */ "./front/src/containers/EditProd.jsx");
-/* harmony import */ var _components_Registro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Registro */ "./front/src/components/Registro.jsx");
-/* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Login */ "./front/src/components/Login.jsx");
-/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Home */ "./front/src/components/Home.jsx");
-/* harmony import */ var _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/UserAsAdmin */ "./front/src/components/UserAsAdmin.jsx");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Header */ "./front/src/components/Header.jsx");
-/* harmony import */ var _containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../containers/SingleProductCont */ "./front/src/containers/SingleProductCont.jsx");
-/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../containers/NavbarContainer */ "./front/src/containers/NavbarContainer.jsx");
-/* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
->>>>>>> sprintMartes
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2292,12 +2231,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 /* eslint-disable no-unused-vars */
 
 
-<<<<<<< HEAD
  // eslint-disable-next-line no-unused-vars
 
 
-=======
->>>>>>> sprintMartes
 
 
 
@@ -2318,18 +2254,16 @@ var Main =
 function (_React$Component) {
   _inherits(Main, _React$Component);
 
-  function Main() {
+  function Main(props) {
+    var _this;
+
     _classCallCheck(this, Main);
 
-<<<<<<< HEAD
-    return _possibleConstructorReturn(this, _getPrototypeOf(Main).apply(this, arguments));
-=======
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Main).call(this, props));
     _this.state = {
       loading: true
     };
     return _this;
->>>>>>> sprintMartes
   }
 
   _createClass(Main, [{
@@ -2345,44 +2279,25 @@ function (_React$Component) {
     }
   }, {
     key: "render",
-    // testAPI () {
-    //   window.FB.api('/me', function (response) {
-    //   });
-    // }
-    // statusChangeCallback (response) {
-    //   this.testAPI();
-    // }
-    // componentDidMount () {
-    //   window.FB.getLoginStatus((response) => {
-    //     this.statusChangeCallback(response);
-    //   });
-    // }
     value: function render() {
-<<<<<<< HEAD
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "main",
-        className: "container-fluid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_13__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
-=======
       var _this3 = this;
 
       console.log(this.props.usuario);
       return this.state.loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Loading...") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main",
         className: "container-fluid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         render: function render(_ref) {
           var history = _ref.history;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_11__["default"], {
             login: _this3.props.usuario.id,
             history: history,
             fetchUser: _this3.props.fetchUser
           });
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_13__["default"], {
         isAdmin: this.props.usuario.isAdmin
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
->>>>>>> sprintMartes
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios",
         render: function render() {
@@ -2391,33 +2306,26 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/registro",
-        render: function render() {
-<<<<<<< HEAD
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
-=======
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_6__["default"], null);
->>>>>>> sprintMartes
+        render: function render(_ref2) {
+          var history = _ref2.history;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], {
+            history: history
+          });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/login",
-<<<<<<< HEAD
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], null);
-=======
-        render: function render(_ref2) {
-          var history = _ref2.history,
-              location = _ref2.location;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        render: function render(_ref3) {
+          var history = _ref3.history,
+              location = _ref3.location;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], {
             history: history,
             location: location
           });
->>>>>>> sprintMartes
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/",
-<<<<<<< HEAD
         component: _components_Home__WEBPACK_IMPORTED_MODULE_9__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
@@ -2428,18 +2336,9 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos",
-        render: function render(_ref) {
-          var location = _ref.location;
+        render: function render(_ref4) {
+          var location = _ref4.location;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
-=======
-        component: _components_Home__WEBPACK_IMPORTED_MODULE_8__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/productos",
-        render: function render(_ref3) {
-          var location = _ref3.location;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
->>>>>>> sprintMartes
             location: location
           });
         }
@@ -2450,52 +2349,31 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/add",
-        render: function render(_ref2) {
-          var history = _ref2.history;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProd__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            history: history
-          });
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProd__WEBPACK_IMPORTED_MODULE_5__["default"], null);
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
-<<<<<<< HEAD
-        render: function render(_ref3) {
-          var match = _ref3.match,
-              history = _ref3.history;
+        render: function render(_ref5) {
+          var match = _ref5.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
-            history: history,
-=======
-        render: function render(_ref4) {
-          var match = _ref4.match;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_5__["default"], {
->>>>>>> sprintMartes
             prodId: match.params.id
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
-<<<<<<< HEAD
-        render: function render(_ref4) {
-          var match = _ref4.match;
+        render: function render(_ref6) {
+          var match = _ref6.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
-=======
-        render: function render(_ref5) {
-          var match = _ref5.match;
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_11__["default"], {
->>>>>>> sprintMartes
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
           });
         }
-<<<<<<< HEAD
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/pagos/",
         component: _components_MetodosDePago__WEBPACK_IMPORTED_MODULE_17__["default"]
       }), "} />"));
-=======
-      })));
->>>>>>> sprintMartes
     }
   }]);
 
@@ -2503,25 +2381,6 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 ;
-<<<<<<< HEAD
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    user: state.user,
-    userCheck: state.userCheck
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    getUser: function getUser() {
-      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_14__["getUser"])());
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_16__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_15__["connect"])(mapStateToProps, mapDispatchToProps)(Main)));
-=======
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -2534,16 +2393,15 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchUser: function fetchUser() {
-      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__["fetchUser"])());
+      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_14__["fetchUser"])());
     },
     checkUser: function checkUser() {
-      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_13__["checkUserLogin"])());
+      return dispatch(Object(_redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_14__["checkUserLogin"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_15__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_14__["connect"])(mapStateToProps, mapDispatchToProps)(Main)));
->>>>>>> sprintMartes
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_16__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_15__["connect"])(mapStateToProps, mapDispatchToProps)(Main)));
 
 /***/ }),
 

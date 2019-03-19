@@ -46,7 +46,7 @@ class Main extends React.Component {
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
-            <Route exact path="/usuarios/registro" render={() => (<Registro />)} />
+            <Route exact path="/usuarios/registro" render={({history}) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
