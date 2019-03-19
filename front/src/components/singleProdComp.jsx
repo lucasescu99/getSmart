@@ -49,16 +49,24 @@ export default (props) => {
       </div>
 
       <div className="row">
-        <h3><strong>Descripción : </strong></h3>
-        <h5>{producto.descripcion}</h5>
+        <div className="col-lg-6 col-xs-12">
+          <h3><strong>Descripción : </strong></h3>
+          <h5>{producto.descripcion}</h5>
+        </div>
       </div>
 
       <div className="row" style={{}}>
-        <h3><strong>Reviews :</strong></h3><br />
-        <h5 className="col-lg-12"><strong>UsuarioX </strong>dijo :
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h5>
+        <div className="col-lg-6 col-xs-12">
+          <h4><strong>Categorias :</strong></h4>
+          <h6 className="col-lg-12">{}</h6>
+        </div>
+        <div className="col-lg-6 col-xs-12">
+          <h4><strong>Reviews :</strong></h4><br />
+          <h6 className="col-lg-12"><strong>UsuarioX </strong>dijo :
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
+        </div>
       </div>
 
     </div>
-  )
-} 
+  );
+}

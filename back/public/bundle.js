@@ -1687,12 +1687,20 @@ __webpack_require__.r(__webpack_exports__);
     }));
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Descripci\xF3n : ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, producto.descripcion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 col-xs-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Descripci\xF3n : ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, producto.descripcion))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     style: {}
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Reviews :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 col-xs-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Categorias :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "col-lg-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "dijo : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.")));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-lg-6 col-xs-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Reviews :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "col-lg-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "dijo : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos."))));
 });
 
 /***/ }),
