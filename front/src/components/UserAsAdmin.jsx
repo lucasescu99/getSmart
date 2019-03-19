@@ -20,6 +20,7 @@ class UserAsAdmin extends React.Component {
     e.preventDefault()
     const user = this.state
     this.props.giveadmAccess(user)
+    return this.props.history.push('/')
   }
   
   render() {

@@ -25,13 +25,13 @@ class Registro extends React.Component {
   handleChange (e) {
     this.setState(
       { [e.target.name]: e.target.value });
-    console.log(this.state)
+    console.log(this.state);
   }
 
   handleSubmit (e) {
     e.preventDefault();
     this.props.registerUser(this.state);
-    return this.props.history.push('/usuarios/login')
+    return this.props.history.push('/usuarios/login');
   }
 
   render () {
@@ -65,7 +65,7 @@ class Registro extends React.Component {
             <div className="form-row">
             </div>
             <div className="botones">
-             <Link to='/'><button type="submit" className="btn btn-primary" onSubmit={this.handleSubmit} >Registrarse</button></Link>
+              <button type="submit" className="btn btn-primary" onSubmit={this.handleSubmit} >Registrarse</button>
               <a className="loginBtn loginBtn--facebook" href='/api/auth/facebook'>
                 Login with Facebook
               </a>

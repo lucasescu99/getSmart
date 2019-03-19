@@ -46,12 +46,12 @@ class Main extends React.Component {
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
-            <Route exact path="/usuarios/registro" render={({history}) => (<Registro history={history} />)} />
+            <Route exact path="/usuarios/registro" render={({ history }) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
             <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
-            <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
+            <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
             <Route exact path='/productos/add' render={() => (<CrearProd />)} />
             <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
             <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />

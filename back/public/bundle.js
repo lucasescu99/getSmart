@@ -882,13 +882,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "FRUstitle"
-      }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-contenedor"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FRUsuarios"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "FRUstitle"
+      }, " \xA1Hola! Ingresa tu Email para seguir  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group col-md-6"
@@ -920,17 +922,13 @@ function (_React$Component) {
         type: "submit",
         onSubmit: this.handleSubmit,
         className: "btn btn-primary"
-<<<<<<< HEAD
-      }, "Login"))));
-=======
       }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--facebook",
         href: "/api/auth/facebook"
       }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--google",
         href: "/api/auth/google"
-      }, "Login with Google"))))));
->>>>>>> logueoFacebook
+      }, "Login with Google")))));
     }
   }]);
 
@@ -1074,9 +1072,9 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-12 "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/adm/users",
+        to: "/usuarios/addadmin",
         onClick: this.handleClick
-      }, "USUARIOS")))));
+      }, "USUARIOS ADMINISTRADORES")))));
     }
   }]);
 
@@ -1382,12 +1380,10 @@ function (_React$Component) {
         className: "form-row"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "botones"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        to: "/"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-<<<<<<< HEAD
-        className: "btn btn-primary"
+        className: "btn btn-primary",
+        onSubmit: this.handleSubmit
       }, "Registrarse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--facebook",
         href: "/api/auth/facebook"
@@ -1395,11 +1391,6 @@ function (_React$Component) {
         className: "loginBtn loginBtn--google",
         href: "/api/auth/google"
       }, "Login with Google")))));
-=======
-        className: "btn btn-primary",
-        onSubmit: this.handleSubmit
-      }, "Registrarse"))))));
->>>>>>> prueba
     }
   }]);
 
@@ -1491,6 +1482,7 @@ function (_React$Component) {
       e.preventDefault();
       var user = this.state;
       this.props.giveadmAccess(user);
+      return this.props.history.push('/');
     }
   }, {
     key: "render",
@@ -2247,40 +2239,18 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/registro",
-<<<<<<< HEAD
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
-=======
-<<<<<<< HEAD
-        render: function render() {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], null);
-=======
         render: function render(_ref2) {
           var history = _ref2.history;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Registro__WEBPACK_IMPORTED_MODULE_7__["default"], {
             history: history
           });
->>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
->>>>>>> prueba
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/login",
-<<<<<<< HEAD
-        render: function render(_ref2) {
-          var history = _ref2.history,
-              location = _ref2.location;
-=======
-<<<<<<< HEAD
-        render: function render(_ref2) {
-          var history = _ref2.history,
-              location = _ref2.location;
-=======
         render: function render(_ref3) {
           var history = _ref3.history,
               location = _ref3.location;
->>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
->>>>>>> prueba
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Login__WEBPACK_IMPORTED_MODULE_8__["default"], {
             history: history,
             location: location
@@ -2299,18 +2269,8 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos",
-<<<<<<< HEAD
-        render: function render(_ref3) {
-          var location = _ref3.location;
-=======
-<<<<<<< HEAD
-        render: function render(_ref3) {
-          var location = _ref3.location;
-=======
         render: function render(_ref4) {
           var location = _ref4.location;
->>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
->>>>>>> prueba
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductsContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {
             location: location
           });
@@ -2318,7 +2278,12 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/usuarios/addadmin",
-        component: _components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_10__["default"]
+        render: function render(_ref5) {
+          var history = _ref5.history;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UserAsAdmin__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            history: history
+          });
+        }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/add",
@@ -2328,36 +2293,16 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
-<<<<<<< HEAD
-        render: function render(_ref4) {
-          var match = _ref4.match;
-=======
-<<<<<<< HEAD
-        render: function render(_ref4) {
-          var match = _ref4.match;
-=======
-        render: function render(_ref5) {
-          var match = _ref5.match;
->>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
->>>>>>> prueba
+        render: function render(_ref6) {
+          var match = _ref6.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
             prodId: match.params.id
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
-<<<<<<< HEAD
-        render: function render(_ref5) {
-          var match = _ref5.match;
-=======
-<<<<<<< HEAD
-        render: function render(_ref5) {
-          var match = _ref5.match;
-=======
-        render: function render(_ref6) {
-          var match = _ref6.match;
->>>>>>> cf386f585fb18baa7319491d414bd251da0267a9
->>>>>>> prueba
+        render: function render(_ref7) {
+          var match = _ref7.match;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
