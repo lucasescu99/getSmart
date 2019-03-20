@@ -758,13 +758,17 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogIn",
     src: "/utils/user.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption"
+  }, "Registrate"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/usuarios/login",
     id: "linkLogOut"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "userLogOut",
     src: "/utils/logout.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption2"
+  }, "Ingresa")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -2335,10 +2339,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _redux_action_creators_action_creator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../redux/action-creators/action-creator */ "./front/src/redux/action-creators/action-creator.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
+<<<<<<< HEAD
 !(function webpackMissingModule() { var e = new Error("Cannot find module '../components/MetodosDePago'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _components_DetalleDeCompra__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/DetalleDeCompra */ "./front/src/components/DetalleDeCompra.jsx");
 /* harmony import */ var _components_Checkout__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/Checkout */ "./front/src/components/Checkout.jsx");
 /* harmony import */ var _components_TarjetaDeCredito__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/TarjetaDeCredito */ "./front/src/components/TarjetaDeCredito.jsx");
+=======
+/* harmony import */ var _components_Checkout__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/Checkout */ "./front/src/components/Checkout.jsx");
+/* harmony import */ var _components_TarjetaDeCredito__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/TarjetaDeCredito */ "./front/src/components/TarjetaDeCredito.jsx");
+>>>>>>> 760d5e70da251c6bf0926a0426ad9dc09612274f
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2375,6 +2384,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+ // import MetodosDePago from '../components/MetodosDePago';
+// import DetalleDeCompra from '../components/DetalleDeCompra';
 
 
 
@@ -2509,11 +2520,19 @@ function (_React$Component) {
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/pagos/",
+<<<<<<< HEAD
         component: _components_Checkout__WEBPACK_IMPORTED_MODULE_19__["default"]
       }), "} />", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/tarjeta",
         component: _components_TarjetaDeCredito__WEBPACK_IMPORTED_MODULE_20__["default"]
+=======
+        component: _components_Checkout__WEBPACK_IMPORTED_MODULE_17__["default"]
+      }), "} />", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
+        path: "/tarjeta",
+        component: _components_TarjetaDeCredito__WEBPACK_IMPORTED_MODULE_18__["default"]
+>>>>>>> 760d5e70da251c6bf0926a0426ad9dc09612274f
       })));
     }
   }]);
