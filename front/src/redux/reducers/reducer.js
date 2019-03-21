@@ -7,7 +7,9 @@ const initialState = {
   userCheck: {},
   user: {},
   access: '',
-  usuario: {}
+  usuario: {},
+  users: [],
+  carrito: {}
 };
 
 export default (state = initialState, action) => {
@@ -24,6 +26,10 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, { access: action.qty });
     case GET_USER:
       return Object.assign({}, state, { usuario: action.usuario });
+    case 'SET_USERS':
+      return Object.assign({}, state, { users: action.users });
+    case 'SET_CARRITO':
+      return Object.assign({}, state, { carrito: action.carrito });
     default:
       return state;
   }

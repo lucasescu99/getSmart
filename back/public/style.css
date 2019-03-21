@@ -2,6 +2,36 @@
     box-sizing : border-box;
     font-family: 'Montserrat', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 12px;     /* Tamaño del scroll en vertical */
+    height: 12px;    /* Tamaño del scroll en horizontal */
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
 .FRUsuarios{
     width: 650px;
     margin: 50px auto
@@ -34,13 +64,18 @@
     border: 1px solid black;
     border-radius: 20px;
     padding: 50px;
- }
+}
 #input{
     border-radius: 25px;
     width: 500px;
     height: 40px;
-  
+    padding-left: 20px;
 }
+
+#input::-webkit-input-placeholder{
+    line-height: 100px;/* Centrado vertical */
+}
+
 #carrito{
     width: 45px;
 }
@@ -70,6 +105,8 @@
 .imgproduct{
     height: 350px;
     width: 300px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 .userAsAdm{
     margin-top: 100px;
@@ -119,8 +156,9 @@ a:hover{
   color: #b1ccf3;
   text-decoration: none;
 }
-.col-lg-12{
+.nav-link{
   border-left: #929fab solid 1px;
+  text-align: center
 }
 
 #logOut {
@@ -275,8 +313,8 @@ a:hover{
     border-radius: 0.2em;
     font-size: 16px;
     color: #FFF;
-  }
-  .loginBtn:before {
+}
+.loginBtn:before {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -284,10 +322,10 @@ a:hover{
     left: 0;
     width: 34px;
     height: 100%;
-  }
-  .loginBtn:focus {
+}
+.loginBtn:focus {
     outline: none;
-  }
+}
   .loginBtn:active {
     box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
   }
@@ -324,9 +362,6 @@ a:hover{
   .loginBtn--google:focus {
     background: #E74B37;
   }
-    width: 90px;
-    height: 90px;
-}
 
 #master{
     width: 90px;
@@ -426,7 +461,7 @@ margin-left:30px;
     grid-template-columns: 0.3fr 1fr;
     height: 0px;
 }
-}
+
 #vencimiento{
     width: 185px;
 }
@@ -480,4 +515,63 @@ margin-left: 160px;
     float: right;
     display: grid;
     margin: 10px 20% 0 60% ;
+}
+
+.navbarUser{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+}
+
+.titleListUsers{
+    margin-top: 25px
+}
+#trashUser{
+    width: 35px;
+    float: right;
+    position: relative;
+    margin-right: 15px;
+}
+
+#trashUser:hover{
+    transform: scale(1.2)
+}
+.listItem{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+}
+.listItem:hover{
+    border: solid rgb(36, 36, 36) 1px
+}
+.containerTrash{
+    float: right
+}
+
+.list-group{
+    max-width: 1000px;
+    margin: 0 auto
+}
+.titlesUsers{
+    margin-right: 10px;
+}
+
+.imgCarritoList {
+    width: 100px;
+    object-fit: contain;
+}
+
+.carritoContainer {
+	height: 300px;
+	width: 600px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+.media{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center
 }

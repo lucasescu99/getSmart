@@ -6,10 +6,12 @@ import Products from '../components/Products';
 
 class ProductsContainer extends React.Component {
   componentDidMount () {
-    this.props.getProducts(this.props.location.search);
+    console.log('PROPS DEL CONTAINER', this.props);
+    this.props.getProducts(this.props.search);
   };
 
   render () {
+    console.log('PROPS EN EL RENDER', this.props);
     return (
       <div className="container">
         <h1 className='titleProduct'>PRODUCTOS</h1>

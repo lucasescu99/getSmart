@@ -61,7 +61,7 @@ export default (props) => {
           <h5>{producto.descripcion}</h5>
         </div>
       </div>
-
+      <hr/>
       <div className="row" style={{}}>
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Categorias :</strong></h4>

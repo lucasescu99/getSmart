@@ -22,6 +22,8 @@ import { withRouter } from 'react-router';
 // import DetalleDeCompra from '../components/DetalleDeCompra';
 import Checkout from '../components/Checkout';
 import TarjetaDeCredito from '../components/TarjetaDeCredito';
+import UsersContainer from './UsersContainer';
+import CarritoContainer from './CarritoContainer';
 
 class Main extends React.Component {
   constructor (props) {
@@ -41,24 +43,25 @@ class Main extends React.Component {
   }
 
   render () {
-    console.log(this.props.usuario);
     return (
       this.state.loading ? <h2>Loading...</h2>
         : <div id='main' className='container-fluid'>
           <Route render= {({ history }) => (<Header login={this.props.usuario.id} history={history} fetchUser={this.props.fetchUser} />)} />
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
+            <Route exact path='/' component={Home} />
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
             <Route exact path="/usuarios/registro" render={({ history }) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
-            <Route exact path='/' component={Home} />
-            <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
-            <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
+            <Route exact path="/usuarios/all" render={({ history }) => (<UsersContainer history={history}/>)} />
             <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
-            <Route exact path='/productos/add' render={() => (<CrearProd />)} />
-            <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
+            <Route exact path='/categorias/add' render={() => (<CreateCat />)} />
+            <Route exact path='/productos' render={({ location }) => <ProductsContainer search={location.search} />} />
+            <Route exact path='/productos/add' render={({ history }) => (<CrearProd history={history}/>)} />
+            <Route exact path='/productos/edit/:id' render={({ match, history }) => (<EditProd prodId={match.params.id} history={history} />)} />
             <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
-            <Route path="/pagos/" component={Checkout} />} />
+            <Route path="/pagos" component={Checkout} />} />
+            <Route path="/cart" render={() => <CarritoContainer />} />
             <Route exact path='/tarjeta' component={TarjetaDeCredito} />
           </Switch>
         </div >
