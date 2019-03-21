@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { RECEIVE_PRODUCT } from '../constants';
+import { RECEIVE_PRODUCT, SET_PRODUCTS, SET_CATEGORIAS } from '../constants';
 
 export const setProducts = (products) => (
   {
-    type: 'SET_PRODUCTS',
+    type: SET_PRODUCTS,
     products
   }
 );
@@ -11,6 +11,11 @@ export const setProducts = (products) => (
 const recibirProducto = (product) => ({
   type: RECEIVE_PRODUCT,
   product
+});
+
+const setCategorias = (categorias) => ({
+  type: SET_CATEGORIAS,
+  categorias
 });
 
 export const getProducts = (searchProduct) => dispatch => {
@@ -24,3 +29,8 @@ export const buscarProducto = prodID => dispatch =>
   axios.get(`/api/productos/${prodID}`)
     .then(res => res.data)
     .then(producto => dispatch(recibirProducto(producto)));
+
+export const buscarCategorias = prodId => dispatch =>
+  axios.get(`/api/categorias/${prodId}`)
+    .then(info => info.data)
+    .then(categorias => dispatch(setCategorias(categorias)))

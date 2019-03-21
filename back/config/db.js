@@ -1,6 +1,10 @@
-var Sequelize = require('sequelize');
+require('dotenv').config()
 
-var db = new Sequelize('postgres://localhost:5432/getSmartDB', { // define la conexion de sequelize con la base de datos creada en postgres
+var Sequelize = require('sequelize');
+const rutaDB = process.env.RUTADB;
+
+console.log(rutaDB)
+var db = new Sequelize(rutaDB, { // define la conexion de sequelize con la base de datos creada en postgres
   logging: false
 });
 
