@@ -1,11 +1,14 @@
-/* eslint-disable one-var */
+/* eslint-disable no-unused-vars */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../redux/action-creators/action-creator';
+import { Link } from 'react-router-dom';
 
 class Registro extends React.Component {
   constructor (props) {
     super(props);
+
     this.state = {
       nombre: '',
       apellido: '',
@@ -14,51 +17,21 @@ class Registro extends React.Component {
       password: '',
       isAdmin: false
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // componentDidMount () {
-  //   window.fbAsyncInit = () => {
-  //     window.FB.init({
-  //       appId: '{534343110422200}',
-  //       cookie: true,
-  //       xfbml: true,
-  //       version: '{1.0.0}'
-  //     });
-  //     window.FB.AppEvents.logPageView();
-  //   };
-
-  //   window.FB.Event.subscribe('auth.statusChange', response => this.statusChangeCallback(response));
-
-  //   this.getLoginStatus();
-
-  //   (function (d, s, id) {
-  //     var js, fjs = d.getElementsByTagName(s)[0];
-  //     if (d.getElementById(id)) { return; }
-  //     js = d.createElement(s); js.id = id;
-  //     js.src = 'https://connect.facebook.net/en_US/sdk.js';
-  //     fjs.parentNode.insertBefore(js, fjs);
-  //   }(document, 'script', 'facebook-jssdk'));
-  // }
-
-  // statusChangeCallback (response) {
-  //   this.setState(response);
-  // }
-
-  // getLoginStatus () {
-  //   window.FB.getLoginStatus((response) => {
-  //     this.statusChangeCallback(response);
-  //   });
-  // }
 
   handleChange (e) {
     this.setState(
       { [e.target.name]: e.target.value });
+    console.log(this.state);
   }
 
   handleSubmit (e) {
     e.preventDefault();
     this.props.registerUser(this.state);
+    return this.props.history.push('/usuarios/login');
   }
 
   render () {
@@ -92,8 +65,14 @@ class Registro extends React.Component {
             <div className="form-row">
             </div>
             <div className="botones">
-              <button type="submit" className="btn btn-primary" >Registrarse</button>
-              <div className="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="true"></div>
+              <button type="submit" className="btn btn-primary" onSubmit={this.handleSubmit} >Registrarse</button>
+              <a className="loginBtn loginBtn--facebook" href='/api/auth/facebook'>
+                Login with Facebook
+              </a>
+
+              <a className="loginBtn loginBtn--google" href='/api/auth/google'>
+                Login with Google
+              </a>
             </div>
           </div>
         </div>

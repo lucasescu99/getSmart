@@ -5,8 +5,7 @@ const categorias = [];
 const addCat = (cat) => {
   categorias.push(cat);
 };
-
-const Formulario = ({ onChange, onChange2, onSubmit, title, array }) => (
+const Formulario = ({ onChange, onSubmit, title, array }) => (
 
   <form className='formProdAm' onSubmit={(e) => onSubmit(e, categorias)} >
     <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} Crear un Nuevo Producto</h1>

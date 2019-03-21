@@ -1,4 +1,5 @@
-import { CHECK_USER, ADD_USER, ADM_ACCESS, RECEIVE_PRODUCT, SET_PRODUCTS, SET_CATEGORIAS } from '../constants';
+import { CHECK_USER, ADD_USER, ADM_ACCESS, RECEIVE_PRODUCT, GET_USER, SET_PRODUCTS, SET_CATEGORIAS } from '../constants';
+import { bindActionCreators } from 'redux';
 
 const initialState = {
   products: [],
@@ -6,7 +7,8 @@ const initialState = {
   userCheck: {},
   user: {},
   access: '',
-  categorias: []
+  categorias: [],
+  usuario: {}
 };
 
 export default (state = initialState, action) => {
@@ -23,6 +25,8 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, { access: action.qty });
     case SET_CATEGORIAS:
       return Object.assign({}, state, { categorias: action.categorias });
+    case GET_USER:
+      return Object.assign({}, state, { usuario: action.usuario });
     default:
       return state;
   }
