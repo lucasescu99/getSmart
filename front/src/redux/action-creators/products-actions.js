@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { RECEIVE_PRODUCT, SET_PRODUCTS, SET_CATEGORIAS } from '../constants';
+import { RECEIVE_PRODUCT, SET_PRODUCTS, SET_CATEGORIAS, SEARCH_MARK } from '../constants';
 
 export const setProducts = (products) => (
   {
@@ -18,6 +18,11 @@ const setCategorias = (categorias) => ({
   categorias
 });
 
+const buscarMarca = (marcas) => ({
+  type: SEARCH_MARK,
+  marcas
+});
+
 export const getProducts = (searchProduct) => dispatch => {
   return axios.get(`/api/productos${searchProduct}`)
     .then(res => {
@@ -33,4 +38,9 @@ export const buscarProducto = prodID => dispatch =>
 export const buscarCategorias = prodId => dispatch =>
   axios.get(`/api/categorias/${prodId}`)
     .then(info => info.data)
-    .then(categorias => dispatch(setCategorias(categorias)))
+    .then(categorias => dispatch(setCategorias(categorias)));
+
+export const buscarMarcas = markProd => dispatch =>
+  axios.get(`/api/productos/marcas/${markProd}`)
+    .then(res => res.data)
+    .then(marca => dispatch(buscarMarca(marca)));

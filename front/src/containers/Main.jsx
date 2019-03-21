@@ -13,6 +13,7 @@ import Login from '../components/Login';
 import Home from '../components/Home';
 import UserAsAdmin from '../components/UserAsAdmin';
 import Header from '../components/Header';
+import MarkProductsContainer from '../containers/MarkProductsContainer';
 import SingleProd from '../containers/SingleProductCont';
 import NavbarContainer from '../containers/NavbarContainer';
 import { getUser, checkUserLogin, fetchUser } from '../redux/action-creators/action-creator';
@@ -53,6 +54,7 @@ class Main extends React.Component {
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
+            <Route exact path='/productos/marcas/:product' render={({ match }) => <MarkProductsContainer markProduct={ match.params.product}/>} />
             <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
             <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
             <Route exact path='/productos/add' render={() => (<CrearProd />)} />

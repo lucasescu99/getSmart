@@ -9,7 +9,6 @@ export default (props) => {
     red.push(`/productos?modelo=${e.target.input.value}`);
   };
 
-  console.log(props);
   return (
     !props.login
       ? <header className='header'>
