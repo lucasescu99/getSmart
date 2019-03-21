@@ -5,6 +5,7 @@ const categorias = [];
 const addCat = (cat) => {
   categorias.push(cat);
 };
+
 const Formulario = ({ onChange, onChange2, onSubmit, title, array }) => (
 
   <form className='formProdAm' onSubmit={(e) => onSubmit(e, categorias)} >

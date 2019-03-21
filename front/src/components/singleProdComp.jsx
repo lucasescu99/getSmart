@@ -4,7 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Stars from './starRating';
 
 export default (props) => {
-  const producto = props.producto;
+  console.log('esta es el props de SingleProdComp', props);
+  const { producto, categorias } = props;
   return (
     <div id="singleProd">
 
@@ -55,18 +56,22 @@ export default (props) => {
         </div>
       </div>
 
-      <div className="row" style={{}}>
+      <div className="row" >
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Categorias :</strong></h4>
-          <h6 className="col-lg-12">{}</h6>
+          <ul><h6>
+            {categorias.map((obj, index = 0) => {
+              return <li key={index++}>{obj.name}</li>;
+            })}
+          </h6></ul>
+
         </div>
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Reviews :</strong></h4><br />
-          <h6 className="col-lg-12"><strong>UsuarioX </strong>dijo :
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
+          <h6 className="col-lg-12"><strong>UsuarioX </strong>Dijo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
         </div>
       </div>
 
     </div>
   );
-}
+};

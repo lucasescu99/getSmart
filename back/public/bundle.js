@@ -1605,7 +1605,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-  var producto = props.producto;
+  console.log('esta es el props de SingleProdComp', props);
+  var producto = props.producto,
+      categorias = props.categorias;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "singleProd"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1691,17 +1693,19 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-lg-6 col-xs-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Descripci\xF3n : ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, producto.descripcion))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
-    style: {}
+    className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-lg-6 col-xs-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Categorias :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "col-lg-12"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Categorias :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, categorias.map(function (obj) {
+    var index = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: index++
+    }, obj.name);
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-lg-6 col-xs-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Reviews :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "col-lg-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "dijo : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos."))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "Dijo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos."))));
 });
 
 /***/ }),
@@ -1920,6 +1924,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_FormCreatCat__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onSubmit: this.handleSubmit,
         onChange: this.handleChange
@@ -2588,6 +2593,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.buscarProd(this.props.prodId);
+      this.props.buscarCat(this.props.prodId);
     }
   }, {
     key: "render",
@@ -2597,7 +2603,8 @@ function (_React$Component) {
         className: "container"
       }, product.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__["default"], {
         producto: product,
-        adminInfo: this.props.isAdmin
+        adminInfo: this.props.isAdmin,
+        categorias: this.props.categorias
       }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Este producto no existe"));
     }
   }]);
@@ -2610,7 +2617,8 @@ function (_React$Component) {
 var mapStateToProps = function mapStateToProps(state) {
   return {
     producto: state.selectedProd,
-    rating: state.ratingProd
+    rating: state.ratingProd,
+    categorias: state.categorias
   };
 };
 
@@ -2618,6 +2626,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     buscarProd: function buscarProd(prodID) {
       return dispatch(Object(_redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_2__["buscarProducto"])(prodID));
+    },
+    buscarCat: function buscarCat(artId) {
+      return dispatch(Object(_redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_2__["buscarCategorias"])(artId));
     }
   };
 };
@@ -2754,7 +2765,7 @@ var cookieIsAdmin = function cookieIsAdmin() {
 /*!*************************************************************!*\
   !*** ./front/src/redux/action-creators/products-actions.js ***!
   \*************************************************************/
-/*! exports provided: setProducts, getProducts, buscarProducto */
+/*! exports provided: setProducts, getProducts, buscarProducto, buscarCategorias */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2762,6 +2773,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setProducts", function() { return setProducts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProducts", function() { return getProducts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buscarProducto", function() { return buscarProducto; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buscarCategorias", function() { return buscarCategorias; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./front/src/redux/constants.js");
@@ -2769,7 +2781,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var setProducts = function setProducts(products) {
   return {
-    type: 'SET_PRODUCTS',
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["SET_PRODUCTS"],
     products: products
   };
 };
@@ -2778,6 +2790,13 @@ var recibirProducto = function recibirProducto(product) {
   return {
     type: _constants__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_PRODUCT"],
     product: product
+  };
+};
+
+var setCategorias = function setCategorias(categorias) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_1__["SET_CATEGORIAS"],
+    categorias: categorias
   };
 };
 
@@ -2797,6 +2816,15 @@ var buscarProducto = function buscarProducto(prodID) {
     });
   };
 };
+var buscarCategorias = function buscarCategorias(prodId) {
+  return function (dispatch) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/categorias/".concat(prodId)).then(function (info) {
+      return info.data;
+    }).then(function (categorias) {
+      return dispatch(setCategorias(categorias));
+    });
+  };
+};
 
 /***/ }),
 
@@ -2804,21 +2832,26 @@ var buscarProducto = function buscarProducto(prodID) {
 /*!**************************************!*\
   !*** ./front/src/redux/constants.js ***!
   \**************************************/
-/*! exports provided: RECEIVE_PRODUCT, CHECK_USER, ADD_USER, ADM_ACCESS */
+/*! exports provided: RECEIVE_PRODUCT, SET_PRODUCTS, CHECK_USER, ADD_USER, ADM_ACCESS, SET_CATEGORIAS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PRODUCT", function() { return RECEIVE_PRODUCT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PRODUCTS", function() { return SET_PRODUCTS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHECK_USER", function() { return CHECK_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_USER", function() { return ADD_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADM_ACCESS", function() { return ADM_ACCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_CATEGORIAS", function() { return SET_CATEGORIAS; });
 // PRODUCT 
-var RECEIVE_PRODUCT = 'RECEIVE_PRODUCT'; // USER
+var RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
+var SET_PRODUCTS = 'SET_PRODUCTS'; // USER
 
 var CHECK_USER = 'CHECK_USER';
 var ADD_USER = 'ADD_USER';
-var ADM_ACCESS = 'ADM_ACCESS';
+var ADM_ACCESS = 'ADM_ACCESS'; //ARTICULOS
+
+var SET_CATEGORIAS = 'SET_CATEGORIAS';
 
 /***/ }),
 
@@ -2838,14 +2871,15 @@ var initialState = {
   selectedProd: {},
   userCheck: {},
   user: {},
-  access: ''
+  access: '',
+  categorias: []
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case 'SET_PRODUCTS':
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_PRODUCTS"]:
       return Object.assign({}, state, {
         products: action.products
       });
@@ -2868,6 +2902,11 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["ADM_ACCESS"]:
       return Object.assign({}, state, {
         access: action.qty
+      });
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_CATEGORIAS"]:
+      return Object.assign({}, state, {
+        categorias: action.categorias
       });
 
     default:

@@ -31,6 +31,7 @@ export default class AdminProd extends React.Component {
   }
 
   render () {
+    console.log(this.props)
     return (
       <div>
         <FormCreatCat
