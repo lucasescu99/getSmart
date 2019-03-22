@@ -12,3 +12,7 @@ export const fetchCarrito = (id) => dispatch => {
     .then(res => res.data)
     .then(carrito => dispatch(setCarrito(carrito)));
 };
+
+export const comprarCarrito = (id, cantidad, productos) => dispatch => {
+  axios.post(`/api/carrito/${id}`, { cantidad, productos });
+};

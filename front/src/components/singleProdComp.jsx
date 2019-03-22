@@ -65,7 +65,7 @@ export default (props) => {
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Categorias :</strong></h4>
           <ul><h6>
-            {categorias.map((obj, index = 0) => {
+            { categorias && categorias.map((obj, index = 0) => {
               return <li key={index++}>{obj.name}</li>;
             })}
           </h6></ul>
