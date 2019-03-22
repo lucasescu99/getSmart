@@ -1751,14 +1751,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
-<<<<<<< HEAD
-  console.log('esta es el props de SingleProdComp', props);
   var producto = props.producto,
       categorias = props.categorias;
-=======
-  var producto = props.producto;
-  console.log(props);
->>>>>>> cb65a20fb2e0948557553e33f5b8223e6629a1fc
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "singleProd"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3013,39 +3007,28 @@ var buscarCategorias = function buscarCategorias(prodId) {
 /*!**************************************!*\
   !*** ./front/src/redux/constants.js ***!
   \**************************************/
-<<<<<<< HEAD
-/*! exports provided: RECEIVE_PRODUCT, SET_PRODUCTS, CHECK_USER, ADD_USER, ADM_ACCESS, SET_CATEGORIAS */
-=======
-/*! exports provided: RECEIVE_PRODUCT, CHECK_USER, ADD_USER, ADM_ACCESS, GET_USER */
->>>>>>> cb65a20fb2e0948557553e33f5b8223e6629a1fc
+/*! exports provided: RECEIVE_PRODUCT, SET_PRODUCTS, GET_USER, CHECK_USER, ADD_USER, ADM_ACCESS, SET_CATEGORIAS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PRODUCT", function() { return RECEIVE_PRODUCT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PRODUCTS", function() { return SET_PRODUCTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_USER", function() { return GET_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHECK_USER", function() { return CHECK_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_USER", function() { return ADD_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADM_ACCESS", function() { return ADM_ACCESS; });
-<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_CATEGORIAS", function() { return SET_CATEGORIAS; });
-=======
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_USER", function() { return GET_USER; });
->>>>>>> cb65a20fb2e0948557553e33f5b8223e6629a1fc
 // PRODUCT 
 var RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 var SET_PRODUCTS = 'SET_PRODUCTS'; // USER
 
+var GET_USER = 'GET_USER';
 var CHECK_USER = 'CHECK_USER';
 var ADD_USER = 'ADD_USER';
-<<<<<<< HEAD
 var ADM_ACCESS = 'ADM_ACCESS'; //ARTICULOS
 
 var SET_CATEGORIAS = 'SET_CATEGORIAS';
-=======
-var ADM_ACCESS = 'ADM_ACCESS';
-var GET_USER = 'GET_USER';
->>>>>>> cb65a20fb2e0948557553e33f5b8223e6629a1fc
 
 /***/ }),
 
@@ -3068,11 +3051,8 @@ var initialState = {
   userCheck: {},
   user: {},
   access: '',
-<<<<<<< HEAD
-  categorias: []
-=======
+  categorias: [],
   usuario: {}
->>>>>>> cb65a20fb2e0948557553e33f5b8223e6629a1fc
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -3104,15 +3084,14 @@ var initialState = {
         access: action.qty
       });
 
-<<<<<<< HEAD
     case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_CATEGORIAS"]:
       return Object.assign({}, state, {
         categorias: action.categorias
-=======
+      });
+
     case _constants__WEBPACK_IMPORTED_MODULE_0__["GET_USER"]:
       return Object.assign({}, state, {
         usuario: action.usuario
->>>>>>> cb65a20fb2e0948557553e33f5b8223e6629a1fc
       });
 
     default:
