@@ -4,7 +4,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 const session = require('express-session');
-const LocalStrategy = require('passport-local').Strategy;
 var path = require('path');
 var morgan = require('morgan');
 const db = require('./config/db');
@@ -21,16 +20,17 @@ app.use(
     resave: false,
     saveUninitialized: false
   })
-);
-
-// ESTRATEGIAS DE LOGIN
-
+  );
+  
+  // ESTRATEGIAS DE LOGIN
+  
+const LocalStrategy = require('passport-local').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy = require('passport-google-oauth2').Strategy;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize()); /* esta linea es de configuracion y cuidado con el orden, poner antes de las rutas*/
+app.use(passport.session()); /* esta idem */
 app.use(morgan('dev'));
 app.use('/api', apiRoutes);
 
