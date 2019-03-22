@@ -1,6 +1,5 @@
 import { CHECK_USER, ADD_USER, ADM_ACCESS, RECEIVE_PRODUCT, GET_USER, SET_PRODUCTS, SET_CATEGORIAS, SEARCH_MARK } from '../constants';
 
-
 const initialState = {
   products: [],
   selectedProd: {},
@@ -9,7 +8,8 @@ const initialState = {
   access: '',
   usuario: {},
   users: [],
-  carrito: {}
+  carrito: {},
+  marcas: []
 };
 
 export default (state = initialState, action) => {
@@ -32,6 +32,8 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, { users: action.users });
     case 'SET_CARRITO':
       return Object.assign({}, state, { carrito: action.carrito });
+    case SEARCH_MARK:
+      return Object.assign({}, state, { marcas: action.marca });
     default:
       return state;
   }
