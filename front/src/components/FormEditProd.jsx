@@ -7,7 +7,7 @@ const addCat = (cat) => {
 
 const Formulario = ({ productoAnterior, onChange, onSubmit, title, array }) => (
 
-  <form className='formProdAm' onSubmit={onSubmit} >
+  <form className='formProdAm' onSubmit={(e) => onSubmit(e)} >
     <h1 style={{ textAlign: 'center', marginBottom: '50px', borderBottom: '1px solid black', paddingBottom: '20px' }}>{title} <b>Editar producto: </b> <br /> '{productoAnterior && productoAnterior.marca}  {productoAnterior && productoAnterior.modelo}'  </h1>
     <div className="row">
       <h3>Marca: </h3>
@@ -88,7 +88,7 @@ const Formulario = ({ productoAnterior, onChange, onSubmit, title, array }) => (
       </label>
     </div>
 
-    <button onSubmit={onSubmit} className='btn btn-lg btn-success'>SUBMIT</button>
+    <button onSubmit={(e) => onSubmit(e)} className='btn btn-lg btn-success'>SUBMIT</button>
 
   </form >
 );

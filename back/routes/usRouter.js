@@ -41,4 +41,13 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
   }
 });
 
+router.get('/all', (req, res) => {
+  Usuario.findAll()
+    .then(usuarios => res.send(usuarios));
+});
+
+router.delete('/:id', (req, res) => {
+  Usuario.destroy({ where: { id: req.params.id } });
+});
+
 module.exports = router;
