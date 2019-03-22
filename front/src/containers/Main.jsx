@@ -8,6 +8,7 @@ import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import ProductsContainer from './ProductsContainer';
 import CrearProd from './CrearProd';
 import HomeRL from './HomeRL';
+import MarkProductsContainer from './MarkProductsContainer';
 import Registro from '../components/Registro';
 import Login from '../components/Login';
 import Home from '../components/Home';
@@ -53,6 +54,7 @@ class Main extends React.Component {
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
+            <Route exact path='/categorias/marcas/:marca' render={({ match }) => <MarkProductsContainer marca={match.params.marca}/>}/>
             <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
             <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
             <Route exact path='/productos/add' render={() => (<CrearProd />)} />

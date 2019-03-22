@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const app = express();
 var cookieParser = require('cookie-parser');
@@ -12,6 +14,7 @@ const apiRoutes = require('./routes');
 const { Usuario } = require('./models/Usuario');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sessionStore = new SequelizeStore({ db });
+const PORT = process.env.PORT || 8080
 
 app.use(cookieParser());
 app.use(
@@ -191,7 +194,6 @@ app.post('/api/usuarios/login', passport.authenticate('local', { failureRedirect
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-var port = 8080;
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, './public/index.html'));
@@ -201,6 +203,6 @@ sessionStore.sync()
   .then(() => {
     db.sync({ force: false }).then((con) => {
       console.log(`${con.options.dialect} database ${con.config.database} connected at ${con.config.host}:${con.config.port}`);
-      app.listen(port, () => console.log('SERVER LISTENING AT PORT', port));
+      app.listen(PORT, () => console.log('SERVER LISTENING AT PORT', PORT));
     });
   });

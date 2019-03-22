@@ -5,8 +5,7 @@ import Stars from './starRating';
 import { Link } from 'react-router-dom';
 
 export default (props) => {
-  const producto = props.producto;
-  console.log(props);
+  const { producto, categorias } = props;
   return (
     <div id="singleProd">
 
@@ -61,16 +60,20 @@ export default (props) => {
           <h5>{producto.descripcion}</h5>
         </div>
       </div>
-
-      <div className="row" style={{}}>
+      <hr/>
+      <div className="row" >
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Categorias :</strong></h4>
-          <h6 className="col-lg-12">{}</h6>
+          <ul><h6>
+            { categorias && categorias.map((obj, index = 0) => {
+              return <li key={index++}>{obj.name}</li>;
+            })}
+          </h6></ul>
+
         </div>
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Reviews :</strong></h4><br />
-          <h6 className="col-lg-12"><strong>UsuarioX </strong>dijo :
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
+          <h6 className="col-lg-12"><strong>UsuarioX </strong>Dijo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
         </div>
       </div>
 

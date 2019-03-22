@@ -27,6 +27,7 @@ export default class AdminProd extends React.Component {
   }
 
   handleSubmit (e, categorias) {
+    console.log('hola');
     e.preventDefault();
     axios.post('/api/productos/add', {
       marca: this.state.Marca,
@@ -38,6 +39,7 @@ export default class AdminProd extends React.Component {
       categorias
     })
       .then(product => {
+        console.log('hola entre en el then');
         this.props.history.push(`/productos/${product.data.id}`);
       });
   }
