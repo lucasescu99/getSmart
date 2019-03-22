@@ -25,12 +25,13 @@ export const getProducts = (searchProduct) => dispatch => {
     });
 };
 
-export const buscarProducto = prodID => dispatch =>
-  axios.get(`/api/productos/${prodID}`)
+export const buscarProducto = prodID => dispatch => {
+  return axios.get(`/api/productos/${prodID}`)
     .then(res => res.data)
     .then(producto => dispatch(recibirProducto(producto)));
-
-export const buscarCategorias = prodId => dispatch =>
-  axios.get(`/api/categorias/${prodId}`)
+};
+export const buscarCategorias = prodId => dispatch => {
+  return axios.get(`/api/categorias/${prodId}`)
     .then(info => info.data)
     .then(categorias => dispatch(setCategorias(categorias)))
+};

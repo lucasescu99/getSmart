@@ -6,8 +6,7 @@ const setUsers = (users) => ({
 });
 
 export const fetchUsers = () => dispatch => {
-  console.log('hola entre al fetch');
-  axios.get('/api/usuarios/all')
+  return axios.get('/api/usuarios/all')
     .then(res => res.data)
     .then(users => {
       dispatch(setUsers(users));
@@ -15,5 +14,5 @@ export const fetchUsers = () => dispatch => {
 };
 
 export const deleteUser = (id) => dispatch => {
-  axios.delete(`/api/usuarios/${id}`);
+  return axios.delete(`/api/usuarios/${id}`);
 };
