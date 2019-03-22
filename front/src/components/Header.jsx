@@ -9,7 +9,6 @@ export default (props) => {
     red.push(`/productos?modelo=${e.target.input.value}`);
   };
 
-  console.log(props);
   return (
     !props.login
       ? <header className='header'>
@@ -24,12 +23,12 @@ export default (props) => {
         <Route render={({ history }) => {
           return (
             <form method='GET' onSubmit={(e) => handleSubmit(e, history)}>
-              <input name='modelo' placeholder='    Busca tu producto 🔎' id='input' />
+              <input name='modelo' placeholder='Busca tu producto 🔎' id='input' />
             </form>
           );
         }
         } />
-        <Link to='cart' id='linkCart'><img id='carrito' src="/utils/carrito.svg"></img></Link>
+        <Link to='/cart' id='linkCart'><img id='carrito' src="/utils/carrito.svg"></img></Link>
 
       </header>
       : <header className='header'>

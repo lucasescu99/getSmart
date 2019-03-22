@@ -10,3 +10,6 @@ export const ADM_ACCESS = 'ADM_ACCESS';
 
 //ARTICULOS
 export const SET_CATEGORIAS = 'SET_CATEGORIAS';
+
+//MARCAS
+export const SEARCH_MARK = 'SEARCH_MARK';

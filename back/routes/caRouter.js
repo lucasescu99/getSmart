@@ -10,15 +10,19 @@ router.post('/add', (req, res) => {
 });
 
 router.get('/get', (req, res) => {
- Categorias.findAll()
-  .then( categorias => res.send(categorias))
+  Categorias.findAll()
+    .then(categorias => res.send(categorias));
+});
+router.get('/marcas/:mark', (req, res) => {
+  Producto.findAll({ where: { marca: req.params.mark } })
+    .then(marcaProduct => res.send(marcaProduct));
 });
 
 router.get('/:id', (req, res) => {
   Producto.findByPk(req.params.id, {
     include: [Categorias]
   })
-  .then(producto => res.send(producto.categorias))
+    .then(producto => res.send(producto.categorias));
 });
 
 module.exports = router

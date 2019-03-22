@@ -1,12 +1,10 @@
-require('dotenv').config()
-
+require('dotenv').config();
 const express = require('express');
 const app = express();
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 const session = require('express-session');
-const LocalStrategy = require('passport-local').Strategy;
 var path = require('path');
 var morgan = require('morgan');
 const db = require('./config/db');
@@ -14,7 +12,7 @@ const apiRoutes = require('./routes');
 const { Usuario } = require('./models/Usuario');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sessionStore = new SequelizeStore({ db });
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 
 app.use(cookieParser());
 app.use(
@@ -24,16 +22,17 @@ app.use(
     resave: false,
     saveUninitialized: false
   })
-);
-
-// ESTRATEGIAS DE LOGIN
-
+  );
+  
+  // ESTRATEGIAS DE LOGIN
+  
+const LocalStrategy = require('passport-local').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy = require('passport-google-oauth2').Strategy;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize()); /* esta linea es de configuracion y cuidado con el orden, poner antes de las rutas*/
+app.use(passport.session()); /* esta idem */
 app.use(morgan('dev'));
 app.use('/api', apiRoutes);
 
@@ -136,21 +135,21 @@ passport.use(new GoogleStrategy(
   }
 ));
 
-/* TODAS LAS RUTAS DE USUARIO */
+// /* TODAS LAS RUTAS DE USUARIO */
 
-app.get('/api/auth/facebook',
-  passport.authenticate('facebook',
-    {
-      scope: ['email']
-    }
-  ));
+// app.get('/api/auth/facebook',
+//   passport.authenticate('facebook',
+//     {
+//       scope: ['email']
+//     }
+//   ));
 
-app.get('/api/auth/google',
-  passport.authenticate('google',
-    {
-      scope: ['email']
-    }
-  ));
+// app.get('/api/auth/google',
+//   passport.authenticate('google',
+//     {
+//       scope: ['email']
+//     }
+//   ));
 
 // app.get('/auth/facebook/callback',
 //   passport.authenticate('facebook', {
@@ -165,35 +164,34 @@ app.get('/api/auth/google',
 //     failureRedirect: '/login'
 //   }));
 
-app.post('/api/usuarios/esAdm', (req, res) => {
-  Usuario.findOne(req.body)
-    .then(data => Usuario.update({ isAdmin: false }, { where: { isAdmin: true } }))
-    .then(data => res.send(data));
-});
+// app.post('/api/usuarios/esAdm', (req, res) => {
+//   Usuario.findOne(req.body)
+//     .then(data => Usuario.update({ isAdmin: false }, { where: { isAdmin: true } }))
+//     .then(data => res.send(data));
+// });
 
-app.get('/api/usuarios/todos', (req, res) => {
-  if (!req.user.dataValues.nombre) res.send(404, 'cantfindthat');
-  res.send(req.user.dataValues.nombre);
-});
+// app.get('/api/usuarios/todos', (req, res) => {
+//   if (!req.user.dataValues.nombre) res.send(404, 'cantfindthat');
+//   res.send(req.user.dataValues.nombre);
+// });
 
-app.get('/failurelogin', (req, res) => {
-  res.send('cantfindthat');
-});
+// app.get('/failurelogin', (req, res) => {
+//   res.send('cantfindthat');
+// });
 
-app.post('/api/usuarios/crea', (req, res) => {
-  console.log(req.body.user);
-  Usuario.create(req.body.user)
-    .then(data => res.status(201).send(data));
-});
+// app.post('/api/usuarios/crea', (req, res) => {
+//   console.log(req.body.user);
+//   Usuario.create(req.body.user)
+//     .then(data => res.status(201).send(data));
+// });
 
-// app.post('/usuarios/login', passport.authenticate('local', { successRedirect: '/usuarios/todos',failureRedirect: '/'}))
-app.post('/api/usuarios/login', passport.authenticate('local', { failureRedirect: '/failurelogin' }),
-  function (req, res) {
-    res.redirect('/api/usuarios/todos');
-  });
+// // app.post('/usuarios/login', passport.authenticate('local', { successRedirect: '/usuarios/todos',failureRedirect: '/'}))
+// app.post('/api/usuarios/login', passport.authenticate('local', { failureRedirect: '/failurelogin' }),
+//   function (req, res) {
+//     res.redirect('/api/usuarios/todos');
+//   });
 
 app.use(express.static(path.resolve(__dirname, 'public')));
-
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, './public/index.html'));

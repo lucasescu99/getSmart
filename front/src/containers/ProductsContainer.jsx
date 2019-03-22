@@ -6,7 +6,10 @@ import Products from '../components/Products';
 
 class ProductsContainer extends React.Component {
   componentDidMount () {
-    this.props.getProducts(this.props.location.search);
+    this.props.getProducts(this.props.search);
+  };
+  componentDidUpdate (prevProps) {
+    if (prevProps.search !== this.props.search) this.props.getProducts(this.props.search);
   };
 
   render () {

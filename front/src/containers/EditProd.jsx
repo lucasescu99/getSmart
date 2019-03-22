@@ -42,7 +42,7 @@ export default class AdminProd extends React.Component {
       modelo: this.state.Modelo,
       stock: this.state.Stock,
       precio: this.state.Precio,
-      imagenes: this.state.Imagen.split(','),
+      imagenes: this.state.Imagen && this.state.Imagen.split(','),
       descripcion: this.state.Descripcion
     })
       .then(product => {
