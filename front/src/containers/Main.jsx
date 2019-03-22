@@ -23,11 +23,12 @@ import { withRouter } from 'react-router';
 // import DetalleDeCompra from '../components/DetalleDeCompra';
 import Checkout from '../components/Checkout';
 import TarjetaDeCredito from '../components/TarjetaDeCredito';
+import UsersContainer from './UsersContainer';
+import CarritoContainer from './CarritoContainer';
 
 class Main extends React.Component {
   constructor (props) {
     super(props);
-
     this.state = {
       loading: true
     };
@@ -50,18 +51,20 @@ class Main extends React.Component {
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
+            <Route exact path="/usuarios/all" render={() => (<UsersContainer />)} />
             <Route exact path="/usuarios/registro" render={({ history }) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
             <Route exact path='/categorias/marcas/:marca' render={({ match }) => <MarkProductsContainer marca={match.params.marca}/>}/>
-            <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
+            <Route exact path='/productos' render={({ location }) => <ProductsContainer search={location.search} />} />
             <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
             <Route exact path='/productos/add' render={() => (<CrearProd />)} />
             <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
             <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
             <Route path="/pagos/" component={Checkout} />} />
             <Route exact path='/tarjeta' component={TarjetaDeCredito} />
+            <Route exact path='/cart' component={CarritoContainer} />
           </Switch>
         </div >
     );
@@ -69,7 +72,6 @@ class Main extends React.Component {
 };
 
 const mapStateToProps = (state) => ({
-  user: state.user,
   userCheck: state.userCheck,
   usuario: state.usuario
 });

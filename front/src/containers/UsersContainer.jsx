@@ -1,16 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUsers, deleteUser } from '../redux/action-creators/user-actions';
-import axios from 'axios';
 
 class UsersContainer extends React.Component {
   componentDidMount () {
     this.props.fetchUsers();
   }
   componentDidUpdate (prevProps) {
-    if (prevProps.users.length !== this.props.users.length) this.props.fetchUsers();
+    if (prevProps.users !== this.props.users) this.props.fetchUsers();
   }
   render () {
     console.log('PROPS DEL RENDER', this.props);
