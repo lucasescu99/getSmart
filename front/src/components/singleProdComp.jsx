@@ -5,7 +5,7 @@ import Stars from './starRating';
 import { Link } from 'react-router-dom';
 
 export default (props) => {
-  const { producto, categorias } = props;
+  const { producto, categorias, onClick } = props;
   return (
     <div id="singleProd">
 
@@ -28,7 +28,9 @@ export default (props) => {
           <div className="row" style={{ marginTop: '60px' }}>
             <div className="col-lg-5 col-sm-12">
               {props.adminInfo
-                ? <Link to={`/productos/edit/${producto.id}`}> <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px', margin: '7px' }} > EDITAR </button> </Link>
+                ? <div> <Link to={`/productos/edit/${producto.id}`}> <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px', margin: '7px' }} > EDITAR </button> </Link>
+                  <button onClick={props.onClick} className="btn btn-lg btn-danger" type="button" style={{ padding: '20px', margin: '7px' }} > ELIMINAR </button>
+                </div>
                 : <Link to={`/checkout/${producto.id}`}><button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} > COMPRAR! </button> </Link>}
             </div>
 
@@ -60,12 +62,12 @@ export default (props) => {
           <h5>{producto.descripcion}</h5>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div className="row" >
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Categorias :</strong></h4>
           <ul><h6>
-            { categorias && categorias.map((obj, index = 0) => {
+            {categorias && categorias.map((obj, index = 0) => {
               return <li key={index++}>{obj.name}</li>;
             })}
           </h6></ul>

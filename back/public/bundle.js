@@ -1764,7 +1764,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function (props) {
   var producto = props.producto,
-      categorias = props.categorias;
+      categorias = props.categorias,
+      onClick = props.onClick;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "singleProd"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1811,7 +1812,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-lg-5 col-sm-12"
-  }, props.adminInfo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, props.adminInfo ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     to: "/productos/edit/".concat(producto.id)
   }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg btn-success",
@@ -1820,7 +1821,15 @@ __webpack_require__.r(__webpack_exports__);
       padding: '20px',
       margin: '7px'
     }
-  }, " EDITAR "), " ") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, " EDITAR "), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.onClick,
+    className: "btn btn-lg btn-danger",
+    type: "button",
+    style: {
+      padding: '20px',
+      margin: '7px'
+    }
+  }, " ELIMINAR ")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     to: "/checkout/".concat(producto.id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg btn-success",
@@ -2688,8 +2697,10 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         path: "/productos/:id",
         render: function render(_ref8) {
-          var match = _ref8.match;
+          var match = _ref8.match,
+              history = _ref8.history;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            history: history,
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
           });
@@ -3041,6 +3052,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/action-creators/products-actions */ "./front/src/redux/action-creators/products-actions.js");
 /* harmony import */ var _components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/singleProdComp */ "./front/src/components/singleProdComp.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3051,9 +3064,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -3065,18 +3078,30 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var SingleProd =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(SingleProd, _React$Component);
 
   function SingleProd() {
+    var _this;
+
     _classCallCheck(this, SingleProd);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(SingleProd).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SingleProd).call(this));
+    _this.borrarProd = _this.borrarProd.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(SingleProd, [{
+    key: "borrarProd",
+    value: function borrarProd() {
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.delete("/api/productos/".concat(this.props.producto.id));
+      alert('Se elimino ' + this.props.producto.marca + ' ' + this.props.producto.modelo);
+      this.props.history.push('/productos');
+    }
+  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.buscarProd(this.props.prodId);
@@ -3089,6 +3114,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, product.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_singleProdComp__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        onClick: this.borrarProd,
         producto: product,
         adminInfo: this.props.isAdmin,
         categorias: this.props.categorias

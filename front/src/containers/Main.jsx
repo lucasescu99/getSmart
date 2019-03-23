@@ -61,7 +61,7 @@ class Main extends React.Component {
             <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
             <Route exact path='/productos/add' render={() => (<CrearProd />)} />
             <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
-            <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
+            <Route path="/productos/:id" render={({ match, history }) => <SingleProd history={history} prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
             <Route path="/pagos/" component={Checkout} />} />
             <Route exact path='/tarjeta' component={TarjetaDeCredito} />
             <Route exact path='/cart' component={CarritoContainer} />
