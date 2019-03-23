@@ -5,6 +5,11 @@ const setUsers = (users) => ({
   users
 });
 
+const removeUser = (id) => ({
+  type: 'REMOVE_USER',
+  id
+});
+
 export const fetchUsers = () => dispatch => {
   return axios.get('/api/usuarios/all')
     .then(res => res.data)
@@ -14,5 +19,6 @@ export const fetchUsers = () => dispatch => {
 };
 
 export const deleteUser = (id) => dispatch => {
-  return axios.delete(`/api/usuarios/${id}`);
+  return axios.delete(`/api/usuarios/${id}`)
+    .then(() => dispatch(removeUser(id)));
 };

@@ -34,6 +34,11 @@ export default (state = initialState, action) => {
       return Object.assign({}, state, { carrito: action.carrito });
     case SEARCH_MARK:
       return Object.assign({}, state, { marcas: action.marca });
+    case 'REMOVE_USER':
+      return {
+        ...state,
+        users: state.users.filter(user => user.id !== action.id)
+      };
     default:
       return state;
   }

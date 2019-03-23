@@ -3205,7 +3205,7 @@ function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      if (prevProps.users !== this.props.users) this.props.fetchUsers();
+      if (prevProps.users.length !== this.props.users.length) this.props.fetchUsers();
     }
   }, {
     key: "render",
@@ -3528,6 +3528,13 @@ var setUsers = function setUsers(users) {
   };
 };
 
+var removeUser = function removeUser(id) {
+  return {
+    type: 'REMOVE_USER',
+    id: id
+  };
+};
+
 var fetchUsers = function fetchUsers() {
   return function (dispatch) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/usuarios/all').then(function (res) {
@@ -3539,7 +3546,9 @@ var fetchUsers = function fetchUsers() {
 };
 var deleteUser = function deleteUser(id) {
   return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/usuarios/".concat(id));
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/usuarios/".concat(id)).then(function () {
+      return dispatch(removeUser(id));
+    });
   };
 };
 
@@ -3587,6 +3596,10 @@ var SEARCH_MARK = 'SEARCH_MARK';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./front/src/redux/constants.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 var initialState = {
   products: [],
@@ -3652,6 +3665,13 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["SEARCH_MARK"]:
       return Object.assign({}, state, {
         marcas: action.marca
+      });
+
+    case 'REMOVE_USER':
+      return _objectSpread({}, state, {
+        users: state.users.filter(function (user) {
+          return user.id !== action.id;
+        })
       });
 
     default:
