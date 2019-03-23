@@ -48,13 +48,8 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-<<<<<<< HEAD
     "sequelize": "^4.43.0",
     "twilio": "^3.29.2"
-=======
-    "request": "^2.88.0",
-    "sequelize": "^4.43.0"
->>>>>>> carrito_omar
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

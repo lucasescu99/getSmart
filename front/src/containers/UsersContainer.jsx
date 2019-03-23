@@ -8,7 +8,7 @@ class UsersContainer extends React.Component {
     this.props.fetchUsers();
   }
   componentDidUpdate (prevProps) {
-    if (prevProps.users !== this.props.users) this.props.fetchUsers();
+    if (prevProps.users.length !== this.props.users.length) this.props.fetchUsers();
   }
   render () {
     console.log('PROPS DEL RENDER', this.props);

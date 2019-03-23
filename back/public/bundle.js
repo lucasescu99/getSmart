@@ -3137,6 +3137,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _redux_action_creators_user_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../redux/action-creators/user-actions */ "./front/src/redux/action-creators/user-actions.js");
+/* harmony import */ var _redux_action_creators_user_actions__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_redux_action_creators_user_actions__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3179,7 +3180,7 @@ function (_React$Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate(prevProps) {
-      if (prevProps.users !== this.props.users) this.props.fetchUsers();
+      if (prevProps.users.length !== this.props.users.length) this.props.fetchUsers();
     }
   }, {
     key: "render",
@@ -3484,38 +3485,10 @@ var buscarCategorias = function buscarCategorias(prodId) {
 /*!*********************************************************!*\
   !*** ./front/src/redux/action-creators/user-actions.js ***!
   \*********************************************************/
-/*! exports provided: fetchUsers, deleteUser */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsers", function() { return fetchUsers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteUser", function() { return deleteUser; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var setUsers = function setUsers(users) {
-  return {
-    type: 'SET_USERS',
-    users: users
-  };
-};
-
-var fetchUsers = function fetchUsers() {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/usuarios/all').then(function (res) {
-      return res.data;
-    }).then(function (users) {
-      dispatch(setUsers(users));
-    });
-  };
-};
-var deleteUser = function deleteUser(id) {
-  return function (dispatch) {
-    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/usuarios/".concat(id));
-  };
-};
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/lucasescu/bootcamp/getSmart/front/src/redux/action-creators/user-actions.js: Unexpected token (13:0)\n\n\u001b[0m \u001b[90m 11 | \u001b[39m})\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m fetchUsers \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m dispatch \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m  \u001b[36mreturn\u001b[39m axios\u001b[33m.\u001b[39mget(\u001b[32m'/api/usuarios/all'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 15 | \u001b[39m    \u001b[33m.\u001b[39mthen(res \u001b[33m=>\u001b[39m res\u001b[33m.\u001b[39mdata)\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m    \u001b[33m.\u001b[39mthen(users \u001b[33m=>\u001b[39m {\u001b[0m\n    at Object.raise (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:3831:17)\n    at Object.unexpected (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:5143:16)\n    at Object.parseBindingAtom (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:5405:20)\n    at Object.parseVarId (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7905:20)\n    at Object.parseVar (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7877:12)\n    at Object.parseVarStatement (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7714:10)\n    at Object.parseStatementContent (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7310:21)\n    at Object.parseStatement (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7243:17)\n    at Object.parseBlockOrModuleBlockBody (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7810:25)\n    at Object.parseBlockBody (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7797:10)\n    at Object.parseTopLevel (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:7181:10)\n    at Object.parse (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:8660:17)\n    at parse (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/parser/lib/index.js:10660:38)\n    at parser (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at process.nextTick (/home/lucasescu/bootcamp/getSmart/node_modules/@babel/core/lib/transform.js:34:34)\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)");
 
 /***/ }),
 
@@ -3561,6 +3534,10 @@ var SEARCH_MARK = 'SEARCH_MARK';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./front/src/redux/constants.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 var initialState = {
   products: [],
@@ -3626,6 +3603,13 @@ var initialState = {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["SEARCH_MARK"]:
       return Object.assign({}, state, {
         marcas: action.marca
+      });
+
+    case 'REMOVE_USER':
+      return _objectSpread({}, state, {
+        users: state.users.filter(function (user) {
+          return user.id !== action.id;
+        })
       });
 
     default:
