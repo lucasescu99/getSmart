@@ -44,17 +44,15 @@
 .header{
     border-bottom: 1px solid black;
     display: grid;
-    grid-template-columns: 0.3fr 0.3fr 1fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 5fr 0.4fr 0.5fr;
     align-items: center; 
+    justify-items: center;  
 }
 #logo{
     width: 150px;
     height: 70px;
 }
 #userLogIn{
-    width: 35px;
-}
-#userLogOut{
     width: 35px;
     margin-left: 8px;
   
@@ -78,6 +76,7 @@
 
 #carrito{
     width: 45px;
+    height: 40px; 
 }
 .card{
     padding: 10px;
@@ -165,7 +164,7 @@ a:hover{
 }
 
 #logOut {
-    color: blue;
+    color: black;
 }
 
 
@@ -201,17 +200,12 @@ a:hover{
 #linkLogo{
     width: 150px;
 }
-#linkLogOut{
-    width: 35px;
-    margin-left: 26px;
-}
 #linkLogIn{
     width: 35px;
-    margin-left: 49px; 
 }
+
 #linkCart{
     width: 45px;
-    margin-left: 125px;
 }
 .caption{
     width: 35px;
@@ -294,10 +288,17 @@ a:hover{
 .botones{
     display: grid;
     margin-top: 20px;
+    margin-bottom: 15px;
     grid-template-columns: 1fr 2fr 2fr;
     align-items: center;
     justify-items: center;
 }
+
+.linkLoginPosition{
+    color: #354C8C;
+    margin-left: 175px;
+}
+
 
 #visa{
     width: 10px;

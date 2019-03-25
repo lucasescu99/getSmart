@@ -74,6 +74,7 @@ class Registro extends React.Component {
                 Login with Google
               </a>
             </div>
+            <Link to = '/usuarios/login' className = 'linkLoginPosition'><span id = 'spanRegister'>Ya tenes una cuenta? Ingresá</span></Link>
           </div>
         </div>
       </form>);

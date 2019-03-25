@@ -8,7 +8,7 @@ class TarjetaDeCredito extends React.Component {
           <h1 id='metodo' >Método de Pago</h1>
           <div>
             <label htmlFor="inputEmail3">Numero de Tarjeta: </label>
-            <input className='numerodetarjeta' type="text" />
+            <input className='numerodetarjeta' type="text" maxLength = '16' />
           </div>
           <div className='datosTarjeta'>
             <div>
@@ -17,7 +17,7 @@ class TarjetaDeCredito extends React.Component {
             </div>
             <div>
               <label htmlFor="inputPassword5">Codigo de Seguridad: </label>
-              <input className='fecha' type="text" id="inputPassword5" aria-describedby="passwordHelpBlock" />
+              <input className='fecha' type="text" id="inputPassword5" maxLength ='4' aria-describedby="passwordHelpBlock" />
               <small id="passwordHelpBlock" className="form-text text-muted note">
                 Ultimos 3 digitos en el dorso de la tarjeta
             </small>

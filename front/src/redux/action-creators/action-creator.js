@@ -43,3 +43,7 @@ export const fetchUser = () => dispatch =>
   axios.get('/api/usuarios/user')
     .then(res => res.data)
     .then(usuario => dispatch(getUser(usuario)));
+
+export const postNewComment = (comment) =>
+  axios.post('/api/reviews/newComment', { comment })
+    .then(post => post.data);

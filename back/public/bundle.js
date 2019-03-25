@@ -756,28 +756,12 @@ __webpack_require__.r(__webpack_exports__);
   return !props.login ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/usuarios/registro",
-    id: "linkLogIn"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogIn",
-    src: "/utils/user.svg"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "caption"
-  }, "Registrate"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/usuarios/login",
-    id: "linkLogOut"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogOut",
-    src: "/utils/logout.svg"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "caption2"
-  }, "Ingresa")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "logo",
     src: "/utils/logoBlanco.jpg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     render: function render(_ref) {
       var history = _ref.history;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -792,7 +776,19 @@ __webpack_require__.r(__webpack_exports__);
       }));
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+<<<<<<< HEAD
     to: "/cart",
+=======
+    to: "/usuarios/login",
+    id: "linkLogIn"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "userLogIn",
+    src: "/utils/logout.svg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "caption2"
+  }, "Ingresa")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "cart",
+>>>>>>> carrito_magui
     id: "linkCart"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
@@ -800,23 +796,6 @@ __webpack_require__.r(__webpack_exports__);
   }))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    id: "logOut",
-    onClick: function onClick(e) {
-      e.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/usuarios/logOut').then(function (data) {
-        return props.fetchUser(data.data);
-      });
-      return props.history.push('/');
-    }
-  }, "LOG OUT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/",
-    id: "linkLogOut"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    id: "userLogOut",
-    src: "/utils/logout.svg"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     id: "linkLogo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -837,7 +816,23 @@ __webpack_require__.r(__webpack_exports__);
       }));
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+<<<<<<< HEAD
     to: "/cart",
+=======
+    to: "/"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "logOut",
+    className: "btn btn-outline-danger",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/usuarios/logOut').then(function (data) {
+        return props.fetchUser(data.data);
+      });
+      return props.history.push('/');
+    }
+  }, "Salir")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "cart",
+>>>>>>> carrito_magui
     id: "linkCart"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
@@ -1067,7 +1062,12 @@ function (_React$Component) {
       }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--google",
         href: "/api/auth/google"
-      }, "Login with Google")))));
+      }, "Login with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        to: "/usuarios/registro",
+        className: "linkLoginPosition"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "spanRegister"
+      }, "No tenes cuenta? Registrate")))));
     }
   }]);
 
@@ -1500,7 +1500,12 @@ function (_React$Component) {
       }, "Login with Facebook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "loginBtn loginBtn--google",
         href: "/api/auth/google"
-      }, "Login with Google")))));
+      }, "Login with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/usuarios/login",
+        className: "linkLoginPosition"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "spanRegister"
+      }, "Ya tenes una cuenta? Ingres\xE1")))));
     }
   }]);
 
@@ -1578,7 +1583,8 @@ function (_React$Component) {
         htmlFor: "inputEmail3"
       }, "Numero de Tarjeta: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "numerodetarjeta",
-        type: "text"
+        type: "text",
+        maxLength: "16"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "datosTarjeta"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Fecha de Vencimiento: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1591,6 +1597,7 @@ function (_React$Component) {
         className: "fecha",
         type: "text",
         id: "inputPassword5",
+        maxLength: "4",
         "aria-describedby": "passwordHelpBlock"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
         id: "passwordHelpBlock",
@@ -1893,6 +1900,7 @@ var SingleProdComp = function SingleProdComp(props) {
     className: "col-lg-6 col-xs-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Reviews :")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "col-lg-12"
+<<<<<<< HEAD
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "Dijo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos."))));
 };
 
@@ -1914,6 +1922,10 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])(mapStateToProps, mapDispatchToProps)(SingleProdComp));
+=======
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "UsuarioX "), "dijo : Me pas\xE9 de un samsung s5 a este equipo, con cierta desconfianza. Despu\xE9s de leerme media internet, me anim\xE9. Excelente equipo y, mucho m\xE1s, si ten\xE9s en cuenta el costo. Es un equipo r\xE1pido, de excelente duraci\xF3n de bater\xEDa: tres d\xEDas con una sola carga!!! est\xE1 bien que no soy fan de instagram y facebook, pero supongo que para un usuario standard tiene que durar 2 d\xEDas, seguro."))));
+});
+>>>>>>> carrito_magui
 
 /***/ }),
 
@@ -2724,8 +2736,13 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/add",
+<<<<<<< HEAD
         render: function render(_ref7) {
           var history = _ref7.history;
+=======
+        render: function render(_ref6) {
+          var history = _ref6.history;
+>>>>>>> carrito_magui
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CrearProd__WEBPACK_IMPORTED_MODULE_5__["default"], {
             history: history
           });
@@ -2733,9 +2750,14 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/edit/:id",
+<<<<<<< HEAD
         render: function render(_ref8) {
           var match = _ref8.match,
               history = _ref8.history;
+=======
+        render: function render(_ref7) {
+          var match = _ref7.match;
+>>>>>>> carrito_magui
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditProd__WEBPACK_IMPORTED_MODULE_1__["default"], {
             history: history,
             prodId: match.params.id
@@ -2744,11 +2766,17 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
         exact: true,
         path: "/productos/:id",
+<<<<<<< HEAD
         render: function render(_ref9) {
           var match = _ref9.match,
               history = _ref9.history;
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_13__["default"], {
             history: history,
+=======
+        render: function render(_ref8) {
+          var match = _ref8.match;
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_SingleProductCont__WEBPACK_IMPORTED_MODULE_12__["default"], {
+>>>>>>> carrito_magui
             prodId: match.params.id,
             isAdmin: _this3.props.usuario.isAdmin
           });
@@ -3351,7 +3379,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*!***********************************************************!*\
   !*** ./front/src/redux/action-creators/action-creator.js ***!
   \***********************************************************/
-/*! exports provided: addUser, checkUser, admAccess, getUser, giveadmAccess, registerUser, checkUserLogin, fetchUser */
+/*! exports provided: addUser, checkUser, admAccess, getUser, giveadmAccess, registerUser, checkUserLogin, fetchUser, postNewComment */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3364,6 +3392,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerUser", function() { return registerUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkUserLogin", function() { return checkUserLogin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUser", function() { return fetchUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postNewComment", function() { return postNewComment; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./front/src/redux/constants.js");
@@ -3428,6 +3457,13 @@ var fetchUser = function fetchUser() {
       return dispatch(getUser(usuario));
     });
   };
+};
+var postNewComment = function postNewComment(comment) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/reviews/newComment', {
+    comment: comment
+  }).then(function (post) {
+    return post.data;
+  });
 };
 
 /***/ }),
