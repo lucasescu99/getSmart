@@ -28,7 +28,7 @@ class SingleProd extends React.Component {
     const product = this.props.producto;
     return (
       <div className="container" >
-        {product.id ? <SingleProdComp history={this.props.history} ordenId={this.props.ordenId} orden={this.props.orden} createOC={this.props.createOC} user={this.props.user} producto={product} adminInfo={this.props.isAdmin} categorias={this.props.categorias}/> : <h1>Este producto no existe</h1>}
+        {product.id ? <SingleProdComp history={this.props.history} ordenId={this.props.ordenId} orden={this.props.orden} createOC={this.props.createOC} user={this.props.user} producto={product} adminInfo={this.props.isAdmin} categorias={this.props.categorias} onClick={this.borrarProd}/> : <h1>Este producto no existe</h1>}
       </div>
     );
   }

@@ -4,14 +4,23 @@ import { connect } from 'react-redux';
 import { fetchUsers, deleteUser } from '../redux/action-creators/user-actions';
 
 class UsersContainer extends React.Component {
-  componentDidMount () {
+  constructor(props) {
+    super(props);
+    
+    this.deleteUser = this.deleteUser.bind(this)
+  }
+  componentDidMount() {
     this.props.fetchUsers();
   }
-  componentDidUpdate (prevProps) {
+  componentDidUpdate(prevProps) {
     if (prevProps.users.length !== this.props.users.length) this.props.fetchUsers();
   }
-  render () {
-    console.log('PROPS DEL RENDER', this.props);
+  deleteUser(id) {
+    this.props.deleteUser(id)
+    alert("El usuario se ha eliminado exitosamente")
+    this.props.history.push('/')
+  }
+  render() {
     return (
       <div className='usersContainer'>
         <ul className="list-group">
@@ -25,7 +34,7 @@ class UsersContainer extends React.Component {
                   <strong className='titlesUsers'> EMAIL: </strong> {user.email}
                 </div>
                 <div className="containerTrash">
-                  <img id='trashUser' src="/utils/garbage.svg" onClick={() => this.props.deleteUser(user.id)}></img>
+                  <img id='trashUser' src="/utils/garbage.svg" onClick={() => this.deleteUser(user.id)}></img>
                 </div>
               </li>
             );

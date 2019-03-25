@@ -19,7 +19,7 @@ export default class NavbarUser extends Component {
           </div>
           <div className="col-sm-2 nav-link">
             <div className='col-lg-12 '>
-              <Link to='/adm/purchaseOrders' onClick={this.handleClick}>ORDENES DE COMPRA</Link>
+              <Link to='/admin/allOrders' onClick={this.handleClick}>ORDENES DE COMPRA</Link>
             </div>
           </div>
           <div className="col-sm-3 nav-link">

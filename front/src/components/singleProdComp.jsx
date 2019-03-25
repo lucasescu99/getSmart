@@ -21,6 +21,7 @@ class SingleProd extends React.Component {
 
   render () {
     const { producto, categorias, onClick } = this.props;
+    console.log("////////STore REDUX //////", this.props)
     return (
       <div id="singleProd">
 
@@ -45,7 +46,7 @@ class SingleProd extends React.Component {
                 {this.props.adminInfo
                   ? <div><Link to={`/productos/edit/${producto.id}`}> <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px', margin: '7px' }} > EDITAR </button> </Link>
                     <button onClick={onClick} className="btn btn-lg btn-danger" type="button" style={{ padding: '20px', margin: '7px' }} > ELIMINAR </button> </div>
-                  : <Link to={`/checkout/${producto.id}`}><button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} onClick={() => this.createOC(producto)} > COMPRAR! </button> </Link>
+                  : <button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} onClick={() => this.createOC(producto)} > COMPRAR! </button>
                 }
               </div>
               <div className="col-lg-7 col-sm-12">
@@ -107,8 +108,8 @@ const mapStateToProps = (state) => ({
   producto: state.selectedProd,
   rating: state.ratingProd,
   categorias: state.categorias,
-  usuario: state.usuario
-
+  usuario: state.usuario,
+  orden: state.orden
 });
 
 const mapDispatchToProps = (dispatch) => ({

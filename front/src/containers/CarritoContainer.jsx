@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchCarrito, comprarCarrito } from '../redux/action-creators/carrito-actions.js';
 import { getProducts } from '../redux/action-creators/products-actions';
+import { createNewOC } from '../redux/action-creators/action-creator'
 import { connect } from 'react-redux';
 
 class CarritoContainer extends React.Component {
@@ -8,6 +9,7 @@ class CarritoContainer extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.createOC = this.createOC.bind(this);
   }
   componentDidMount () {
     console.log('PROPS DEL CARRITO', this.props);
@@ -21,6 +23,10 @@ class CarritoContainer extends React.Component {
   }
   handleChange (e) {
     this.setState({ [e.target.name]: e.target.value });
+  }
+  createOC (producto) {
+    this.props.createOC(this.props.cartProducts)
+      .then(() => this.props.history.push(`/checkout/${this.props.orden.id}`));
   }
   render () {
     return (
@@ -50,7 +56,7 @@ class CarritoContainer extends React.Component {
               );
             })}
           </div>
-          <button className='pure-material-button-contained' type='submit' onSubmit={this.handleSubmit}>Comprar</button>
+          <button className='pure-material-button-contained' type='submit' onClick={() => this.createOC(this.props.cartProducts)}>Comprar</button>
         </form>
       </div>
     );
@@ -61,7 +67,8 @@ const mapStateToProps = state => {
   return {
     cartProducts: state.carrito,
     productos: state.products,
-    usuario: state.usuario
+    usuario: state.usuario,
+    orden: state.orden
   };
 };
 
@@ -70,6 +77,7 @@ const mapDispatchToProps = dispatch => {
     getCarrito: (id) => dispatch(fetchCarrito(id)),
     getProducts: (searchProduct) => dispatch(getProducts(searchProduct)),
     comprarCarrito: (id, cantidad, productos) => dispatch(comprarCarrito(id, cantidad, productos)),
+    createOC: (product) => dispatch(createNewOC(product))
   };
 };
 

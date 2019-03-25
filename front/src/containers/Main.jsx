@@ -50,7 +50,7 @@ class Main extends React.Component {
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
-            <Route exact path="/usuarios/all" render={() => (<UsersContainer />)} />
+            <Route exact path="/usuarios/all" render={({history}) => (<UsersContainer history={history} />)} />
             <Route exact path="/usuarios/registro" render={({ history }) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
@@ -65,6 +65,8 @@ class Main extends React.Component {
             <Route exact path='/tarjeta' render={({ history }) => (<TarjetaDeCredito history={history}/>)} />
             <Route exact path='/admin/allOrders' render={({ history }) => (<AdminAllOC history={history} />)} />
             <Route exact path='/orders/:id' render={({ match }) => (<SingleOC history={history} ordenId={match.params.id} />)} />
+            <Route exact path='/cart'  render={({ history }) => (<CarritoContainer history={history} />)} />
+            <Route exact path='/checkout/:OCid' render={({ match }) => <Checkout ordenId={match.params.OCid} />} />
           </Switch>
         </div >
     );

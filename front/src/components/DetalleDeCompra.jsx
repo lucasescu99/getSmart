@@ -23,7 +23,7 @@ export default (props) => {
         </div>
         <div className='preciofinal'>
           <h2>PRECIO FINAL</h2>
-          <h2>{props.prod.precio}</h2>
+          <h2>$ {props.prod.precio}</h2>
         </div>
       </div>
       <Link to='/tarjeta'><button className="btn btn-lg btn-danger" id="btnTarjeta" style ={{ margin: '3% 0px 0px 1%' }}>Proceder al Método de Pago</button></Link>
