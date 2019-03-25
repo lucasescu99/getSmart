@@ -46,6 +46,7 @@ export default class AdminProd extends React.Component {
       descripcion: this.state.Descripcion
     })
       .then(product => {
+        alert('Producto editado con éxito');
         this.props.history.push(`/productos/${product.data.id}`);
       });
   }

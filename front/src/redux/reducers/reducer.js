@@ -1,4 +1,4 @@
-import { CHECK_USER, ADD_USER, ADM_ACCESS, RECEIVE_PRODUCT, GET_USER, SET_PRODUCTS, SET_CATEGORIAS, SEARCH_MARK } from '../constants';
+import { CHECK_USER, ADD_USER, ADM_ACCESS, RECEIVE_PRODUCT, GET_USER, SET_PRODUCTS, SET_CATEGORIAS, SEARCH_MARK, SET_ADDTOCART } from '../constants';
 
 const initialState = {
   products: [],
@@ -8,8 +8,9 @@ const initialState = {
   access: '',
   usuario: {},
   users: [],
-  carrito: {},
+  carrito: [],
   marcas: []
+
 };
 
 export default (state = initialState, action) => {
@@ -39,6 +40,8 @@ export default (state = initialState, action) => {
         ...state,
         users: state.users.filter(user => user.id !== action.id)
       };
+    case SET_ADDTOCART:
+      return Object.assign({}, state, { carrito: [...state.carrito, action.productoCarrito] });
     default:
       return state;
   }

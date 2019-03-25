@@ -13,3 +13,6 @@ export const SET_CATEGORIAS = 'SET_CATEGORIAS';
 
 //MARCAS
 export const SEARCH_MARK = 'SEARCH_MARK';
+
+//CARRITO
+export const SET_ADDTOCART = 'SET_ADDTOCART';

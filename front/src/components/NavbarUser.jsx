@@ -25,7 +25,7 @@ export default class NavbarContainer extends Component {
           </div>
           <div className="col-sm-2 nav-link">
             <div className='col-lg-12 '>
-              <Link to = '/categorias/marcas/Xiaomi'  > Xiaomi </Link>
+              <Link to = '/categorias/marcas/Xiaomi' > Xiaomi </Link>
             </div>
           </div>
           <div className="col-sm-2 nav-link">

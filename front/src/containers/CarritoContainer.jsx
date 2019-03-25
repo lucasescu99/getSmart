@@ -11,7 +11,9 @@ class CarritoContainer extends React.Component {
   }
   componentDidMount () {
     console.log('PROPS DEL CARRITO', this.props);
-    this.props.getProducts('?modelo=');
+    // this.props.fetchUser()
+    this.props.getCarrito(this.props.usuario.id);
+    // this.props.getProducts('?modelo=');
   }
   handleSubmit (e) {
     e.preventDefault();
@@ -27,7 +29,7 @@ class CarritoContainer extends React.Component {
         <hr />
         <form className='inputCarrito' onSubmit={this.handleSubmit}>
           <div className="carritoContainer">
-            {this.props.productos && this.props.productos.map(producto => {
+            {this.props.cartProducts && this.props.cartProducts.map(producto => {
               return (
                 <div className="media" key={producto.id}>
                   <img src={producto.imagenes[0]} className="mr-3 imgCarritoList" />
@@ -67,7 +69,7 @@ const mapDispatchToProps = dispatch => {
   return {
     getCarrito: (id) => dispatch(fetchCarrito(id)),
     getProducts: (searchProduct) => dispatch(getProducts(searchProduct)),
-    comprarCarrito: (id, cantidad, productos) => dispatch(comprarCarrito(id, cantidad, productos))
+    comprarCarrito: (id, cantidad, productos) => dispatch(comprarCarrito(id, cantidad, productos)),
   };
 };
 

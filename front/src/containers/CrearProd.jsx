@@ -39,7 +39,7 @@ export default class AdminProd extends React.Component {
       categorias
     })
       .then(product => {
-        console.log('hola entre en el then');
+        alert('Se creo el producto' + ' ' + this.state.Marca + ' ' + this.state.Modelo)
         this.props.history.push(`/productos/${product.data.id}`);
       });
   }

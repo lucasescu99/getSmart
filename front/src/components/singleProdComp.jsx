@@ -4,8 +4,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import Stars from './starRating';
 import { Link } from 'react-router-dom';
 import { borrarProd } from '../redux/action-creators/products-actions';
+import { connect } from 'react-redux';
+import { addToCart } from '../redux/action-creators/carrito-actions'
 
-export default (props) => {
+const SingleProdComp = (props) => {
   const { producto, categorias, onClick } = props;
   return (
     <div id="singleProd">
@@ -36,8 +38,10 @@ export default (props) => {
               <button className="btn btn-lg btn-danger" type="button" style={{ padding: '20px' }} onClick={ props.onClick} > Eliminar </button>
             </div>
 
-            <div className="col-lg-7 col-sm-12"><button className="btn btn-lg" type="button" style={{ color: '#28a745', borderColor: '#28a745', padding: '20px' }}>Agregar al Carrito</button></div>
+            <div className="col-lg-7 col-sm-12"><button onClick={()=> props.addToCart(props.producto.id, props.usuario.id)} className="btn btn-lg" type="button" style={{ color: '#28a745', borderColor: '#28a745', padding: '20px' }}>Agregar al Carrito</button></div>
           </div>
+
+          {/* onClick={()=> this.props.addToCart(data)} */}
 
         </div>
 
@@ -84,3 +88,18 @@ export default (props) => {
     </div>
   );
 };
+
+const mapStateToProps = (state) => ({
+  producto: state.selectedProd,
+  rating: state.ratingProd,
+  categorias: state.categorias,
+  usuario: state.usuario
+
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addToCart: (idProducto, idUsuario) => dispatch(addToCart(idProducto, idUsuario))
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SingleProdComp);
