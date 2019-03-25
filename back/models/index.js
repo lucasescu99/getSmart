@@ -5,6 +5,8 @@ const OrdenCompra = require('./OrdenCompra');
 const Reviews = require('./Reviews');
 const Usuario = require('./Usuario').Usuario;
 
+OrdenCompra.belongsTo(Usuario, { as: 'owner' });
+
 const modelos = {
   Categorias,
   Productos,
@@ -25,10 +27,10 @@ const ordenes = {
   Productos
 };
 
-OrdenCompra.belongsToMany(Productos, { through: 'orden_productos' });
-Productos.belongsToMany(OrdenCompra, { through: 'orden_productos' });
 Reviews.belongsTo(Usuario, { as: 'author' });
 Reviews.belongsTo(Productos, { as: 'ref' });
+OrdenCompra.belongsToMany(Productos, { through: 'orden_productos', foreignKey: "ordencompraId" });
+Productos.belongsToMany(OrdenCompra, { through: 'orden_productos', foreignKey: "productoId" });
 
 module.exports = {
   modelos,

@@ -16,3 +16,5 @@ export const SEARCH_MARK = 'SEARCH_MARK';
 
 //CARRITO
 export const SET_ADDTOCART = 'SET_ADDTOCART';
+//ORDEN DE COMPRA
+export const SET_ORDER = "SET_ORDER"

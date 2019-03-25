@@ -29,9 +29,8 @@ const Producto = db.define('productos', {
   imagenes: {
     type: S.ARRAY(S.TEXT),
     allowNull: true
-  },
+  }
 
 });
-
 
 module.exports = Producto;

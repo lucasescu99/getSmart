@@ -38,8 +38,6 @@ const Usuario = db.define('usuario', {
   }
 });
 
-// Usuario.belongsTo(OrdenCompra, { as: 'owner' });
-
 Usuario.addHook('beforeCreate', (usuario) => {
   usuario.salt = crypto.randomBytes(20).toString('hex');
   usuario.password = usuario.hashPassword(usuario.password);

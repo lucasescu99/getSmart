@@ -163,10 +163,24 @@ a:hover{
     transform: scale(1.07)
 }
 
+#btnTarjeta:hover {
+    transform: scale(1.1)
+}
+
 #logOut {
     color: black;
 }
 
+.botonOC {
+    display: grid;
+    margin-top: 15px;
+}
+
+.numOC {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
 
 .formProdAm{
     padding: 7% 20%;

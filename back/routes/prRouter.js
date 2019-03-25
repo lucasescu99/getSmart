@@ -26,7 +26,6 @@ router.get('/', (req, res) => {
         modelo: req.query.modelo
       }
     }).then(data => {
-      console.log('DATAAAA', data);
       res.send(data);
     });
   } else {
