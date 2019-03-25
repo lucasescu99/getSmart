@@ -59,7 +59,9 @@ class Login extends React.Component {
                 Login with Google
               </a>
             </div>
+            <Link to = '/usuarios/registro' className = 'linkLoginPosition'><span id = 'spanRegister'>No tenes cuenta? Registrate</span></Link>  
           </form>
+
         </div>
       </div>
     );

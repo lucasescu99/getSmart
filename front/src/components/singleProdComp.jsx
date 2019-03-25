@@ -70,7 +70,7 @@ export default (props) => {
         <div className="col-lg-6 col-xs-12">
           <h4><strong>Reviews :</strong></h4><br />
           <h6 className="col-lg-12"><strong>UsuarioX </strong>dijo :
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eum saepe, quos tempora perferendis repellendus in libero asperiores voluptatum deleniti voluptatem tenetur voluptatibus consequuntur animi architecto ratione quae maiores dignissimos.</h6>
+          Me pasé de un samsung s5 a este equipo, con cierta desconfianza. Después de leerme media internet, me animé. Excelente equipo y, mucho más, si tenés en cuenta el costo. Es un equipo rápido, de excelente duración de batería: tres días con una sola carga!!! está bien que no soy fan de instagram y facebook, pero supongo que para un usuario standard tiene que durar 2 días, seguro.</h6>
         </div>
       </div>
 

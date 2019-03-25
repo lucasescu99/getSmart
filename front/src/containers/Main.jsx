@@ -55,7 +55,7 @@ class Main extends React.Component {
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
             <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
             <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
-            <Route exact path='/productos/add' render={() => (<CrearProd />)} />
+            <Route exact path='/productos/add' render={({history}) => (<CrearProd history={history} />)} />
             <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
             <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
             <Route path="/pagos/" component={Checkout} />} />
