@@ -837,7 +837,7 @@ __webpack_require__.r(__webpack_exports__);
       }));
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "cart",
+    to: "/cart",
     id: "linkCart"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "carrito",
@@ -2739,6 +2739,7 @@ function (_React$Component) {
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
         path: "/productos/:id",
         render: function render(_ref9) {
           var match = _ref9.match,
@@ -2750,6 +2751,7 @@ function (_React$Component) {
           });
         }
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+        exact: true,
         path: "/pagos/",
         component: _components_Checkout__WEBPACK_IMPORTED_MODULE_18__["default"]
       }), "} />", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
@@ -3477,6 +3479,7 @@ var comprarCarrito = function comprarCarrito(id, cantidad, productos) {
 };
 var addToCart = function addToCart(idProducto, idUsuario) {
   return function (dispatch) {
+    alert('Producto agregado al carrito');
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/carrito/add', {
       idProducto: idProducto,
       idUsuario: idUsuario

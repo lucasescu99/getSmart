@@ -53,7 +53,7 @@ export default (props) => {
           );
         }
         } />
-        <Link to='cart' id='linkCart'><img id='carrito' src="/utils/carrito.svg"></img></Link>
+        <Link to='/cart' id='linkCart'><img id='carrito' src="/utils/carrito.svg"></img></Link>
 
       </header>
   );

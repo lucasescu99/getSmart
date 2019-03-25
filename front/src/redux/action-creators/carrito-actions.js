@@ -28,6 +28,7 @@ export const comprarCarrito = (id, cantidad, productos) => dispatch => {
 };
 
 export const addToCart = (idProducto, idUsuario) => dispatch => {
+  alert('Producto agregado al carrito')
   return axios.post('/api/carrito/add', { idProducto, idUsuario })
     .then(res => dispatch(setAddToCart(res.data)));
 };
