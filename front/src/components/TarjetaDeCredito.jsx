@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TarjetaDeCredito extends React.Component {
   render() {
@@ -33,7 +34,11 @@ class TarjetaDeCredito extends React.Component {
             <label htmlFor="inputEmail3">DNI Titular:</label>
             <input id='dni' type="text" />
           </div>
-          <button type="button" class="btn btn-success finCompra">FINALIZAR COMPRA</button>
+          <button type="button" class="btn btn-success finCompra" onClick={(e) => {
+            e.preventDefault()
+            alert("Tu compra se ha realizado con éxito!")
+            this.props.history.push('/')
+          }}>FINALIZAR COMPRA</button>
         </form>
       </div>
     )

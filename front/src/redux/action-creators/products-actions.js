@@ -33,4 +33,4 @@ export const buscarProducto = prodID => dispatch =>
 export const buscarCategorias = prodId => dispatch =>
   axios.get(`/api/categorias/${prodId}`)
     .then(info => info.data)
-    .then(categorias => dispatch(setCategorias(categorias)))
+    .then(categorias => dispatch(setCategorias(categorias)));

@@ -119,14 +119,25 @@ a:hover{
   color: #b1ccf3;
   text-decoration: none;
 }
-.col-lg-12{
-  border-left: #929fab solid 1px;
+
+#btnTarjeta:hover {
+    transform: scale(1.1)
 }
 
 #logOut {
     color: blue;
 }
 
+.botonOC {
+    display: grid;
+    margin-top: 15px;
+}
+
+.numOC {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
 
 .formProdAm{
     padding: 7% 20%;

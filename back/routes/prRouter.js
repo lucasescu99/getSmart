@@ -21,13 +21,11 @@ router.put('/edit/:id', (req, res, next) => {
 });
 router.get('/', (req, res) => {
   if (req.query.modelo) {
-    console.log('query', req.query.modelo);
     modelos.Productos.findAll({
       where: {
         modelo: req.query.modelo
       }
     }).then(data => {
-      console.log('DATAAAA', data);
       res.send(data);
     });
   } else {

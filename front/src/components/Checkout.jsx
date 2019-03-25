@@ -1,15 +1,34 @@
-import React from 'react'
-import DatosDelCliente from './DatosDelCliente'
-import DetalleDelCliente from './DetalleDeCompra'
+import React from 'react';
+import DatosDelCliente from './DatosDelCliente';
+import DetalleDeCompra from './DetalleDeCompra';
+import { fetchOrder } from '../redux/action-creators/action-creator';
+import { connect } from 'react-redux';
+import { buscarProducto } from '../redux/action-creators/products-actions';
+import { Link } from 'react-router-dom';
 
+class Checkout extends React.Component {
+  componentDidMount() {
+    this.props.fetchOC(this.props.ordenId);
+  }
 
-const Checkout = () => {
-  return (<div className='checkoutview'>
-    <div className='datosgrid'><DatosDelCliente /></div>
-    <div className='datosgrid'><DetalleDelCliente /></div>
-  </div>)
+  render() {
+    return (
+      <div className='checkoutview'>
+          <div className='datosgrid'><DatosDelCliente user={this.props.user} idOC={this.props.ordenId} /></div>
+          <div className='datosgrid'><DetalleDeCompra prod={this.props.producto} orden={this.props.orden} /></div>
+      </div>);
+  }
 }
 
-export default Checkout
+const mapStateToProps = (state) => ({
+  producto: state.selectedProd,
+  orden: state.orden,
+  user: state.usuario
+});
 
+const mapDispatchToProps = (dispatch) => ({
+  fetchOC: (id) => dispatch(fetchOrder(id)),
+  fetchProd: (id) => dispatch(buscarProducto(id))
+});
 
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);

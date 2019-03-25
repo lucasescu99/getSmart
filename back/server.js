@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const express = require('express');
 const app = express();
@@ -14,7 +14,7 @@ const apiRoutes = require('./routes');
 const { Usuario } = require('./models/Usuario');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sessionStore = new SequelizeStore({ db });
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 
 app.use(cookieParser());
 app.use(
@@ -36,6 +36,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(morgan('dev'));
 app.use('/api', apiRoutes);
+app.use(express.static(path.resolve(__dirname, 'public')));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
 
 passport.serializeUser(function (user, done) {
   done(null, user.id);
@@ -165,43 +171,10 @@ app.get('/api/auth/google',
 //     failureRedirect: '/login'
 //   }));
 
-app.post('/api/usuarios/esAdm', (req, res) => {
-  Usuario.findOne(req.body)
-    .then(data => Usuario.update({ isAdmin: false }, { where: { isAdmin: true } }))
-    .then(data => res.send(data));
-});
-
-app.get('/api/usuarios/todos', (req, res) => {
-  if (!req.user.dataValues.nombre) res.send(404, 'cantfindthat');
-  res.send(req.user.dataValues.nombre);
-});
-
-app.get('/failurelogin', (req, res) => {
-  res.send('cantfindthat');
-});
-
-app.post('/api/usuarios/crea', (req, res) => {
-  console.log(req.body.user);
-  Usuario.create(req.body.user)
-    .then(data => res.status(201).send(data));
-});
-
-// app.post('/usuarios/login', passport.authenticate('local', { successRedirect: '/usuarios/todos',failureRedirect: '/'}))
-app.post('/api/usuarios/login', passport.authenticate('local', { failureRedirect: '/failurelogin' }),
-  function (req, res) {
-    res.redirect('/api/usuarios/todos');
-  });
-
-app.use(express.static(path.resolve(__dirname, 'public')));
-
-
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, './public/index.html'));
-});
 
 sessionStore.sync()
   .then(() => {
-    db.sync({ force: false }).then((con) => {
+    db.sync({ force: false}).then((con) => {
       console.log(`${con.options.dialect} database ${con.config.database} connected at ${con.config.host}:${con.config.port}`);
       app.listen(PORT, () => console.log('SERVER LISTENING AT PORT', PORT));
     });

@@ -10,3 +10,6 @@ export const ADM_ACCESS = 'ADM_ACCESS';
 
 //ARTICULOS
 export const SET_CATEGORIAS = 'SET_CATEGORIAS';
+
+//ORDEN DE COMPRA
+export const SET_ORDER = "SET_ORDER"
