@@ -16,7 +16,6 @@ export default class AdminProd extends React.Component {
 
   componentDidMount () {
     axios.get('/api/categorias/get')
-    // .then(categorias => console.log(categorias.data))
       .then(categorias => this.setState({ categorias: categorias.data }));
   }
 
@@ -27,7 +26,6 @@ export default class AdminProd extends React.Component {
   }
 
   handleSubmit (e, categorias) {
-    console.log('hola');
     e.preventDefault();
     axios.post('/api/productos/add', {
       marca: this.state.Marca,

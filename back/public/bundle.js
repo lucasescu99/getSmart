@@ -2183,8 +2183,11 @@ function (_React$Component) {
         descripcion: this.state.Descripcion,
         categorias: categorias
       }).then(function (product) {
+<<<<<<< HEAD
         alert('Se creo el producto' + ' ' + _this3.state.Marca + ' ' + _this3.state.Modelo);
 
+=======
+>>>>>>> viernes22
         _this3.props.history.push("/productos/".concat(product.data.id));
       });
     }
