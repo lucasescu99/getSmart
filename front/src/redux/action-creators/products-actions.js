@@ -26,7 +26,7 @@ const buscarMarca = (marca) => ({
   marca
 });
 
-export const getProducts = (searchProduct) => dispatch => {
+export const getProducts = searchProduct => dispatch => {
   return axios.get(`/api/productos${searchProduct}`)
     .then(res => {
       dispatch(setProducts(res.data));
@@ -49,3 +49,8 @@ export const buscarCategorias = prodId => dispatch =>
   axios.get(`/api/categorias/${prodId}`)
     .then(info => info.data)
     .then(categorias => dispatch(setCategorias(categorias)));
+
+export const borrarProd = (prodID) =>
+  axios.delete(`/api/productos/${prodID}`)
+;
+

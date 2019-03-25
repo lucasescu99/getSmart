@@ -18,6 +18,7 @@ class SingleProd extends React.Component {
   }
 
   componentDidMount () {
+    console.log('props', this.props)
     this.props.buscarProd(this.props.prodId);
     this.props.buscarCat(this.props.prodId);
   }

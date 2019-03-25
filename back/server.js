@@ -14,6 +14,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sessionStore = new SequelizeStore({ db });
 const PORT = process.env.PORT || 8080;
 
+
 app.use(cookieParser());
 app.use(
   session({

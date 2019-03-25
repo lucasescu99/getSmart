@@ -2,6 +2,13 @@ const express = require('express');
 const router = express.Router();
 const { Usuario } = require('../models/Usuario');
 const passport = require('passport');
+const methods = require('../methods');
+
+router.post('/get-order-status', methods.getOrder);
+
+router.post('/send/sms', methods.sendSMS);
+
+router.post('/send/email', methods.sendEmail);
 
 router.post('/esAdm', (req, res) => {
   Usuario.findOne({ where: { email: req.body.email } })
