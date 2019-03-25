@@ -3,6 +3,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Stars from './starRating';
 import { Link } from 'react-router-dom';
+import { borrarProd } from '../redux/action-creators/products-actions';
 
 export default (props) => {
   const { producto, categorias, onClick } = props;
@@ -32,6 +33,7 @@ export default (props) => {
                   <button onClick={props.onClick} className="btn btn-lg btn-danger" type="button" style={{ padding: '20px', margin: '7px' }} > ELIMINAR </button>
                 </div>
                 : <Link to={`/checkout/${producto.id}`}><button className="btn btn-lg btn-success" type="button" style={{ padding: '20px' }} > COMPRAR! </button> </Link>}
+              <button className="btn btn-lg btn-danger" type="button" style={{ padding: '20px' }} onClick={ props.onClick} > Eliminar </button>
             </div>
 
             <div className="col-lg-7 col-sm-12"><button className="btn btn-lg" type="button" style={{ color: '#28a745', borderColor: '#28a745', padding: '20px' }}>Agregar al Carrito</button></div>

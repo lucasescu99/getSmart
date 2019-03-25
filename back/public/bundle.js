@@ -1757,7 +1757,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Carousel__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _starRating__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./starRating */ "./front/src/components/starRating.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _redux_action_creators_products_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/action-creators/products-actions */ "./front/src/redux/action-creators/products-actions.js");
 /* eslint-disable no-unused-vars */
+
 
 
 
@@ -1837,7 +1839,14 @@ __webpack_require__.r(__webpack_exports__);
     style: {
       padding: '20px'
     }
-  }, " COMPRAR! "), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, " COMPRAR! "), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-lg btn-danger",
+    type: "button",
+    style: {
+      padding: '20px'
+    },
+    onClick: props.onClick
+  }, " Eliminar ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-lg-7 col-sm-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "btn btn-lg",

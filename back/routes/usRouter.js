@@ -17,7 +17,7 @@ router.get('/todos', (req, res) => {
 });
 
 router.post('/crea', (req, res) => {
-  console.log(req.body.user);
+
   Usuario.create(req.body.user)
     .then(data => res.status(201).send(data));
 });
