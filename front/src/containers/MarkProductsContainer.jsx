@@ -10,11 +10,11 @@ class MarkProductsContainer extends Component {
 
   componentDidUpdate (prevProps) {
     if (this.props.marca !== prevProps.marca) {
-      this.props.buscarMarcas(this.props.marca)
+      this.props.buscarMarcas(this.props.marca);
     }
   }
 
-  render() {
+  render () {
     return (
       <div className='row'>
         {this.props.marcas.map(mark => (

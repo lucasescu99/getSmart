@@ -43,7 +43,7 @@ export const buscarMarcas = markProd => dispatch => {
     .then(res => {
       dispatch(buscarMarca(res.data));
     });
-}
+};
 
 export const buscarCategorias = prodId => dispatch =>
   axios.get(`/api/categorias/${prodId}`)

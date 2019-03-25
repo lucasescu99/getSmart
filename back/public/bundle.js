@@ -1991,8 +1991,6 @@ function (_React$Component) {
         descripcion: this.state.Descripcion,
         categorias: categorias
       }).then(function (product) {
-        console.log('hola entre en el then');
-
         _this3.props.history.push("/productos/".concat(product.data.id));
       });
     }
