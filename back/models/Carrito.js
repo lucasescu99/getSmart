@@ -8,8 +8,6 @@ const Carrito = db.define('carrito', {
         allowNull: false,
     }
 })
-// cantidad de product id
-// User belong to many 
 
 
 module.exports = Carrito

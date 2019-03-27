@@ -7,24 +7,29 @@ export default class NavbarUser extends Component {
     return (
       <div className="navbar-light" id='navbar-light'>
         <div className="row">
-          <div className="col-sm-3 nav-link">
+          <div className="col-sm-2 nav-link">
             <div className='col-lg-12 '>
               <Link to='/productos' onClick = { this.handleClick }>PRODUCTO</Link> 
             </div>
           </div>
-          <div className="col-sm-3 nav-link">
+          <div className="col-sm-2 nav-link">
             <div className='col-lg-12 '>
               <Link to='/productos/add' onClick = { this.handleClick }>CREAR PRODUCTO</Link> 
             </div>
           </div>
-          <div className="col-sm-3 nav-link">
+          <div className="col-sm-2 nav-link">
             <div className='col-lg-12 '>
-              <Link to='/adm/purchaseOrders' onClick={this.handleClick}>ORDENES DE COMPRA</Link>
+              <Link to='/admin/allOrders' onClick={this.handleClick}>ORDENES DE COMPRA</Link>
             </div>
           </div>
           <div className="col-sm-3 nav-link">
             <div className='col-lg-12 '>
-              <Link to='/adm/users' onClick={this.handleClick}>USUARIOS</Link>
+              <Link to='/usuarios/addadmin' onClick={this.handleClick}>AGREGAR ADMINISTRADOR</Link>
+            </div>
+          </div>
+          <div className="col-sm-3 nav-link">
+            <div className='col-lg-12 '>
+              <Link to='/usuarios/all' onClick={this.handleClick}>LISTA DE USUARIOS</Link>
             </div>
           </div>
         </div>

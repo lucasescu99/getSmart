@@ -28,9 +28,11 @@ export default class AdminProd extends React.Component {
     axios.post('/api/categorias/add', {
       name: this.state.newCategory
     });
+    alert("La categoría se creo correctamente")
   }
 
   render () {
+    console.log(this.props)
     return (
       <div>
         <FormCreatCat

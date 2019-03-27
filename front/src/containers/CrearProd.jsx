@@ -16,7 +16,6 @@ export default class AdminProd extends React.Component {
 
   componentDidMount () {
     axios.get('/api/categorias/get')
-    // .then(categorias => console.log(categorias.data))
       .then(categorias => this.setState({ categorias: categorias.data }));
   }
 
@@ -38,8 +37,9 @@ export default class AdminProd extends React.Component {
       categorias
     })
       .then(product => {
-      this.props.history.push(`/productos/${product.data.id}`);
-    });
+        alert('Se creo el producto' + ' ' + this.state.Marca + ' ' + this.state.Modelo)
+        this.props.history.push(`/productos/${product.data.id}`);
+      });
   }
 
   render () {
@@ -49,8 +49,7 @@ export default class AdminProd extends React.Component {
         <FormCrearProd
           array={this.state.categorias}
           onSubmit={this.handleSubmit}
-          onChange={this.handleChange}
-          onChange2={this.handleChange2} />
+          onChange={this.handleChange} />
       </div>
     );
   }

@@ -2,14 +2,20 @@ const express = require('express');
 const router = express.Router();
 const { Usuario } = require('../models/Usuario');
 const passport = require('passport');
+const methods = require('../methods');
+
+router.post('/get-order-status', methods.getOrder);
+
+router.post('/send/sms', methods.sendSMS);
+
+router.post('/send/email', methods.sendEmail);
 
 router.post('/esAdm', (req, res) => {
-  console.log(req.body, '000000000000000000000000000000');
   Usuario.findOne({ where: { email: req.body.email } })
     .then(data => {
       return data.update({ isAdmin: true }, { where: { isAdmin: false } });
     })
-    .then(data => res.send(data));
+    .then(data => console.log(data));
 });
 
 router.get('/todos', (req, res) => {
@@ -18,7 +24,7 @@ router.get('/todos', (req, res) => {
 });
 
 router.post('/crea', (req, res) => {
-  console.log(req.body.user);
+
   Usuario.create(req.body.user)
     .then(data => res.status(201).send(data));
 });
@@ -42,20 +48,13 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
   }
 });
 
-// console.log(req.body + "//LOGIN/////////")
-// PASSPORT HACE UN Request.ISAUTHENTICATE (TRUE O FALSE, req.isauthenticate = (true) Y REQ.USER. algo (es lo que está en la base de datos), eso lo paso en nnuevo objeto al front como respuesta; en el front tengo axios tengo en el res.data --> guardo local storage res.data que me da el axios.
+router.get('/all', (req, res) => {
+  Usuario.findAll()
+    .then(usuarios => res.send(usuarios));
+});
 
-// router.post('/add', (req, res) => {
-//   console.log(req.body.user)
-//   Usuario.create(req.body.user)
-//     .then(data => res.status(201).send(data))
-// })
-
-// router.get('/todos', (req, res) => {
-//   Usuario.findAll()
-//     .then(data => res.send(data))
-// })
-
-// router.post('/login', passport.authenticate('local', { successRedirect: '/usuarios/todos',failureRedirect: '/'}))
+router.delete('/:id', (req, res) => {
+  Usuario.destroy({ where: { id: req.params.id } });
+});
 
 module.exports = router;

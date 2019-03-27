@@ -8,6 +8,7 @@ import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import ProductsContainer from './ProductsContainer';
 import CrearProd from './CrearProd';
 import HomeRL from './HomeRL';
+import MarkProductsContainer from './MarkProductsContainer';
 import Registro from '../components/Registro';
 import Login from '../components/Login';
 import Home from '../components/Home';
@@ -15,17 +16,21 @@ import UserAsAdmin from '../components/UserAsAdmin';
 import Header from '../components/Header';
 import SingleProd from '../containers/SingleProductCont';
 import NavbarContainer from '../containers/NavbarContainer';
-import { getUser, checkUserLogin, fetchUser } from '../redux/action-creators/action-creator';
+import { checkUserLogin, fetchUser } from '../redux/action-creators/action-creator';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import MetodosDePago from '../components/MetodosDePago';
+import Checkout from '../components/Checkout';
+import TarjetaDeCredito from '../components/TarjetaDeCredito';
+import UsersContainer from './UsersContainer';
+import CarritoContainer from './CarritoContainer';
+import AdminAllOC from './adminOrdenCompra';
+import SingleOC from './singleOc';
 
 class Main extends React.Component {
   constructor (props) {
     super(props);
-
     this.state = {
-      loading: true,
+      loading: true
     };
   }
 
@@ -38,7 +43,6 @@ class Main extends React.Component {
   }
 
   render () {
-    console.log(this.props.usuario);
     return (
       this.state.loading ? <h2>Loading...</h2>
         : <div id='main' className='container-fluid'>
@@ -46,16 +50,23 @@ class Main extends React.Component {
           <NavbarContainer isAdmin={this.props.usuario.isAdmin} />
           <Switch>
             <Route exact path="/usuarios" render={() => (<HomeRL />)} />
-            <Route exact path="/usuarios/registro" render={() => (<Registro />)} />
+            <Route exact path="/usuarios/all" render={({history}) => (<UsersContainer history={history} />)} />
+            <Route exact path="/usuarios/registro" render={({ history }) => (<Registro history={history} />)} />
             <Route exact path="/usuarios/login" render={({ history, location }) => (<Login history={history} location={location} />)} />
             <Route exact path='/' component={Home} />
             <Route exact path= '/categorias/add' render={() => (<CreateCat />)} />
-            <Route exact path='/productos' render={({ location }) => <ProductsContainer location={location} />} />
-            <Route exact path='/usuarios/addadmin' component={UserAsAdmin} />
-            <Route exact path='/productos/add' render={() => (<CrearProd />)} />
-            <Route exact path='/productos/edit/:id' render={({ match }) => (<EditProd prodId={match.params.id} />)} />
-            <Route path="/productos/:id" render={({ match }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} />} />
-            <Route path="/pagos/" component={MetodosDePago} />} />
+            <Route exact path='/categorias/marcas/:marca' render={({ match }) => <MarkProductsContainer marca={match.params.marca}/>}/>
+            <Route exact path='/productos' render={({ location }) => <ProductsContainer search={location.search} />} />
+            <Route exact path='/usuarios/addadmin' render={({ history }) => (<UserAsAdmin history={history}/>)} />
+            <Route exact path='/productos/add' render={({ history }) => (<CrearProd history={history} />)} />   
+            <Route exact path='/productos/edit/:id' render={({ match, history }) => (<EditProd history={history} prodId={match.params.id} />)} />
+            <Route exact path="/productos/:id" render={({ match, history }) => <SingleProd prodId={match.params.id} isAdmin={this.props.usuario.isAdmin} history={history} />} />
+            <Route exact path="/productos/:p/checkout/:oc" render={({ match }) => <Checkout ordenId={match.params.oc} p={match.params.p} />} />
+            <Route exact path='/tarjeta' render={({ history }) => (<TarjetaDeCredito history={history}/>)} />
+            <Route exact path='/admin/allOrders' render={({ history }) => (<AdminAllOC history={history} />)} />
+            <Route exact path='/orders/:id' render={({ match }) => (<SingleOC history={history} ordenId={match.params.id} />)} />
+            <Route exact path='/cart'  render={({ history }) => (<CarritoContainer history={history} />)} />
+            <Route exact path='/checkout/:OCid' render={({ match }) => <Checkout ordenId={match.params.OCid} />} />
           </Switch>
         </div >
     );
@@ -63,9 +74,9 @@ class Main extends React.Component {
 };
 
 const mapStateToProps = (state) => ({
-  user: state.user,
   userCheck: state.userCheck,
-  usuario: state.usuario
+  usuario: state.usuario,
+  orden: state.orden
 });
 const mapDispatchToProps = (dispatch) => ({
   fetchUser: () => dispatch(fetchUser()),
